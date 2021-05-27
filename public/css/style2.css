@@ -1397,10 +1397,14 @@ footer {
 }
 
 .footer__copy {
-  align-items: flex-end;
   font-family: var(--font-family-1);
+  display: block;
+}
+
+.footer__copy-div {
   display: flex;
-  margin-top: 9vh;
+  align-items: flex-end;
+  margin-top: 12vh;
 }
 
 .footer__social {
@@ -1432,4 +1436,121 @@ footer {
     opacity: 1;
     transform: translate(0);
   }
+}
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+.containerAbout {
+  display: grid;
+  grid-template-columns: repeat(10, minmax(12rem, 1fr));
+  grid-template-rows: 10vh 90vh 80vh min-content 80vh 80vh 20vh 12vh;
+}
+
+.aboutNav {
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+  background: linear-gradient(
+    to right bottom,
+    var(--color-primary-3),
+    var(--color-primary-5)
+  );
+  padding: 2rem 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: whitesmoke;
+}
+
+.aboutNav-image {
+  width: 3%;
+}
+
+.aboutNav-header {
+  font-family: var(--font-family-4);
+
+  letter-spacing: 1.5px;
+  font-size: 4rem;
+  transform: translateX(60%);
+}
+
+.aboutNav-links {
+  width: 20%;
+}
+
+.aboutNav-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 5rem;
+  list-style: none;
+  font-size: 2rem;
+}
+
+.aboutNav-list a {
+  color: whitesmoke;
+}
+
+.aboutNav-list-item {
+}
+
+/*//////////////////////////////////////////////////////////////////////////////////////////*/
+.aboutHeader {
+  grid-column: 1 / -1;
+  grid-row: 2/3;
+  display: grid;
+  grid-template-columns: 40vw 60vw;
+
+  height: 88vh;
+  padding: 8rem;
+}
+
+.aboutHeader-gallery {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  background-image: url('/public/img/site/leaf2.jpg');
+  background-position: center;
+  border-radius: 1rem;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.aboutHeader-img {
+  width: 100%;
+  grid-column: 3/5;
+  grid-row: 2/4;
+  border-radius: 1rem;
+  border: 5px solid forestgreen;
+  margin: 3rem 0 0 3rem;
+  transform: translateY(-5%);
+  justify-self: center;
+}
+
+.aboutHeader-contentBox {
+  padding: 8rem;
+
+  text-align: center;
+}
+
+.aboutHeader-title {
+  grid-column: 1/2;
+
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    to right bottom,
+    var(--color-primary-3),
+    var(--color-primary-5)
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+  font-family: var(--font-family-1);
+  margin-bottom: 1rem;
+}
+
+.aboutHeader-text {
+  grid-column: 2/-1;
+  width: 80%;
+  margin: 0 auto;
+  text-align: left;
+  color: var(--color-grey-4);
 }
