@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link />
+    <link rel="shortcut icon" href="./img/site/icon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="/public/css/style2.css" />
+    <title>Nettles Herbs | Products page</title>
+  </head>
+  <body>
+    <nav class="aboutNav">
+      <img src="/public/img/site/icon.png" alt="" class="aboutNav-image" />
+      <h3 class="aboutNav-header">Nettles Herbs</h3>
+      <div class="aboutNav-links">
+        <ul class="aboutNav-list">
+          <li class="aboutNav-list-item"><a href="#">Home</a></li>
+          <li class="aboutNav-list-item"><a href="#">Remedies</a></li>
+          <li class="aboutNav-list-item"><a href="#">About us</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- <button class="nav__el">Log in</button>
+        <button class="nav__el nav__el--cta">Sign up</button> -->
+
+    <!-- In video, this <main> element is wrongly called: <section class="overview">. So in pug template, please use main.main instead of section.overview -->
+    <main class="main">
+      <div class="card-container">
+        <div class="card">
+          <div class="card__header">
+            <div class="card__picture">
+              <div class="card__picture-overlay">&nbsp;</div>
+              <img
+                src="/public/img/products/product-1-cover.jpg"
+                alt="Product 1"
+                class="card__picture-img"
+              />
+            </div>
+
+            <h3 class="heading-tertirary">
+              <span>Anxious Begone</span>
+            </h3>
+          </div>
+
+          <div class="card__details">
+            <h4 class="card__sub-heading">Formulated Tincture</h4>
+            <p class="card__text">
+              Eases the symptoms of anxiety and stress by lowering cortisol
+              production inside the adrenal glands of the nervous system. Also
+              aids in digestion.
+            </p>
+            <div class="card__data">
+              <svg class="card__icon">
+                <use xlink:href="img/icons.svg#icon-map-pin"></use>
+              </svg>
+              <span>Glass bottle</span>
+            </div>
+            <div class="card__data">
+              <svg class="card__icon">
+                <use xlink:href="img/icons.svg#icon-calendar"></use>
+              </svg>
+              <span>4 OZ</span>
+            </div>
+            <div class="card__data">
+              <svg class="card__icon">
+                <use xlink:href="img/icons.svg#icon-flag"></use>
+              </svg>
+              <span>Quantity</span>
+            </div>
+            <div class="card__data">
+              <svg class="card__icon">
+                <use xlink:href="img/icons.svg#icon-user"></use>
+              </svg>
+              <span>Sri Lanka</span>
+            </div>
+          </div>
+
+          <div class="card__footer">
+            <p>
+              <span class="card__footer-value">$13</span>
+              <span class="card__footer-text">per pack</span>
+            </p>
+            <p class="card__ratings">
+              <span class="card__footer-value">4.9</span>
+              <span class="card__footer-text">rating (21)</span>
+            </p>
+            <a href="#" class="btn btn--green btn--small">Details</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card__header">
+            <div class="card__picture">
+              <div class="card__picture-overlay">&nbsp;</div>
+              <img
+                src="/public/img/products/product-2-cover.jpg"
+                alt="Product 2"
+                class="card__picture-img"
+              />
+            </div>
+
+            <h3 class="heading-tertirary">
+              <span>Digest Eez</span>
+            </h3>
+          </div>
+
+          <div class="card__details">
+            <h4 class="card__sub-heading">Formulated Tincture</h4>
+            <p class="card__text">
+              Specifically designed to aid with digestion by both lowering
+              gastro-muscular contractions and increasing bile production.
+            </p>
+            <div class="card__data">
+              <svg class="card__icon">
+                <use xlink:href="img/icons.svg#icon-map-pin"></use>
+              </svg>
+              <span>Glass bottle</span>
+            </div>
+            <div class="card__data">
+              <svg class="card__icon">
+                <use xlink:href="img/icons.svg#icon-calendar"></use>
+              </svg>
+              <span>2 ml</span>
+            </div>
+            <div class="card__data">
+              <svg class="card__icon">
+                <use xlink:href="img/icons.svg#icon-flag"></use>
+              </svg>
+              <span>Quantity: 48</span>
+            </div>
+            <div class="card__data">
+              <svg class="card__icon">
+                <use xlink:href="img/icons.svg#icon-user"></use>
+              </svg>
+              <span>India</span>
+            </div>
+          </div>
+
+          <div class="card__footer">
+            <p>
+              <span class="card__footer-value">$13</span>
+              <span class="card__footer-text">per bottle</span>
+            </p>
+            <p class="card__ratings">
+              <span class="card__footer-value">4.8</span>
+              <span class="card__footer-text">rating (17)</span>
+            </p>
+            <a href="#" class="btn btn--green btn--small">Details</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card__header">
+            <div class="card__picture">
+              <div class="card__picture-overlay">&nbsp;</div>
+              <img
+                src="/public/img/products/product-3-cover.jpg"
+                alt="Product 3"
+                class="card__picture-img"
+              />
+            </div>
+
+            <h3 class="heading-tertirary">
+              <span>Pregnancy Tea</span>
+            </h3>
+          </div>
+
+          <div class="card__details">
+            <h4 class="card__sub-heading">Herbal blend</h4>
+            <p class="card__text">
+              Assist with maintaining the homeostatic balance and strengthening
+              of the womb. Positively effects the endocrine system as well.
+            </p>
+            <div class="card__data">
+              <svg class="card__icon">
+                <use xlink:href="img/icons.svg#icon-map-pin"></use>
+              </svg>
+              <span>Loose herb</span>
+            </div>
+            <div class="card__data">
+              <svg class="card__icon">
+                <use xlink:href="img/icons.svg#icon-calendar"></use>
+              </svg>
+              <span>60 cups</span>
+            </div>
+            <div class="card__data">
+              <svg class="card__icon">
+                <use xlink:href="img/icons.svg#icon-flag"></use>
+              </svg>
+              <span>Quantity: 30</span>
+            </div>
+            <div class="card__data">
+              <svg class="card__icon">
+                <use xlink:href="img/icons.svg#icon-user"></use>
+              </svg>
+              <span>Bhutan</span>
+            </div>
+          </div>
+
+          <div class="card__footer">
+            <p>
+              <span class="card__footer-value">$17</span>
+              <span class="card__footer-text">per pack</span>
+            </p>
+            <p class="card__ratings">
+              <span class="card__footer-value">4.9</span>
+              <span class="card__footer-text">rating (7)</span>
+            </p>
+            <a href="#" class="btn btn--green btn--small">Details</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card__header">
+            <div class="card__picture">
+              <div class="card__picture-overlay">&nbsp;</div>
+              <img
+                src="img/product-4-cover.jpg"
+                alt="Product 4"
+                class="card__picture-img"
+              />
+            </div>
+
+            <h3 class="heading-tertirary">
+              <span>Yoni Steam Blend</span>
+            </h3>
+          </div>
+
+          <div class="card__details">
+            <h4 class="card__sub-heading">Herbal blend</h4>
+            <p class="card__text">
+              For gently cleansing the womb space by killing off harmful
+              bacteria, tightening tissues, improving bloodflow and healing
+              damaged tissues.
+            </p>
+            <div class="card__data">
+              <svg class="card__icon">
+                <use xlink:href="img/icons.svg#icon-map-pin"></use>
+              </svg>
+              <span>Loose Herb</span>
+            </div>
+            <div class="card__data">
+              <svg class="card__icon">
+                <use xlink:href="img/icons.svg#icon-calendar"></use>
+              </svg>
+              <span>10 steams</span>
+            </div>
+            <div class="card__data">
+              <svg class="card__icon">
+                <use xlink:href="img/icons.svg#icon-flag"></use>
+              </svg>
+              <span>Quantity: 30</span>
+            </div>
+            <div class="card__data">
+              <svg class="card__icon">
+                <use xlink:href="img/icons.svg#icon-user"></use>
+              </svg>
+              <span>India</span>
+            </div>
+          </div>
+
+          <div class="card__footer">
+            <p>
+              <span class="card__footer-value">$30</span>
+              <span class="card__footer-text">per pack</span>
+            </p>
+            <p class="card__ratings">
+              <span class="card__footer-value">4.8</span>
+              <span class="card__footer-text">rating (31)</span>
+            </p>
+            <a href="#" class="btn btn--green btn--small">Details</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card__header">
+            <div class="card__picture">
+              <div class="card__picture-overlay">&nbsp;</div>
+              <img
+                src="img/product-5-cover.jpg"
+                alt="Product 5"
+                class="card__picture-img"
+              />
+            </div>
+
+            <h3 class="heading-tertirary">
+              <span>Soothing Relief</span>
+            </h3>
+          </div>
+
+          <div class="card__details">
+            <h4 class="card__sub-heading">Herbal blend</h4>
+            <p class="card__text">
+              Specifically formulated for the perineum. Utilizes Yarrow to help
+              sooth inflammation and encourage tissue healing. Perfect for
+              baths.
+            </p>
+            <div class="card__data">
+              <svg class="card__icon">
+                <use xlink:href="img/icons.svg#icon-map-pin"></use>
+              </svg>
+              <span>Loose Herb</span>
+            </div>
+            <div class="card__data">
+              <svg class="card__icon">
+                <use xlink:href="img/icons.svg#icon-calendar"></use>
+              </svg>
+              <span>4 OZ</span>
+            </div>
+            <div class="card__data">
+              <svg class="card__icon">
+                <use xlink:href="img/icons.svg#icon-flag"></use>
+              </svg>
+              <span>Quantity: 20</span>
+            </div>
+            <div class="card__data">
+              <svg class="card__icon">
+                <use xlink:href="img/icons.svg#icon-user"></use>
+              </svg>
+              <span>Palau</span>
+            </div>
+          </div>
+
+          <div class="card__footer">
+            <p>
+              <span class="card__footer-value">$17</span>
+              <span class="card__footer-text">per pack</span>
+            </p>
+            <p class="card__ratings">
+              <span class="card__footer-value">4.9</span>
+              <span class="card__footer-text">rating (19)</span>
+            </p>
+            <a href="/tour.html" class="btn btn--green btn--small">Details</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card__header">
+            <div class="card__picture">
+              <div class="card__picture-overlay">&nbsp;</div>
+              <img
+                src="img/product-6-cover.jpg"
+                alt="Product 6"
+                class="card__picture-img"
+              />
+            </div>
+
+            <h3 class="heading-tertirary">
+              <span>Loose leaf Nettle</span>
+            </h3>
+          </div>
+
+          <div class="card__details">
+            <h4 class="card__sub-heading">Herb</h4>
+            <p class="card__text">
+              Nettle is a blood cleansing herb full of nutrients, including
+              Iron. This herb has been used to treat allergy symptoms for
+              centuries. Also improves hair and nail growth.
+            </p>
+            <div class="card__data">
+              <svg class="card__icon">
+                <use xlink:href="img/icons.svg#icon-map-pin"></use>
+              </svg>
+              <span>Loose Herb</span>
+            </div>
+            <div class="card__data">
+              <svg class="card__icon">
+                <use xlink:href="img/icons.svg#icon-calendar"></use>
+              </svg>
+              <span>5.5 OZ</span>
+            </div>
+            <div class="card__data">
+              <svg class="card__icon">
+                <use xlink:href="img/icons.svg#icon-flag"></use>
+              </svg>
+              <span>Quantity: 20</span>
+            </div>
+            <div class="card__data">
+              <svg class="card__icon">
+                <use xlink:href="img/icons.svg#icon-user"></use>
+              </svg>
+              <span>Ireland</span>
+            </div>
+          </div>
+
+          <div class="card__footer">
+            <p>
+              <span class="card__footer-value">$5</span>
+              <span class="card__footer-text">per pack</span>
+            </p>
+            <p class="card__ratings">
+              <span class="card__footer-value">4.7</span>
+              <span class="card__footer-text">rating (23)</span>
+            </p>
+            <a href="#" class="btn btn--green btn--small">Details</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__header">
+            <div class="card__picture">
+              <div class="card__picture-overlay">&nbsp;</div>
+              <img
+                src="img/product-7-cover.jpg"
+                alt="Products 7"
+                class="card__picture-img"
+              />
+            </div>
+
+            <h3 class="heading-tertirary">
+              <span>Loose leaf oat straw</span>
+            </h3>
+          </div>
+
+          <div class="card__details">
+            <h4 class="card__sub-heading">Herb</h4>
+            <p class="card__text">
+              Oat Straw is a proven stress and anxiety reliever which lowers the
+              production of cortisol in the blood.***
+            </p>
+            <div class="card__data">
+              <svg class="card__icon">
+                <use xlink:href="img/icons.svg#icon-map-pin"></use>
+              </svg>
+              <span>Loose Herb</span>
+            </div>
+            <div class="card__data">
+              <svg class="card__icon">
+                <use xlink:href="img/icons.svg#icon-calendar"></use>
+              </svg>
+              <span>5.5 OZ</span>
+            </div>
+            <div class="card__data">
+              <svg class="card__icon">
+                <use xlink:href="img/icons.svg#icon-flag"></use>
+              </svg>
+              <span>Quantity: 20</span>
+            </div>
+            <div class="card__data">
+              <svg class="card__icon">
+                <use xlink:href="img/icons.svg#icon-user"></use>
+              </svg>
+              <span>England</span>
+            </div>
+          </div>
+
+          <div class="card__footer">
+            <p>
+              <span class="card__footer-value">$5</span>
+              <span class="card__footer-text">per pack</span>
+            </p>
+            <p class="card__ratings">
+              <span class="card__footer-value">4.7</span>
+              <span class="card__footer-text">rating (14)</span>
+            </p>
+            <a href="#" class="btn btn--green btn--small">Details</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__header">
+            <div class="card__picture">
+              <div class="card__picture-overlay">&nbsp;</div>
+              <img
+                src="img/product-8-cover.jpg"
+                alt="Product 8"
+                class="card__picture-img"
+              />
+            </div>
+
+            <h3 class="heading-tertirary">
+              <span>Hand Sanitizer</span>
+            </h3>
+          </div>
+
+          <div class="card__details">
+            <h4 class="card__sub-heading">Cleanser</h4>
+            <p class="card__text">
+              Formulated with powerful antimicrobial herbs as well as aloe and
+              vitamin E, this sanitizer will both clean and nourish. Plus it
+              smells great too!
+            </p>
+            <div class="card__data">
+              <svg class="card__icon">
+                <use xlink:href="img/icons.svg#icon-map-pin"></use>
+              </svg>
+              <span>Spray Bottle</span>
+            </div>
+            <div class="card__data">
+              <svg class="card__icon">
+                <use xlink:href="img/icons.svg#icon-calendar"></use>
+              </svg>
+              <span>2ml</span>
+            </div>
+            <div class="card__data">
+              <svg class="card__icon">
+                <use xlink:href="img/icons.svg#icon-flag"></use>
+              </svg>
+              <span>Quantity: 100</span>
+            </div>
+            <div class="card__data">
+              <svg class="card__icon">
+                <use xlink:href="img/icons.svg#icon-user"></use>
+              </svg>
+              <span>USA</span>
+            </div>
+          </div>
+
+          <div class="card__footer">
+            <p>
+              <span class="card__footer-value">$13</span>
+              <span class="card__footer-text">per bottle</span>
+            </p>
+            <p class="card__ratings">
+              <span class="card__footer-value">4.7</span>
+              <span class="card__footer-text">rating (15)</span>
+            </p>
+            <a href="#" class="btn btn--green btn--small">Details</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__header">
+            <div class="card__picture">
+              <div class="card__picture-overlay">&nbsp;</div>
+              <img
+                src="img/product-9-cover.jpg"
+                alt="Product"
+                class="card__picture-img"
+              />
+            </div>
+
+            <h3 class="heading-tertirary">
+              <span>Passionflower tincture</span>
+            </h3>
+          </div>
+
+          <div class="card__details">
+            <h4 class="card__sub-heading">Formulated tincture</h4>
+            <p class="card__text">
+              Used predominately as a natural sleep aid. Also good for the
+              treatment of muscle tension.
+            </p>
+            <div class="card__data">
+              <svg class="card__icon">
+                <use xlink:href="img/icons.svg#icon-map-pin"></use>
+              </svg>
+              <span>glass bottle</span>
+            </div>
+            <div class="card__data">
+              <svg class="card__icon">
+                <use xlink:href="img/icons.svg#icon-calendar"></use>
+              </svg>
+              <span>2 ml</span>
+            </div>
+            <div class="card__data">
+              <svg class="card__icon">
+                <use xlink:href="img/icons.svg#icon-flag"></use>
+              </svg>
+              <span>Quantity: 30</span>
+            </div>
+            <div class="card__data">
+              <svg class="card__icon">
+                <use xlink:href="img/icons.svg#icon-user"></use>
+              </svg>
+              <span>Madagascar</span>
+            </div>
+          </div>
+
+          <div class="card__footer">
+            <p>
+              <span class="card__footer-value">$12</span>
+              <span class="card__footer-text">per bottle</span>
+            </p>
+            <p class="card__ratings">
+              <span class="card__footer-value">4.8</span>
+              <span class="card__footer-text">rating (12)</span>
+            </p>
+            <a href="#" class="btn btn--green btn--small">Details</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__header">
+            <div class="card__picture">
+              <div class="card__picture-overlay">&nbsp;</div>
+              <img
+                src="img/product-10-cover.jpg"
+                alt="Product 10"
+                class="card__picture-img"
+              />
+            </div>
+
+            <h3 class="heading-tertirary">
+              <span>Nettles tincture</span>
+            </h3>
+          </div>
+
+          <div class="card__details">
+            <h4 class="card__sub-heading">Formulated tincture</h4>
+            <p class="card__text">
+              Powerful nutrient booster. This tincture is commonly used for
+              seasonal allergies but also aids with pains from arthritis and
+              dementia.***
+            </p>
+            <div class="card__data">
+              <svg class="card__icon">
+                <use xlink:href="img/icons.svg#icon-map-pin"></use>
+              </svg>
+              <span>glass bottle</span>
+            </div>
+            <div class="card__data">
+              <svg class="card__icon">
+                <use xlink:href="img/icons.svg#icon-calendar"></use>
+              </svg>
+              <span>2ml</span>
+            </div>
+            <div class="card__data">
+              <svg class="card__icon">
+                <use xlink:href="img/icons.svg#icon-flag"></use>
+              </svg>
+              <span>Quantity: 999</span>
+            </div>
+            <div class="card__data">
+              <svg class="card__icon">
+                <use xlink:href="img/icons.svg#icon-user"></use>
+              </svg>
+              <span>Ireland</span>
+            </div>
+          </div>
+
+          <div class="card__footer">
+            <p>
+              <span class="card__footer-value">$19</span>
+              <span class="card__footer-text">per bottle</span>
+            </p>
+            <p class="card__ratings">
+              <span class="card__footer-value">4.7</span>
+              <span class="card__footer-text">rating (25)</span>
+            </p>
+            <a href="#" class="btn btn--green btn--small">Details</a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footerAbout">
+      <img src="./img/site/logo.png" alt="" class="footer-img" />
+      <div class="footer__social">
+        <a href="#">tiktok</a>
+        <a href="#">instagram</a>
+        <a href="#">facebook</a>
+      </div>
+      <div class="footer__copy-div">
+        <h4 class="footer__copy">
+          &#169;2021 Nettles Herb's,&nbsp;
+          <small>
+            All rights reserved
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </small>
+        </h4>
+        <p class="builtBy">
+          Website built by:
+          <a href="https://github.com/MagentaSpruce">MagentaSpruce</a>🌴
+        </p>
+      </div>
+      <div class="footer__links">
+        <a href="#">Home</a>
+        <a href="#">Products</a>
+        <a href="#">About</a>
+      </div>
+    </footer>
+  </body>
+</html>

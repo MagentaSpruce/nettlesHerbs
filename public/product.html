@@ -8,11 +8,13 @@
       href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700"
       rel="stylesheet"
     />
+    <link rel="shortcut icon" href="./img/site/icon.png" type="image/x-icon" />
 
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="/public/css/style.css" />
+    <link rel="stylesheet" href="/public/css/style2.css" />
     <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
 
-    <title>Natours | The Park Camper Tour</title>
+    <title>Nettles Herbs | Pregnancy Tea</title>
 
     <script src="https://api.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.js"></script>
     <link
@@ -21,46 +23,29 @@
     />
   </head>
   <body>
-    <header class="header">
-      <nav class="nav nav--tours">
-        <a href="/overview.html" class="nav__el">All tours</a>
-        <form class="nav__search">
-          <button class="nav__search-btn">
-            <svg>
-              <use xlink:href="img/icons.svg#icon-search"></use>
-            </svg>
-          </button>
-          <input
-            type="text"
-            placeholder="Search tours"
-            class="nav__search-input"
-          />
-        </form>
-      </nav>
-      <div class="header__logo">
-        <img src="img/logo-white.png" alt="Natours logo" />
+    <nav class="aboutNav">
+      <img src="/public/img/site/icon.png" alt="" class="aboutNav-image" />
+      <h3 class="aboutNav-header">Nettles Herbs</h3>
+      <div class="aboutNav-links">
+        <ul class="aboutNav-list">
+          <li class="aboutNav-list-item"><a href="#">Home</a></li>
+          <li class="aboutNav-list-item"><a href="#">Remedies</a></li>
+          <li class="aboutNav-list-item"><a href="#">About us</a></li>
+        </ul>
       </div>
-      <nav class="nav nav--user">
-        <a href="#" class="nav__el">My bookings</a>
-        <button class="nav__el">Log out</button>
-        <a href="#" class="nav__el">
-          <img src="img/user.jpg" alt="User photo" class="nav__user-img" />
-          <span>Jonas</span>
-        </a>
+    </nav>
 
-        <!--
+    <!--
         <button class="nav__el">Log in</button>
         <button class="nav__el nav__el--cta">Sign up</button>
         -->
-      </nav>
-    </header>
 
     <section class="section-header">
       <div class="heading-box">
         <h1 class="heading-primary">
           <span
-            >The Park <br />
-            Camper Tour</span
+            >Pregnancy <br />
+            tea</span
           >
         </h1>
         <div class="heading-box__group">
@@ -68,13 +53,13 @@
             <svg class="heading-box__icon">
               <use xlink:href="img/icons.svg#icon-clock"></use>
             </svg>
-            <span class="heading-box__text">10 days</span>
+            <span class="heading-box__text">Nourishing</span>
           </div>
           <div class="heading-box__detail">
             <svg class="heading-box__icon">
-              <use xlink:href="img/icons.svg#icon-map-pin"></use>
+              <use xlink:href="img/icons.svg#icon-map-pin">Relaxing</use>
             </svg>
-            <span class="heading-box__text">Las Vegas, USA</span>
+            <span class="heading-box__text"></span>
           </div>
         </div>
       </div>
@@ -89,22 +74,25 @@
               <svg class="overview-box__icon">
                 <use xlink:href="img/icons.svg#icon-calendar"></use>
               </svg>
-              <span class="overview-box__label">Next date</span>
-              <span class="overview-box__text">August 2021</span>
+              <span class="overview-box__label">Stored as</span>
+              <span class="overview-box__text">loose herb</span>
             </div>
             <div class="overview-box__detail">
               <svg class="overview-box__icon">
                 <use xlink:href="img/icons.svg#icon-trending-up"></use>
               </svg>
-              <span class="overview-box__label">Difficulty</span>
-              <span class="overview-box__text">Medium</span>
+              <span class="overview-box__label">Amount</span>
+              <span class="overview-box__text">4 OZ</span>
             </div>
             <div class="overview-box__detail">
               <svg class="overview-box__icon">
                 <use xlink:href="img/icons.svg#icon-user"></use>
               </svg>
-              <span class="overview-box__label">Participants</span>
-              <span class="overview-box__text">10 people</span>
+              <span class="overview-box__label">Medicinal Properties</span>
+              <span class="overview-box__text"
+                >strengthens uterine wall, treats nervousness, reduces muscle
+                tension</span
+              >
             </div>
             <div class="overview-box__detail">
               <svg class="overview-box__icon">
@@ -116,54 +104,62 @@
           </div>
 
           <div class="overview-box__group">
-            <h2 class="heading-secondary ma-bt-lg">Your tour guides</h2>
+            <h2 class="heading-secondary ma-bt-lg">Active ingredients</h2>
 
             <div class="overview-box__detail">
               <img
-                src="img/users/user-19.jpg"
-                alt="Lead guide"
+                src="img/herbs/herbs-1.jpg"
+                alt="Red Raspberry Leaf"
                 class="overview-box__img"
               />
-              <span class="overview-box__label">Lead guide</span>
-              <span class="overview-box__text">Steven Miller</span>
+              <span class="overview-box__label">red raspberry leaf</span>
+              <span class="overview-box__text"><em>(Rubus idaeus)</em> </span>
             </div>
             <div class="overview-box__detail">
               <img
-                src="img/users/user-18.jpg"
-                alt="Tour guide"
+                src="img/herbs/herbs-2.jpg"
+                alt="Dandelion"
                 class="overview-box__img"
               />
-              <span class="overview-box__label">Tour guide</span>
-              <span class="overview-box__text">Lisa Brown</span>
+              <span class="overview-box__label">dandelion</span>
+              <span class="overview-box__text"><em>(Taraxacum)</em></span>
             </div>
             <div class="overview-box__detail">
               <img
-                src="img/users/user-17.jpg"
-                alt="Intern"
+                src="img/herbs/herbs-3.jpg"
+                alt="Ginger root"
                 class="overview-box__img"
               />
-              <span class="overview-box__label">Intern</span>
-              <span class="overview-box__text">Max Smith</span>
+              <span class="overview-box__label">ginger root</span>
+              <span class="overview-box__text"
+                ><em>(Zingiber officinale)</em></span
+              >
             </div>
           </div>
         </div>
       </div>
 
       <div class="description-box">
-        <h2 class="heading-secondary ma-bt-lg">About the park camper tour</h2>
+        <h2 class="heading-secondary ma-bt-lg">About the pregnancy tea</h2>
         <p class="description__text">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
           aliquip ex ea commodo consequat. Duis aute irure dolor in
           reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur.
+          pariatur. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Doloribus consectetur, optio, dolores ducimus ullam blanditiis
+          officiis velit quaerat commodi est sed, quam vitae debitis totam
+          fugiat sunt adipisci voluptas laboriosam!
         </p>
         <p class="description__text">
           Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
           dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
           proident, sunt in culpa qui officia deserunt mollit anim id est
-          laborum!
+          laborum! Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Corporis accusamus in cupiditate ea reprehenderit voluptatem aut
+          tenetur excepturi rem alias. Quis necessitatibus quidem recusandae
+          eius molestias? Veritatis itaque ratione reiciendis.
         </p>
       </div>
     </section>
@@ -172,22 +168,29 @@
       <div class="picture-box">
         <img
           class="picture-box__img picture-box__img--1"
-          src="img/tour-5-1.jpg"
-          alt="The Park Camper Tour 1"
+          src="/public/img/products/product-3-1.jpg"
+          alt="Red raspberries in a white cup"
         />
       </div>
       <div class="picture-box">
         <img
           class="picture-box__img picture-box__img--2"
-          src="img/tour-5-2.jpg"
-          alt="The Park Camper Tour 1"
+          src="/public/img/products/product-3-2.jpg"
+          alt="Ginger root sprouting flowers"
         />
       </div>
       <div class="picture-box">
         <img
           class="picture-box__img picture-box__img--3"
-          src="img/tour-5-3.jpg"
-          alt="The Park Camper Tour 1"
+          src="/public/img/products/product-3-3.jpg"
+          alt="Preganant woman sitting on log in forrest"
+        />
+      </div>
+      <div class="picture-box">
+        <img
+          class="picture-box__img picture-box__img--4"
+          src="/public/img/products/product-3-4.jpg"
+          alt="Cup of hot pregnancy tea"
         />
       </div>
     </section>
@@ -205,67 +208,67 @@
               type: 'Feature',
               geometry: {
                 type: 'Point',
-                coordinates: [-112.987418, 37.198125]
+                coordinates: [-75.0152, -9.19],
               },
               properties: {
-                description: 'Zion Canyon National Park'
-              }
+                description: 'Passion flower, Peru',
+              },
             },
             {
               type: 'Feature',
               geometry: {
                 type: 'Point',
-                coordinates: [-111.376161, 36.86438]
+                coordinates: [108.2772, 14.0583],
               },
               properties: {
-                description: 'Antelope Canyon'
-              }
+                description: 'Ginger root, Vietnam',
+              },
             },
             {
               type: 'Feature',
               geometry: {
                 type: 'Point',
-                coordinates: [-112.115763, 36.058973]
+                coordinates: [15.2551, 54.526],
               },
               properties: {
-                description: 'Grand Canyon National Park'
-              }
+                description: 'Red raspberry leaves, Europe',
+              },
             },
             {
               type: 'Feature',
               geometry: {
                 type: 'Point',
-                coordinates: [-116.107963, 34.011646]
+                coordinates: [1.2644, 46.2022],
               },
               properties: {
-                description: 'Joshua Tree National Park'
-              }
-            }
-          ]
+                description: 'Dafodil, Northern Europe',
+              },
+            },
+          ],
         };
 
         const map = new mapboxgl.Map({
           container: 'map',
           style: 'mapbox://styles/jonasschmedtmann/cjnxfn3zk7bj52rpegdltx58h',
-          scrollZoom: false
+          scrollZoom: true,
         });
 
         const bounds = new mapboxgl.LngLatBounds();
 
-        geojson.features.forEach(function(marker) {
+        geojson.features.forEach(function (marker) {
           var el = document.createElement('div');
           el.className = 'marker';
 
           new mapboxgl.Marker({
             element: el,
-            anchor: 'bottom'
+            anchor: 'bottom',
           })
             .setLngLat(marker.geometry.coordinates)
             .addTo(map);
 
           new mapboxgl.Popup({
             offset: 30,
-            closeOnClick: false
+            closeOnClick: false,
           })
             .setLngLat(marker.geometry.coordinates)
             .setHTML('<p>' + marker.properties.description + '</p>')
@@ -279,11 +282,11 @@
             top: 200,
             bottom: 150,
             left: 50,
-            right: 50
-          }
+            right: 50,
+          },
         });
 
-        map.on('load', function() {
+        map.on('load', function () {
           map.addLayer({
             id: 'route',
             type: 'line',
@@ -293,25 +296,15 @@
                 type: 'Feature',
                 properties: {},
                 geometry: {
-                  type: 'LineString',
                   coordinates: [
-                    [-112.987418, 37.198125],
-                    [-111.376161, 36.86438],
-                    [-112.115763, 36.058973],
-                    [-116.107963, 34.011646]
-                  ]
-                }
-              }
+                    [-82.6403, 27.7676],
+                    [-74.8273, 11.0014],
+                    [-83.9844, 34.5261],
+                    [-81.5471, 30.0821],
+                  ],
+                },
+              },
             },
-            layout: {
-              'line-join': 'round',
-              'line-cap': 'round'
-            },
-            paint: {
-              'line-color': '#55c57a',
-              'line-opacity': 0.6,
-              'line-width': 3
-            }
           });
         });
       </script>
@@ -323,15 +316,17 @@
           <div class="reviews__avatar">
             <img
               src="img/users/user-7.jpg"
-              alt="Jim Brown"
+              alt="Saffron Davies"
               class="reviews__avatar-img"
             />
-            <h6 class="reviews__user">Jim Brown</h6>
+            <h6 class="reviews__user">Saffron Davies</h6>
           </div>
           <p class="reviews__text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
-            dignissimos sint quo commodi corrupti accusantium veniam saepe
-            numquam.
+            "After experiencing terrible cramping during my first two
+            pregnancies and not finding any solutions with my Pediatrician I
+            then found out about Tabi from a friend. During my last pregnancy I
+            drank a cup of pregnancy tea every night before bed and my morning
+            sickness was cured!"
           </p>
           <div class="reviews__rating">
             <svg class="reviews__star reviews__star--active">
@@ -362,9 +357,8 @@
             <h6 class="reviews__user">Laura Wilson</h6>
           </div>
           <p class="reviews__text">
-            Veniam adipisci blanditiis, corporis sit magnam aperiam ad, fuga
-            reiciendis provident deleniti cumque similique itaque animi,
-            sapiente obcaecati beatae accusantium.
+            "The pregnancy tea was a god send on those mornings when eating
+            seemed to be an impossibility. Thank you Tabi!"
           </p>
           <div class="reviews__rating">
             <svg class="reviews__star reviews__star--active">
@@ -395,9 +389,10 @@
             <h6 class="reviews__user">Ben Hadley</h6>
           </div>
           <p class="reviews__text">
-            Debitis, nesciunt itaque! At quis officia natus. Suscipit,
-            reprehenderit blanditiis mollitia distinctio ducimus porro tempore
-            perspiciatis sunt vel.
+            My wife used this pregnancy tea during our last pregnancy and I was
+            so amazed by the difference between our first pregnancy and this one
+            that I had to share. Who knew herbal medicine would have better
+            results than traditional?
           </p>
           <div class="reviews__rating">
             <svg class="reviews__star reviews__star--active">
@@ -422,15 +417,15 @@
           <div class="reviews__avatar">
             <img
               src="img/users/user-6.jpg"
-              alt="Alexander Jones"
+              alt="Alice Zhuang"
               class="reviews__avatar-img"
             />
-            <h6 class="reviews__user">Alexander Jones</h6>
+            <h6 class="reviews__user">Alice Zhuang</h6>
           </div>
           <p class="reviews__text">
-            Quaerat laborum eveniet ut aut maiores doloribus mollitia aperiam
-            quis praesentium sed inventore harum aliquam veritatis at adipisci
-            ea assumenda!
+            Finally, something that actually works as advertised and doesn't
+            make me feel worse than before I started! I am amazed by how much of
+            a difference an extra glass of tea per day can make.
           </p>
           <div class="reviews__rating">
             <svg class="reviews__star reviews__star--active">
@@ -461,8 +456,9 @@
             <h6 class="reviews__user">Ayla Cornell</h6>
           </div>
           <p class="reviews__text">
-            Perferendis quo aliquid iste quas laboriosam molestias illo est
-            voluptatem odit ea. Vero placeat culpa provident dicta maiores!
+            Simply sublime! As a tea lover this fit right in with my normal
+            routine and the benefits have been much more pronounced than I first
+            imagined possible. Highly recommended.
           </p>
           <div class="reviews__rating">
             <svg class="reviews__star reviews__star--active">
@@ -488,35 +484,55 @@
     <section class="section-cta">
       <div class="cta">
         <div class="cta__img cta__img--logo">
-          <img src="img/logo-white.png" alt="Natours logo" class="" />
+          <img src="img/site/logo-small.png" alt="Natours logo" class="" />
         </div>
-        <img src="img/tour-5-2.jpg" alt="" class="cta__img cta__img--1" />
-        <img src="img/tour-5-1.jpg" alt="" class="cta__img cta__img--2" />
+        <img
+          src="/public/img/site/leaf.jpg"
+          alt=""
+          class="cta__img cta__img--1"
+        />
+        <img
+          src="/public/img/site/leaf2.jpg"
+          alt=""
+          class="cta__img cta__img--2"
+        />
 
         <div class="cta__content">
           <h2 class="heading-secondary">What are you waiting for?</h2>
           <p class="cta__text">
-            10 days. 1 adventure. Infinite memories. Make it yours today!
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Start
+            the journey to a healthier you today!
           </p>
-          <button class="btn btn--green span-all-rows">Book tour now!</button>
+          <button class="btn btn--green span-all-rows">Order Now</button>
         </div>
       </div>
     </section>
 
-    <div class="footer">
-      <div class="footer__logo">
-        <img src="img/logo-green.png" alt="Natours logo" />
+    <footer class="footerAbout">
+      <img src="./img/site/logo.png" alt="" class="footer-img" />
+      <div class="footer__social">
+        <a href="#">tiktok</a>
+        <a href="#">instagram</a>
+        <a href="#">facebook</a>
       </div>
-      <ul class="footer__nav">
-        <li><a href="#">About us</a></li>
-        <li><a href="#">Download apps</a></li>
-        <li><a href="#">Become a guide</a></li>
-        <li><a href="#">Careers</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-      <p class="footer__copyright">
-        &copy; by Jonas Schmedtmann. All rights reserved.
-      </p>
-    </div>
+      <div class="footer__copy-div">
+        <h4 class="footer__copy">
+          &#169;2021 Nettles Herb's,&nbsp;
+          <small>
+            All rights reserved
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </small>
+        </h4>
+        <p class="builtBy">
+          Website built by:
+          <a href="https://github.com/MagentaSpruce">MagentaSpruce</a>🌴
+        </p>
+      </div>
+      <div class="footer__links">
+        <a href="#">Home</a>
+        <a href="#">Products</a>
+        <a href="#">About</a>
+      </div>
+    </footer>
   </body>
 </html>
