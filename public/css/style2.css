@@ -1171,10 +1171,10 @@ header {
   fill: violet;
 }
 .operations__icon--2 svg {
-  fill: var(--color-secondary-4);
+  fill: var(--color-secondary-5);
 }
 .operations__icon--3 svg {
-  fill: var(--color-primary-4);
+  fill: var(--color-primary-8);
 }
 
 .contact__main {
