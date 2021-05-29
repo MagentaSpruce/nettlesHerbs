@@ -196,6 +196,16 @@ a:visited {
   z-index: 10;
 }
 
+.heading-box__text {
+  font-size: 4rem;
+}
+
+.specials-icon-product-price {
+  height: 5rem;
+  width: 5rem;
+  fill: green;
+}
+
 .btn,
 .btn:link,
 .btn:visited {
@@ -494,7 +504,7 @@ a:visited {
 }
 .overview-box__img {
   border-radius: 50%;
-  height: 3.5rem;
+  height: 5.5rem;
   margin-right: 1.25rem;
 }
 
@@ -840,6 +850,12 @@ a:visited {
   object-fit: cover;
   height: 100%;
   width: 100%;
+}
+
+.card__picture-img-tincture {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 .card__details {
   display: grid;
