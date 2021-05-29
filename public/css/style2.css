@@ -97,6 +97,61 @@ a:visited {
   color: whitesmoke;
 }
 
+.stats-icon-list {
+  width: 2rem;
+  height: 2rem;
+  fill: var(--color-primary-3);
+}
+.specials-icon-specials-info {
+  width: 2rem;
+  height: 2rem;
+  fill: rebeccapurple;
+}
+
+.specials-icon-specials-meter {
+  height: 2rem;
+  width: 2rem;
+  fill: palevioletred;
+}
+
+.specials-icon-specials-medal {
+  height: 2rem;
+  width: 2rem;
+  fill: var(--color-secondary-1);
+}
+
+.specials-icon-specials-price {
+  height: 2rem;
+  width: 2rem;
+  fill: var(--color-primary-3);
+}
+.operations-icon-operations-female {
+}
+
+.operations-icon-operations-pill {
+}
+
+.operations-icon-operations-square {
+}
+
+.footer-icon-footer {
+  width: 6rem;
+  height: 6rem;
+}
+
+.about-icon-header {
+  height: 2.5rem;
+  width: 2.5rem;
+  fill: crimson;
+}
+
+.about-icon-list {
+  padding-top: 1rem;
+  height: 3rem;
+  width: 3rem;
+  fill: var(--color-primary-3);
+}
+
 html {
   box-sizing: border-box;
   font-size: 62.5%;
@@ -245,12 +300,8 @@ span.green {
 }
 
 .btn-rectangle:hover {
-  background-image: linear-gradient(
-    to top right,
-    var(--color-primary-4),
-    var(--color-primary-5)
-  );
-  color: var(--color-grey-1);
+  background-color: var(--color-grey-2);
+  color: var(--color-primary-3);
   transform: translateY(-3px);
   box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
@@ -702,7 +753,7 @@ header {
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
 }
 .card__side--front {
-  background-color: var(--color-white);
+  background-color: whitesmoke;
 }
 .card__side--back {
   transform: rotateY(180deg);
@@ -737,7 +788,7 @@ header {
 .card__picture {
   background-size: cover;
   height: 23rem;
-  background-blend-mode: screen;
+
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 }
@@ -793,6 +844,7 @@ header {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   font-family: var(--font-family-5);
+  grid-gap: 3rem;
 }
 
 .card__details-header {
@@ -802,36 +854,28 @@ header {
 
 .card__details--packaging {
   grid-column: 1 / 2;
+  display: flex;
 }
 .card__details--quantity {
   grid-column: 2 / 3;
+  display: flex;
 }
 .card__details--amount {
   grid-column: 1 / 2;
+  display: flex;
 }
 .card__details--price {
   grid-column: 2/3;
+  display: flex;
 }
 
 .card__details--summary {
+  padding-top: 1rem;
   grid-column: 1/-1;
   font-family: var(--font-family-1);
   font-size: 2.5rem;
-}
-
-.card__details--packaging svg,
-.card__details--quantity svg,
-.card__details--amount svg,
-.card__details--price svg {
-  fill: var(--color-primary-1);
-  height: 2rem;
-  width: 2rem;
-}
-
-.card__details--packaging p,
-.card__details--quantity p,
-.card__details--amount p,
-.card__details--price p {
+  outline: 3px solid var(--color-primary-8);
+  outline-offset: 1.5rem;
 }
 
 .card__cta {
@@ -844,7 +888,7 @@ header {
 }
 .card__price-box {
   text-align: center;
-  color: #ffffc7;
+  color: var(--color-grey-1);
   margin-bottom: 8rem;
 }
 .card__price-only {
@@ -942,7 +986,7 @@ header {
 
 .operations {
   max-width: 100rem;
-  margin: 8rem auto 0 auto;
+  margin: 10rem auto 0 auto;
 
   background-color: #fff;
 }
