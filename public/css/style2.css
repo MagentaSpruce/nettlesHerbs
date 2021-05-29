@@ -93,7 +93,8 @@ a:hover {
   text-underline-offset: 3px;
 }
 
-a:visited {
+a:visited,
+a:active {
   color: whitesmoke;
 }
 
@@ -325,7 +326,7 @@ span.green {
   font-size: 2.5rem;
   outline: none;
   border: none;
-  color: var(--color-grey-1);
+  color: var(--color-primary-3);
   text-decoration: underline;
   text-underline-offset: 7px;
   border-radius: 0.5rem;
@@ -345,13 +346,8 @@ span.green {
   box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
 
-.btn-top {
-  background: transparent;
-  color: var(--color-primary-3);
-}
 .btn-top:hover {
   color: var(--color-grey-1);
-  background: var(--color-primary-3);
 }
 
 .btn-rectangle:active {
@@ -1563,6 +1559,7 @@ header {
 
   letter-spacing: 1.5px;
   font-size: 4rem;
+
   transform: translateX(60%);
 }
 
@@ -1576,6 +1573,7 @@ header {
   grid-gap: 5rem;
   list-style: none;
   font-size: 2rem;
+  font-weight: bold;
 }
 
 .aboutNav-list a {
@@ -1775,7 +1773,6 @@ header {
 }
 
 .aboutServices-button {
-  transform: translateX(-50%);
   padding: 2rem 3rem;
   border-radius: 4px;
   background-image: linear-gradient(
@@ -1786,19 +1783,23 @@ header {
   color: var(--color-grey-1);
   font-size: 2rem;
   font-family: var(--font-family-2);
-  margin-top: 9vh;
+
   border: none;
   transition: all 0.2s;
   cursor: pointer;
+  position: relative;
+  top: 12vh;
+  right: 6.4vw;
 }
 
 .aboutServices-button:hover {
-  transform: translateX(-50%) translateY(-3px);
+  top: 11vh;
   box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.2);
+  text-decoration: none;
 }
 
 .aboutServices-button:active {
-  transform: translateX(-50%) translateY(3px);
+  top: 12vh;
   box-shadow: none;
 }
 
