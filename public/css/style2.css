@@ -1270,22 +1270,6 @@ header {
   transform: translateY(-4rem);
 }
 
-.slider {
-  background-image: linear-gradient(
-    to bottom right,
-    var(--color-primary-3),
-    var(--color-primary-5)
-  );
-  grid-column: center-start / center-end;
-  grid-row: 8/9;
-  margin-bottom: 10rem;
-
-  position: relative;
-  /* overflow: hidden; */
-}
-
-/* IN THE END */
-
 .section {
   padding: 10rem 3rem;
   transition: transform 1s, opacity 1s;
@@ -1315,11 +1299,21 @@ header {
   font-weight: 500;
 }
 
-.slider1 {
-}
-
 /* SLIDER */
 
+.slider {
+  background-image: linear-gradient(
+    to bottom right,
+    var(--color-primary-3),
+    var(--color-primary-5)
+  );
+  grid-column: center-start / center-end;
+  grid-row: 8/9;
+  margin-bottom: 10rem;
+
+  position: relative;
+  /* overflow: hidden; */
+}
 .slide {
   position: absolute;
   top: 0;
@@ -1377,7 +1371,7 @@ header {
 
 .dots__dot {
   border: none;
-  background-color: #b9b9b9;
+  background-color: var(--color-white);
   opacity: 0.7;
   height: 1rem;
   width: 1rem;
@@ -1396,7 +1390,7 @@ header {
 
 .dots__dot--active {
   /* background-color: #fff; */
-  background-color: #888;
+  background-color: var(--color-primary-8);
   opacity: 1;
 }
 
@@ -1415,7 +1409,7 @@ header {
   line-height: 1;
   font-size: 20rem;
   font-family: inherit;
-  color: var(--color-primary-3);
+  color: var(--color-grey-2);
   z-index: -1;
 }
 
