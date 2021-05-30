@@ -1,0 +1,119 @@
+[
+  {
+    "_id": "5c8a1d5b0190b214360dc057",
+    "name": "Marshmellow Man",
+    "email": "admin@herbs.com",
+    "role": "admin",
+    "active": true,
+    "photo": "user-1.jpg",
+    "password": "$2a$12$Q0grHjH9PXc6SxivC8m12.2mZJ9BbKcgFpwSG4Y1ZEII8HJVzWeyS"
+  },
+  {
+    "_id": "5c8a1d5b0190b214360dc999",
+    "name": "Magenta Spruce",
+    "email": "mag@herbs1.com",
+    "role": "admin",
+    "active": true,
+    "photo": "user-1.jpg",
+    "password": "$2a$12$Q0grHjH9PXc6SxivC8m12.2mZJ9BbKcgFpwSG4Y1ZEII8HJVzWeyS"
+  },
+  {
+    "_id": "5c8a1dfa2f8fb814b56fa181",
+    "name": "Red Raspberry Leaf",
+    "photo": "herbs-3-1.jpg"
+  },
+  {
+    "_id": "5c8a1e1a2f8fb814b56fa182",
+    "name": "Dandelion",
+    "photo": "herbs-3-2.jpg"
+  },
+  {
+    "_id": "5c8a1ec62f8fb814b56fa183",
+    "name": "Ginger Root",
+    "photo": "herbs-3-3.jpg"
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa184",
+    "name": "Ashwaghanda",
+    "photo": "herbs-1-1"
+  },
+  {
+    "_id": "5c8a1f4e2f8fb814b56fa185",
+    "name": "Skullcap",
+    "photo": "herbs-1-2"
+  },
+  {
+    "_id": "5c8a201e2f8fb814b56fa186",
+    "name": "Chamomile",
+    "photo": "herbs-1-3"
+  },
+  {
+    "_id": "5c8a20d32f8fb814b56fa187",
+    "name": "Nettle",
+    "photo": "herbs-1-4"
+  },
+  {
+    "_id": "5c8a211f2f8fb814b56fa188",
+    "name": "Calendula",
+    "photo": "herbs-2-1"
+  },
+  {
+    "_id": "5c8a21d02f8fb814b56fa189",
+    "name": "Rosemary",
+    "photo": "herbs-2-2"
+  },
+  {
+    "_id": "5c8a21f22f8fb814b56fa18a",
+    "name": "lavender",
+    "photo": "herbs-4-1"
+  },
+  {
+    "_id": "5c8a22c62f8fb814b56fa18b",
+    "name": "Mugwort",
+    "photo": "herbs-4-2"
+  },
+  {
+    "_id": "5c8a23412f8fb814b56fa18c",
+    "name": "Echinacea",
+    "photo": "herbs-4-3"
+  },
+  {
+    "_id": "5c8a23c82f8fb814b56fa18d",
+    "name": "Yarrow",
+    "photo": "herbs-4-4"
+  },
+  {
+    "_id": "5c8a23de2f8fb814b56fa18e",
+    "name": "Marshmellow Leaf",
+    "photo": "herbs-5-1"
+  },
+  {
+    "_id": "5c8a24282f8fb814b56fa18f",
+    "name": "Loose Leaf Oat Straw",
+    "photo": "herbs-7-1"
+  },
+  {
+    "_id": "5c8a24402f8fb814b56fa190",
+    "name": "Thyme",
+    "photo": "herbs-8-1"
+  },
+  {
+    "_id": "5c8a245f2f8fb814b56fa191",
+    "name": "Aloe",
+    "photo": "herbs-8-2"
+  },
+  {
+    "_id": "5c8a24822f8fb814b56fa192",
+    "name": "Passionflower",
+    "photo": "herbs-9-1"
+  },
+  {
+    "_id": "5c8a24a02f8fb814b56fa193",
+    "name": "Lisa Brown",
+    "email": "lisa@example.com",
+    "role": "user",
+    "active": true,
+    "photo": "user-20.jpg",
+    "password": "$2a$12$uA9FsDw63v6dkJKGlLQ/8ufYBs8euB7kqIQewyYlZXU5azEKeLEky"
+  }
+]
