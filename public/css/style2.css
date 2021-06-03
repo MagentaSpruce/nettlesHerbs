@@ -3764,7 +3764,7 @@ body {
   .footer__social {
   }
 }
-@media only screen and (max-width: 660px) {
+@media only screen and (max-width: 600px) {
   .aboutNav-image {
     display: none;
   }

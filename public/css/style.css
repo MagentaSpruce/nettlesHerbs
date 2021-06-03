@@ -824,7 +824,7 @@ a:active {
   grid-gap: 7rem;
 }
 
-.card {
+.card-overview {
   border-radius: 3px;
   overflow: hidden;
   -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.1);
@@ -1067,6 +1067,168 @@ a:active {
   transform: translateY(-2px);
 }
 
-.footer__links {
+.footer__links-overview {
   color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+
+  font-size: 2rem;
+}
+
+.aboutNav {
+  height: 10vh;
+}
+
+.aboutNav-links-overview {
+  font-size: 2rem;
+}
+
+.aboutNav-list-overview {
+  list-style: none;
+}
+.aboutNav-image-overview {
+  width: 5%;
+}
+
+.footer__social-overview {
+  display: grid;
+  grid-template-columns: repeat(3, 10rem);
+  transform: translateX(10%);
+}
+
+.footer__copy-div-overview {
+  display: flex;
+  align-items: center;
+  transform: translateY(5.5vh);
+}
+
+@media only screen and (max-width: 1325px) {
+  .aboutNav-header {
+    /* background-color: red; */
+  }
+
+  .aboutNav-image-overview {
+    width: 6%;
+  }
+
+  .card-container {
+    max-width: 100rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 7rem;
+  }
+
+  .builtBy-overview {
+    transform: translateY(0.2vh);
+  }
+  .btn.btn--green.btn--small {
+    width: 40%;
+    transform: translateX(10vw);
+  }
+}
+@media only screen and (max-width: 700px) {
+  .aboutNav-header {
+    /* background-color: red; */
+  }
+
+  .aboutNav-image-overview {
+    width: 10%;
+  }
+
+  body {
+    background-image: url('/public/img/site/full-bloom.png') !important;
+  }
+
+  .card-container {
+    max-width: 50rem;
+    grid-template-columns: minmax(min-content, 1fr);
+  }
+
+  .btn.btn--green.btn--small {
+    margin: 0 auto;
+  }
+
+  .footer-img {
+    transform: translateX(20%);
+  }
+
+  .footer__copy-overview {
+    position: relative;
+    left: -10vw;
+    top: 0.5vh;
+  }
+
+  .builtBy-overview {
+    position: relative;
+    right: 8vw;
+    top: 0.3vh;
+  }
+}
+@media only screen and (max-width: 415px) {
+  .aboutNav-header {
+    /* background-color: red; */
+  }
+
+  .aboutNav-image-overview {
+    width: 15%;
+  }
+
+  body {
+    background-image: url('/public/img/site/full-bloom.png') !important;
+  }
+
+  .card-container {
+    max-width: 50rem;
+    grid-template-columns: minmax(min-content, 1fr);
+  }
+
+  .btn.btn--green.btn--small {
+    margin: 0 auto;
+  }
+
+  .footer__social-overview {
+    display: grid;
+    grid-template-columns: repeat(3, 7rem);
+    transform: translateX(10%);
+  }
+
+  .footer__links-overview {
+    transform: translateX(40%);
+  }
+
+  .section-description {
+    display: grid;
+  }
+
+  .section-cta {
+    max-width: 100%;
+  }
+
+  .cta {
+    padding: 0;
+    height: 21vh;
+  }
+
+  .cta__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .description-box {
+    margin-top: -5vh;
+  }
+
+  .heading-secondary {
+    transform: translateY(1.5vh) translateX(8vw);
+  }
+
+  .cta__text {
+    transform: translateX(8vw) translateY(3.5vh);
+    color: #777;
+  }
+
+  .btn.btn--green.span-all-rows {
+    transform: translateY(6vh) translateX(19vw);
+  }
 }
