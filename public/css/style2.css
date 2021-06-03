@@ -1696,12 +1696,25 @@ header {
 }
 
 @media only screen and (max-width: 1920px) {
+  .container {
+    grid-template-rows:
+      8rem
+      93vh 70vh 86vh 85vh 40vw repeat(3, minmax(min-content, 85vh))
+      15vh;
+  }
+
   .navLogo {
     transform: translateY(6.5vh) translateX(-28vw);
   }
 
   .nav-item {
     transform: translateX(28vw);
+  }
+
+  .btn.header__btn {
+    margin-top: 10rem;
+    font-size: 3rem;
+    padding: 2.5rem 4rem;
   }
 
   .intro__container--content-content {
@@ -1716,12 +1729,16 @@ header {
     top: 10vh;
   }
 
+  .specials {
+    height: 70%;
+  }
+
   .story__img--2 {
     transform: translateX(6rem);
   }
 
   .story__content {
-    padding: 3.5rem 3rem;
+    padding: 3.5rem 5rem;
   }
 }
 @media only screen and (max-width: 1605px) {
@@ -2055,6 +2072,10 @@ header {
     transform: translateY(12rem) translateX(-28rem);
   }
 
+  .specials {
+    height: 90%;
+  }
+
   .story__content-title {
     width: 70%;
     text-align: center;
@@ -2202,7 +2223,7 @@ header {
   .container {
     grid-template-rows:
       8rem
-      95vh 70vh 70vh 110vh 142vh 70vh 70vw repeat(2, minmax(min-content, 55vh))
+      95vh 70vh 70vh 120vh 142vh 70vh 70vw repeat(2, minmax(min-content, 55vh))
       60vh 15vh;
   }
 
@@ -2253,7 +2274,7 @@ header {
   }
 
   .inbetween {
-    margin-right: -1rem;
+    margin-right: 10vw;
   }
 
   .specials {
@@ -2398,7 +2419,7 @@ header {
   .container {
     grid-template-rows:
       8rem
-      95vh 60vh 70vh 90vh 120vh 60vh 70vw repeat(2, minmax(min-content, 60vh))
+      95vh 60vh 70vh 99vh 120vh 60vh 70vw repeat(2, minmax(min-content, 60vh))
       60vh 15vh;
   }
 
@@ -2411,20 +2432,21 @@ header {
   }
 
   li.nav-item {
-    transform: translateX(17vw);
+    transform: translateX(24vw);
   }
 
   .navLogo {
-    transform: translateY(6.5vh) translateX(-12.5vw);
+    transform: translateY(6.5vh) translateX(-24.5vw);
   }
 
   .header__logo {
     width: 60%;
-    margin-bottom: 18rem;
+    margin-bottom: 10rem;
   }
 
   .header-1 {
     font-size: 5rem;
+    margin-bottom: 3vh;
   }
 
   .stats__header {
@@ -2461,7 +2483,7 @@ header {
   .inbetween {
     grid-row: 6/7;
     margin-top: -15rem;
-    margin-right: -4rem;
+    margin-right: 10rem;
   }
 
   .specials {
@@ -2506,7 +2528,7 @@ header {
   }
 
   body {
-    background-image: url('/public/img/site/full-bloom.png');
+    background-image: url('/public/img/site/full-bloom.png') !important;
   }
 
   ul.navbar__nav {
@@ -2647,16 +2669,16 @@ header {
   .container {
     grid-template-rows:
       8rem
-      95vh 60vh 75vh 110vh 142vh 77vh 70vw repeat(2, minmax(min-content, 65vh))
+      95vh 60vh 75vh 100vh 140vh 60vh 70vw repeat(2, minmax(min-content, 65vh))
       60vh 15vh;
   }
 
   body {
-    background-image: url('/public/img/site/full-bloom.png');
+    background-image: url('/public/img/site/full-bloom.png') !important;
   }
 
   ul.navbar__nav {
-    gap: 1rem;
+    gap: 12rem;
   }
 
   li.nav-item {
@@ -2667,13 +2689,11 @@ header {
     display: none;
   }
 
-  .header {
-  }
-
   .header__logo {
     width: 70%;
     margin-top: -8rem;
-    margin-right: 0-1rem;
+    margin-right: -1rem;
+    margin-bottom: 15vh;
   }
 
   .header-1 {
@@ -2720,7 +2740,9 @@ header {
   }
 
   .intro__container--gallery {
-    left: 5rem;
+    width: 70%;
+    left: 12rem;
+    top: 12vh;
   }
 
   .inbetween {
@@ -2732,8 +2754,12 @@ header {
     margin-bottom: 5vh;
   }
 
+  .story__content-title {
+    transform: translateY(-4vh);
+  }
+
   .story__content {
-    padding: 8rem;
+    padding: 4rem;
     transform: translateX(0rem);
   }
 
@@ -3314,6 +3340,14 @@ body {
   }
 }
 @media only screen and (max-width: 1500px) {
+  .aboutHeader-img {
+    width: 180%;
+    transform: translateY(-2.5vh) translateX(-1vw);
+  }
+
+  .aboutHeader-gallery {
+    height: 70%;
+  }
   .aboutNav-links {
     width: 30%;
   }
@@ -3441,7 +3475,16 @@ body {
   }
 
   .aboutHeader-gallery {
-    height: 70%;
+    height: 50%;
+    transform: translateY(11vh) translateX(7vw);
+  }
+
+  .aboutHeader-img {
+    transform: translateY(1vh) translateX(-1vw);
+  }
+
+  .aboutHeader {
+    height: 70vh;
   }
 
   .aboutPhilo {
@@ -3464,9 +3507,13 @@ body {
     font-size: 40%;
   }
 
+  .aboutHeader {
+    height: 75vh;
+  }
+
   .aboutHeader-gallery {
     height: 50%;
-    transform: translateY(10vh) translateX(5vw);
+    transform: translateY(7vh) translateX(5vw);
   }
 
   .aboutHeader-img {
@@ -3475,15 +3522,19 @@ body {
 
   .aboutPhilo {
     transform: translateY(-10vh);
-    height: 94vh;
+    height: 78vh;
   }
 
   .aboutServices {
-    height: 65vh;
+    height: 55vh;
   }
   .aboutContact {
     height: 30vh;
     transform: translateY(-5vh);
+  }
+
+  .aboutContact-contentBox {
+    height: 17vh;
   }
 
   .aboutServices-button {
@@ -3522,88 +3573,77 @@ body {
     width: 10%;
   }
 }
-@media only screen and (max-width: 830px) {
-  .aboutNav-links {
-    width: 50%;
+@media only screen and (max-width: 780px) {
+  html {
+    font-size: 40%;
+  }
+  body {
+    /* background-image: url('/public/img/site/full-bloom.png') !important; */
+    max-width: 100vw;
+    margin: 0 auto;
   }
 
+  .aboutNav-image {
+    display: none;
+  }
+
+  .aboutNav-list {
+  }
   .aboutHeader {
+    height: 100vh;
     grid-template-columns: minmax(min-content, 1fr);
-    height: 120vh;
   }
 
   .aboutHeader-gallery {
-    width: 40%;
-    transform: translateX(25vw) translateY(3vh);
+    height: 80%;
+    transform: translateY(2vh) translateX(5vw);
   }
 
   .aboutHeader-img {
-    transform: translateY(-4vh);
+    transform: translateY(-4.5vh) translateX(-1vw);
+    width: 90%;
   }
 
   .aboutHeader-contentBox {
-    transform: translateY(-28vh);
+    transform: translateY(-7vh);
+  }
+
+  .aboutHeader-text {
+    font-size: 3rem;
   }
 
   .aboutPhilo {
-    height: 90vh;
-    transform: translateY(-17vh);
-  }
-
-  .aboutPhilo-header {
-    font-weight: bolder;
+    transform: translateY(5vh);
+    height: 155vh;
   }
 
   .aboutPhilo-contentBox {
     grid-template-columns: minmax(min-content, 1fr);
   }
 
-  .aboutPhilo-contentBox-text::after {
-    display: none;
+  .aboutPhilo-contentBox-title {
+    font-size: 5rem;
+  }
+
+  .aboutPhilo-contentBox-text {
+    font-size: 3rem;
   }
 
   .aboutPhilo-contentBox-2.border-left::after {
     display: none;
   }
+
   .aboutServices {
-    transform: translateX(-2vw) translateY(8vh);
+    height: 55vh;
+    transform: translateX(-10vw);
   }
-
-  .aboutServices-list {
-    transform: translateX(8vw);
-  }
-
-  .aboutServices-button {
-    top: -1vh;
-  }
-  .aboutServices-button:hover {
-    top: -2vh;
-  }
-
-  .aboutHeader-gallery {
-  }
-
-  .aboutContact-contentBox-img {
-    width: 114%;
-  }
-
-  .aboutContact-title {
-    transform: translateX(7rem);
-  }
-
-  .aboutContact-text {
-    transform: translateX(-3vw) translateY(2vh);
+  .aboutContact {
+    height: 30vh;
+    transform: translateY(-5vh);
   }
 
   .aboutContact-contentBox {
-    height: 95%;
-  }
-}
-@media only screen and (max-width: 700px) {
-  body {
-    background-image: none;
-  }
-  .aboutServices {
+    height: 17vh;
   }
 
   .aboutServices-button {
@@ -3636,5 +3676,171 @@ body {
   }
   .aboutContact-button:hover {
     transform: translateY(2rem) translateX(-3rem);
+  }
+
+  .footer-img {
+    width: 10%;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  html {
+    font-size: 40%;
+  }
+  body {
+    background-image: none;
+    max-width: 100vw;
+    margin: 0 auto;
+  }
+
+  .aboutNav-image {
+    display: none;
+  }
+
+  .aboutNav-list {
+    transform: translateX(-16vw);
+  }
+  .aboutHeader {
+    height: 100vh;
+    grid-template-columns: minmax(min-content, 1fr);
+  }
+
+  .aboutHeader-gallery {
+    height: 80%;
+    transform: translateY(2vh) translateX(-6.5vw);
+  }
+
+  .aboutHeader-contentBox {
+    transform: translateY(-4vh) translateX(-11vw);
+  }
+
+  .aboutHeader-text {
+    font-size: 3rem;
+  }
+
+  .aboutPhilo {
+    transform: translateY(5vh) translateX(-10vw);
+    height: 190vh;
+  }
+
+  .aboutPhilo-header {
+    transform: translateX(-2vw);
+  }
+
+  .aboutPhilo-contentBox-title {
+    transform: translateX(-3vw);
+  }
+
+  .aboutServices {
+    height: 62vh;
+    transform: translateX(-18vw);
+  }
+
+  .aboutContact {
+    height: 35vh;
+    transform: translateY(-5vh) translateX(-11vw);
+  }
+
+  .aboutContact-contentBox {
+    height: 20vh;
+  }
+
+  .footer__links {
+    transform: translateX(-20vw);
+  }
+
+  .footer__copy {
+    transform: translateX(-0vw);
+  }
+
+  .footer__copy-div {
+    transform: translateX(-12vw);
+  }
+
+  .footer-img {
+    height: 9vh;
+  }
+
+  .footer__social {
+  }
+}
+@media only screen and (max-width: 660px) {
+  .aboutNav-image {
+    display: none;
+  }
+
+  .aboutNav-list {
+    transform: translateX(-30vw);
+  }
+  .aboutHeader {
+    height: 130vh;
+  }
+
+  .aboutHeader-gallery {
+    height: 80%;
+    transform: translateY(2vh) translateX(-9.5vw);
+  }
+
+  .aboutHeader-contentBox {
+    transform: translateY(-4vh) translateX(-11vw);
+  }
+
+  .aboutHeader-img {
+    transform: translateY(-6vh);
+    height: 280%;
+  }
+
+  .aboutHeader-contentBox {
+    transform: translateX(-18vw) translateY(-6vh);
+  }
+
+  .aboutPhilo {
+    width: 85%;
+    transform: translateY(5vh) translateX(-10vw);
+    height: 250vh;
+  }
+
+  .aboutPhilo-header {
+    transform: translateX(-2vw) translateY(5vh);
+  }
+
+  .aboutServices {
+    height: 62vh;
+    transform: translateX(-23vw);
+  }
+
+  .aboutServices-button {
+    left: 50vw;
+    top: -2.5vh;
+  }
+
+  .aboutContact {
+    height: 35vh;
+    transform: translateY(-5vh) translateX(-18vw);
+  }
+
+  .aboutContact-contentBox {
+    height: 22vh;
+  }
+
+  .footer__links {
+    transform: translateX(-3vw);
+  }
+
+  .footer__copy {
+    transform: translateX(-0vw);
+  }
+
+  .footer__copy-div {
+    transform: translateX(-12vw);
+  }
+
+  .footer-img {
+    height: 9vh;
+    transform: translateX(-3vw);
+  }
+
+  .footer__social {
+    transform: translateX(-5vw);
   }
 }
