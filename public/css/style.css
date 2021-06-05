@@ -1085,9 +1085,10 @@ a:active {
 
 .aboutNav-list-overview {
   list-style: none;
+  transform: translateX(30%);
 }
 .aboutNav-image-overview {
-  width: 8vh;
+  width: 7vh;
 }
 
 .footer-img {
@@ -1103,15 +1104,19 @@ a:active {
 }
 
 .footer__social-overview {
-  grid-column: 4/7;
+  grid-column: 4/8;
   grid-row: 2/3;
-  margin-top: 2vh;
+  margin-top: 1.5vh;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(min-content, 1fr));
+  transform: translateX(15%);
 }
 
 .footer__links-overview {
-  grid-column: 9/10;
-  margin-top: 1vh;
+  grid-column: 10/11;
+  margin-top: 1.5vh;
   grid-gap: 1.5vh;
+  transform: translateX(25%);
 }
 
 .footer__copy-div-overview {
@@ -1127,6 +1132,7 @@ a:active {
 
   .aboutNav-image-overview {
     width: 6%;
+    transform: translateX(-40%);
   }
 
   .card-container {
@@ -1212,7 +1218,7 @@ a:active {
   }
 
   .footer__links-overview {
-    transform: translateX(40%);
+    transform: translateX(-15%);
   }
 
   .section-description {
