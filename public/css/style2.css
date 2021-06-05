@@ -49,9 +49,6 @@
   --margin-top-md: 4rem;
   --margin-top-lg: 6rem;
   --margin-top-xl: 8rem;
-
-  /*RESPONSIVE BREAKPOINTS*/
-  --bp-largest: 94rem; /*1500px*/
 }
 
 ::selection {
@@ -98,7 +95,7 @@ a:hover {
 
 a:visited,
 a:active {
-  color: whitesmoke;
+  color: var(-);
 }
 
 .stats-icon-list {
@@ -805,7 +802,7 @@ header {
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
 }
 .card__side--front {
-  background-color: whitesmoke;
+  background-color: var(-);
 }
 .card__side--back {
   transform: rotateY(180deg);
@@ -859,7 +856,7 @@ header {
   font-weight: 300;
   text-transform: uppercase;
   text-align: right;
-  color: white;
+  color: var(--color-white);
   position: absolute;
   top: 12rem;
   right: 2rem;
@@ -1046,7 +1043,7 @@ header {
 .section__title {
   text-align: center;
   padding-top: 5rem;
-  color: whitesmoke;
+  color: var(-);
 }
 
 .section__description {
@@ -1069,7 +1066,7 @@ header {
   transform: translateY(-50%);
   outline: none;
   border: none;
-  color: whitesmoke;
+  color: var(-);
 }
 
 .operations__tab span {
@@ -1361,7 +1358,7 @@ header {
   border: none;
   background: rgba(84, 245, 92, 0.7);
   font-family: inherit;
-  color: whitesmoke;
+  color: var(-);
   border-radius: 50%;
   height: 5.5rem;
   width: 5.5rem;
@@ -1486,13 +1483,13 @@ header {
   align-items: center;
   justify-content: space-around;
 
-  color: whitesmoke;
+  color: var(-);
   padding: 0 4rem;
 }
 
 .footer-img {
   width: 4%;
-  background-color: whitesmoke;
+  background-color: var(-);
 }
 
 .footer__copy {
@@ -2892,7 +2889,7 @@ html {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: whitesmoke;
+  color: var(-);
 }
 
 .aboutNav-image {
@@ -2922,10 +2919,7 @@ html {
 }
 
 .aboutNav-list a {
-  color: whitesmoke;
-}
-
-.aboutNav-list-item {
+  color: var(-);
 }
 
 /*//////////////////////////////////////////////////////////////////////////////////////////*/
@@ -3255,7 +3249,7 @@ html {
   width: 65%;
   grid-column: 1/2;
   grid-row: 1/4;
-  background-color: whitesmoke;
+  background-color: var(-);
 }
 
 .footer__social-about {
@@ -3271,18 +3265,13 @@ html {
   align-items: baseline;
   grid-column: 4/8;
   grid-row: 3/-1;
-  color: white;
-}
-
-.footer__copy-about {
+  color: var(--color-white);
 }
 
 .footer__links-about {
   grid-column: 10/11;
   transform: translateY(0.8vh) translateX(-1vw);
   font-size: 2.4vh;
-}
-.builtBy {
 }
 
 @media only screen and (max-width: 2500px) and (min-width: 1551px) {
