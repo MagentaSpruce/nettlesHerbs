@@ -1098,6 +1098,10 @@ a:active {
   transform: translateX(15%) !important;
 }
 
+.aboutNav-header-overview {
+  color: whitesmoke;
+}
+
 .footer__social-overview {
   grid-column: 4/7;
   grid-row: 2/3;
