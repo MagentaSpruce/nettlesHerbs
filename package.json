@@ -1,0 +1,23 @@
+{
+  "name": "nettlesherbs",
+  "version": "1.0.0",
+  "description": "professional business website for nettles herbs.",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MagentaSpruce/nettlesHerbs.git"
+  },
+  "author": "magentaspruce",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MagentaSpruce/nettlesHerbs/issues"
+  },
+  "homepage": "https://github.com/MagentaSpruce/nettlesHerbs#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "morgan": "^1.9.1"
+  }
+}

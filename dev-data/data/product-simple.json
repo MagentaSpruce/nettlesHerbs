@@ -18,7 +18,6 @@
     ],
     "storedAs": ["Glass Bottle"]
   },
-
   {
     "id": 1,
     "name": "Digest Eez",
@@ -39,7 +38,6 @@
     ],
     "storedAs": ["Glass Bottle"]
   },
-
   {
     "id": 2,
     "name": "Pregnancy Tea",
@@ -60,7 +58,6 @@
     ],
     "storedAs": ["Loose Herb"]
   },
-
   {
     "id": 3,
     "name": "Yoni Steam Blend",
@@ -81,7 +78,6 @@
     ],
     "storedAs": ["Loose Herb"]
   },
-
   {
     "id": 4,
     "name": "Soothing Relief",
@@ -102,7 +98,6 @@
     ],
     "storedAs": ["Loose Herb"]
   },
-
   {
     "id": 5,
     "name": "Loose Leaf Nettle",
@@ -123,7 +118,6 @@
     ],
     "storedAs": ["Loose Herb"]
   },
-
   {
     "id": 6,
     "name": "Loose Leaf Oat Straw",
@@ -144,7 +138,6 @@
     ],
     "storedAs": ["Loose Herb"]
   },
-
   {
     "id": 7,
     "name": "Hand Sanitizer",
@@ -165,7 +158,6 @@
     ],
     "storedAs": ["Glass Bottle"]
   },
-
   {
     "id": 8,
     "name": "Passionflower Tincture",
@@ -205,5 +197,17 @@
       "product-10-4.jpg"
     ],
     "storedAs": ["Glass Bottle"]
+  },
+  {
+    "id": 10,
+    "name": "Test Product",
+    "cost": 10,
+    "medicinalProperties": "stuff"
+  },
+  {
+    "id": 11,
+    "name": "Test Product",
+    "cost": 10,
+    "medicinalProperties": "stuff"
   }
 ]
