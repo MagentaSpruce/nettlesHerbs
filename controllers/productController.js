@@ -4,16 +4,22 @@ const products = JSON.parse(
   fs.readFileSync(`${__dirname}/../dev-data/data/product-simple.json`)
 );
 
-exports.getProduct = (req, res) => {
-  //   console.log(req.params);
-
-  const id = req.params.id * 1;
-  if (id > products.length) {
+exports.checkID = (req, res, next, val) => {
+  console.log(`The product id is ${val}`);
+  if (req.params.id * 1 > products.length) {
     return res.status(404).json({
       status: 'fail',
       message: 'Shit got fucked',
     });
   }
+  next();
+};
+
+exports.getProduct = (req, res) => {
+  //   console.log(req.params);
+
+  const id = req.params.id * 1;
+
   const product = products.find((el) => el.id === id);
   res.status(200).json({
     status: 'success',
@@ -53,12 +59,6 @@ exports.createProduct = (req, res) => {
 };
 
 exports.updateProduct = (req, res) => {
-  if (req.params.id * 1 > products.length) {
-    return res.status(404).json({
-      status: 'fail',
-      message: 'Shit got fucked',
-    });
-  }
   res.status(200).json({
     status: 'success',
     data: {
@@ -68,12 +68,6 @@ exports.updateProduct = (req, res) => {
 };
 
 exports.deleteProduct = (req, res) => {
-  if (req.params.id * 1 > products.length) {
-    return res.status(404).json({
-      status: 'fail',
-      message: 'Shit got fucked',
-    });
-  }
   res.status(204).json({
     status: 'success',
     data: null,
