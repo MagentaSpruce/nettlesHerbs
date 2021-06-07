@@ -7,7 +7,7 @@ router.param('id', productController.checkID);
 router
   .route('/')
   .get(productController.getAllProducts)
-  .post(productController.updateProduct);
+  .post(productController.checkBody, productController.updateProduct);
 router
   .route('/:id')
   .get(productController.getProduct)
