@@ -1,3 +1,4 @@
 .vscode
 include lib
 include bin
+node_modules
