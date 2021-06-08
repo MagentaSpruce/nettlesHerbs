@@ -1,4 +1,4 @@
-const Product = require('./../models/productModel.js');
+const Product = require('./../models/productModel');
 
 exports.getProduct = async (req, res) => {
   try {
@@ -19,8 +19,17 @@ exports.getProduct = async (req, res) => {
 
 exports.getAllProducts = async (req, res) => {
   try {
-    const products = await Product.find();
+    //BUILD QUERY
+    const queryObj = { ...req.query };
+    const excludedField = ['page', 'sort', 'limit', 'fields'];
+    excludedField.forEach(el => delete queryObj[el]);
 
+    // console.log(req.query, queryObj);
+    const query = Product.find(queryObj);
+    //EXECUTE QUERY
+    const products = await query;
+
+    //SEND RESPONSE
     res.status(200).json({
       status: 'success',
       results: products.length,
