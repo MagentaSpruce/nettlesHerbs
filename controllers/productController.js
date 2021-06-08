@@ -25,14 +25,33 @@ exports.getAllProducts = async (req, res) => {
     const excludedField = ['page', 'sort', 'limit', 'fields'];
     excludedField.forEach(el => delete queryObj[el]);
 
-    //2.Advanced filtering
+    //2. Advanced filtering
     let queryStr = JSON.stringify(queryObj);
     queryStr = queryStr.replace(/\b(gte|gt|lte|le)\b/g, match => `$${match}`);
     // console.log(JSON.parse(queryStr));
     // console.log(req.query, queryObj);
-    const query = Product.find(JSON.parse(queryStr));
-
+    let query = Product.find(JSON.parse(queryStr));
     // console.log(req.query);
+
+    //3. Sorting
+    if (req.query.sort) {
+      const sortBy = req.query.sort.split(',').join(' ');
+      // console.log(sortBy);
+      query = query.sort(sortBy);
+    } else {
+      query = query.sort('-createdAt');
+    }
+
+    //3. Field limiting
+    if (req.query.fields) {
+      const fields = req.query.fields.split(',').join(' ');
+      query = query.select(fields);
+    } else {
+      query = query.select('-__v');
+    }
+
+    //4. Pagination
+
     //EXECUTE QUERY
     const products = await query;
 
