@@ -20,12 +20,19 @@ exports.getProduct = async (req, res) => {
 exports.getAllProducts = async (req, res) => {
   try {
     //BUILD QUERY
+    //1. Filtering
     const queryObj = { ...req.query };
     const excludedField = ['page', 'sort', 'limit', 'fields'];
     excludedField.forEach(el => delete queryObj[el]);
 
+    //2.Advanced filtering
+    let queryStr = JSON.stringify(queryObj);
+    queryStr = queryStr.replace(/\b(gte|gt|lte|le)\b/g, match => `$${match}`);
+    // console.log(JSON.parse(queryStr));
     // console.log(req.query, queryObj);
-    const query = Product.find(queryObj);
+    const query = Product.find(JSON.parse(queryStr));
+
+    // console.log(req.query);
     //EXECUTE QUERY
     const products = await query;
 
