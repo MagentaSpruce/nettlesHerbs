@@ -12,16 +12,33 @@ exports.getProduct = (req, res) => {
   // });
 };
 
-exports.getAllProducts = (req, res) => {
+exports.getAllProducts = async (req, res) => {
+  const products = await Product.find();
+
   res.status(200).json({
     status: 'success',
-    requestedAt: req.requestTime
-    // results: products.length,
-    // data: { products: products }
+    results: products.length,
+    data: { products: products }
   });
 };
 
-exports.createProduct = (req, res) => {};
+exports.createProduct = async (req, res) => {
+  try {
+    const newProduct = await Product.create(req.body);
+
+    res.status(201).json({
+      status: 'success',
+      data: {
+        product: newProduct
+      }
+    });
+  } catch (err) {
+    res.status(400).json({
+      status: 'fail',
+      message: err.message
+    });
+  }
+};
 
 exports.updateProduct = (req, res) => {
   res.status(200).json({
