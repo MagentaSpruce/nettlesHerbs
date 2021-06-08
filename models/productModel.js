@@ -4,19 +4,20 @@ const productSchema = new mongoose.Schema({
   name: {
     type: String,
     required: [true, 'A product must have a name.'],
-    unique: true
+    unique: true,
+    trim: true
   },
-  duration: {
+  cost: {
     type: Number,
-    required: [true, 'A tour must have a duration']
+    required: [true, 'A product must have a cost.']
   },
-  maxGroupSize: {
-    type: Number,
-    required: [true, 'A product must have a group size']
-  },
-  difficulty: {
+  medicinalProperties: {
     type: String,
-    required: [true, ' A product must have a difficulty']
+    required: [true, 'A product must have at least one medicinal property']
+  },
+  amount: {
+    type: String,
+    required: [true, ' A product must have an amount']
   },
   ratingAverage: {
     type: Number,
@@ -33,8 +34,23 @@ const productSchema = new mongoose.Schema({
   priceDiscount: Number,
   summary: {
     type: String,
+    trim: true,
+    required: [true, 'A product must have a description.']
+  },
+  description: {
+    type: String,
     trim: true
-  }
+  },
+  imageCover: {
+    type: String,
+    required: [true, 'A product must have a cover image.']
+  },
+  images: [String],
+  createdAt: {
+    type: Date,
+    default: Date.now()
+  },
+  storedAs: [String]
 });
 
 const Product = mongoose.model('Product', productSchema);

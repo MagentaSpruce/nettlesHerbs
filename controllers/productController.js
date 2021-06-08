@@ -1,4 +1,3 @@
-const { findByIdAndDelete } = require('./../models/productModel.js');
 const Product = require('./../models/productModel.js');
 
 exports.getProduct = async (req, res) => {
@@ -48,7 +47,7 @@ exports.createProduct = async (req, res) => {
   } catch (err) {
     res.status(400).json({
       status: 'fail',
-      message: err.message
+      message: err
     });
   }
 };
