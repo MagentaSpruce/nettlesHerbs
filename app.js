@@ -1,8 +1,8 @@
 const express = require('express');
 const morgan = require('morgan');
 
-const productRouter = require('./routes/productRoutes');
-const herbRouter = require('./routes/herbRoutes');
+const productRouter = require('./routes/productRoutes.js');
+const herbRouter = require('./routes/herbRoutes.js');
 
 const app = express();
 console.log(process.env.NODE_ENV);
