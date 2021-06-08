@@ -197,17 +197,5 @@
       "product-10-4.jpg"
     ],
     "storedAs": ["Glass Bottle"]
-  },
-  {
-    "id": 10,
-    "name": "Test Product",
-    "cost": 10,
-    "medicinalProperties": "stuff"
-  },
-  {
-    "id": 11,
-    "name": "Test Product",
-    "cost": 10,
-    "medicinalProperties": "stuff"
   }
 ]

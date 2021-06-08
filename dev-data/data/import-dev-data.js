@@ -21,18 +21,37 @@ mongoose
   });
 
 //READ JSON FILE
-const products = JSON.parse(fs.readFileSync('products-simple.json', 'utf-8'));
-
+const products = JSON.parse(
+  fs.readFileSync(`${__dirname}/product-simple.json`, 'utf-8')
+);
 
 //IMPORT DATA TO DB
 const importData = async () => {
-    try{
-        await Product.create(products)
-        console.log('Data successfully loaded!');
-    }catch(err){
-        console.log(err);
-    }
+  try {
+    await Product.create(products);
+    console.log('Data successfully loaded!');
+  } catch (err) {
+    console.log(err);
+  }
+  process.exit();
 };
 
 //DELETE ALL DATA FROM COLLECTION
-const delete 
+const deleteData = async () => {
+  try {
+    await Product.deleteMany();
+    console.log('Data successfully deleted!');
+  } catch (err) {
+    console.log(err);
+  }
+  process.exit();
+};
+
+//SWITCH
+if (process.argv[2] === '--import') {
+  importData();
+} else if (process.argv[2] === '--delete') {
+  deleteData();
+}
+
+console.log(process.argv);
