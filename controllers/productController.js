@@ -1,3 +1,4 @@
+const { findByIdAndDelete } = require('./../models/productModel.js');
 const Product = require('./../models/productModel.js');
 
 exports.getProduct = async (req, res) => {
@@ -61,7 +62,8 @@ exports.updateProduct = async (req, res) => {
     res.status(200).json({
       status: 'success',
       data: {
-        product: 'We will update you baby!'
+        //property name has same name as the value
+        product: product
       }
     });
   } catch (err) {
@@ -72,9 +74,17 @@ exports.updateProduct = async (req, res) => {
   }
 };
 
-exports.deleteProduct = (req, res) => {
-  res.status(204).json({
-    status: 'success',
-    data: null
-  });
+exports.deleteProduct = async (req, res) => {
+  try {
+    await Product.findByIdAndDelete(req.params.id);
+    res.status(204).json({
+      status: 'success',
+      data: null
+    });
+  } catch (err) {
+    res.status(400).json({
+      status: 'fail',
+      message: err.message
+    });
+  }
 };
