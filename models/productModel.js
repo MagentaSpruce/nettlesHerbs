@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const slugify = require('slugify');
 
 const productSchema = new mongoose.Schema({
   name: {
@@ -7,6 +8,7 @@ const productSchema = new mongoose.Schema({
     unique: true,
     trim: true
   },
+  slug: String,
   cost: {
     type: Number,
     required: [true, 'A product must have a cost.']
@@ -53,6 +55,14 @@ const productSchema = new mongoose.Schema({
   },
   storedAs: [String]
 });
+
+//DOCUMENT MIDDLEWARE: runs before .save() and .create()
+productSchema.pre('save', function(next) {
+  this.slug = slugify(this.name, { lower: true });
+  next();
+});
+
+//QUERY MIDDLEWARE
 
 const Product = mongoose.model('Product', productSchema);
 
