@@ -6,7 +6,9 @@ const productSchema = new mongoose.Schema({
     type: String,
     required: [true, 'A product must have a name.'],
     unique: true,
-    trim: true
+    trim: true,
+    maxlength: [40, 'A product name must have less or equal to 40 characters.'],
+    minlength: [7, 'A product name must have more or equal to 7 characters.']
   },
   slug: String,
   cost: {
@@ -23,7 +25,9 @@ const productSchema = new mongoose.Schema({
   },
   ratingAverage: {
     type: Number,
-    default: 4.5
+    default: 4.5,
+    min: [1, 'Rating must be above 1.0'],
+    max: [5, 'Rating must be below 5.0']
   },
   ratingsQuantity: {
     type: Number,
