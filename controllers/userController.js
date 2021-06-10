@@ -1,28 +1,28 @@
-exports.getAllHerbs = (req, res) => {
+exports.getAllUsers = (req, res) => {
   res.status(500).json({
     status: 'Error',
     message: 'This route is not yet defined'
   });
 };
-exports.getHerb = (req, res) => {
+exports.getUser = (req, res) => {
   res.status(500).json({
     status: 'Error',
     message: 'This route is not yet defined'
   });
 };
-exports.createHerb = (req, res) => {
+exports.createUser = (req, res) => {
   res.status(500).json({
     status: 'Error',
     message: 'This route is not yet defined'
   });
 };
-exports.updateHerb = (req, res) => {
+exports.updateUser = (req, res) => {
   res.status(500).json({
     status: 'Error',
     message: 'This route is not yet defined'
   });
 };
-exports.deleteHerb = (req, res) => {
+exports.deleteUser = (req, res) => {
   res.status(500).json({
     status: 'Error',
     message: 'This route is not yet defined'

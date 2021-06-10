@@ -4,7 +4,7 @@ const morgan = require('morgan');
 const AppError = require('./utils/appError');
 const globalErrorHandler = require('./controllers/errorController');
 const productRouter = require('./routes/productRoutes.js');
-const herbRouter = require('./routes/herbRoutes.js');
+const userRouter = require('./routes/userRoutes.js');
 
 const app = express();
 console.log(process.env.NODE_ENV);
@@ -28,7 +28,7 @@ app.use((req, res, next) => {
 });
 
 app.use('/api/v1/products', productRouter);
-app.use('/api/v1/herbs', herbRouter);
+app.use('/api/v1/users', userRouter);
 
 app.all('*', (req, res, next) => {
   next(new AppError(`Can't find ${req.originalUrl} on this server!`, 404));
