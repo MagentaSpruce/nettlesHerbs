@@ -1,3 +1,4 @@
+const { promisify } = require('util');
 const jwt = require('jsonwebtoken');
 const User = require('./../models/userModel');
 const catchAsync = require('./../utils/catchAsync');
@@ -14,7 +15,9 @@ exports.signup = catchAsync(async (req, res, next) => {
     name: req.body.name,
     email: req.body.email,
     password: req.body.password,
-    passwordConfirm: req.body.passwordConfirm
+    passwordConfirm: req.body.passwordConfirm,
+    passwordChangedAt: req.body.passwordChangedAt,
+    role: req.body.role
   });
 
   const token = signToken(newUser._id);
@@ -61,18 +64,42 @@ exports.protect = catchAsync(async (req, res, next) => {
   ) {
     token = req.headers.authorization.split(' ')[1];
   }
-  console.log(token);
+  //   console.log(token);
   if (!token) {
     return next(
       new AppError('You are not logged in! Please log in to get access.', 401)
     );
   }
   // 2) Verify the token using jwt algorithm
-
+  const decoded = await promisify(jwt.verify)(token, process.env.JWT_SECRET);
+  //   console.log(decoded);
   // 3) Check if user still exists
-
+  const currentUser = await User.findById(decoded.id);
+  if (!currentUser) {
+    return next(
+      new AppError('The user belonging to this token no longer exist.', 401)
+    );
+  }
   // 4) Check if user changed password after the JWT was issued
+  if (currentUser.changedPasswordAfter(decoded.iat)) {
+    return next(
+      new AppError('User recently changed password! Please log in again.', 401)
+    );
+  }
 
-  // 5) If no problems, then next is called.
+  // 5) If no problems, then next is called and access to the protected route is granted
+  req.user = currentUser;
   next();
 });
+
+exports.restrictTo = (...roles) => {
+  return (req, res, next) => {
+    // roles ['admin']
+    if (!roles.includes(req.user.role)) {
+      return next(
+        new AppError('You do not have permission to perform this action', 403)
+      );
+    }
+    next();
+  };
+};
