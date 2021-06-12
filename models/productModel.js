@@ -57,7 +57,32 @@ const productSchema = new mongoose.Schema({
     default: Date.now(),
     select: false
   },
-  storedAs: [String]
+  storedAs: [String],
+  // startLocation: {
+  //   //GeoJSON
+  //   type: {
+  //     type: String,
+  //     default: 'Point',
+  //     enum: ['Point']
+  //   },
+  //   coordinates: [Number],
+  //   address: String,
+  //   description: String
+  // },
+  locations: [
+    {
+      type: {
+        type: String,
+        default: 'Point',
+        enum: ['Point']
+      },
+      coordinates: [Number],
+      address: String,
+      description: String
+      // day: Number
+    }
+  ],
+  herbs: [{ type: mongoose.Schema.ObjectId, ref: 'User' }]
 });
 
 //DOCUMENT MIDDLEWARE: runs before .save() and .create()
@@ -66,7 +91,20 @@ productSchema.pre('save', function(next) {
   next();
 });
 
+// productSchema.pre('save', async function(next) {
+//   const herbsPromises = this.herbs.map(async id => await User.findById(id));
+//   this.herbs = await Promise.all(herbsPromises);
+//   next();
+// });
+
 //QUERY MIDDLEWARE
+productSchema.pre(/^find/, function(next) {
+  this.populate({
+    path: 'herbs',
+    select: '-__v -passwordChangedAt'
+  });
+  next();
+});
 
 const Product = mongoose.model('Product', productSchema);
 
