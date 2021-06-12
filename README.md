@@ -13,7 +13,7 @@ Building this project out has helped me to better learn and practice the followi
 5. NodeJS
 6. Creating schema and models
 7. Routing
-8. CRUD documents
+8. CRUD operations
 9. Working with remote databases
 10. Express
 11. Mongoose/MongoDB
