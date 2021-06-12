@@ -1,5 +1,6 @@
 const express = require('express');
 const morgan = require('morgan');
+const rateLimit = require('express');
 
 const AppError = require('./utils/appError');
 const globalErrorHandler = require('./controllers/errorController');
