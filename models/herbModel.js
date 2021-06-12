@@ -1,12 +1,23 @@
 const mongoose = require('mongoose');
 
-const herbSchema = new mongoose.Schema({
-  name: {
-    type: String,
-    required: [true, 'An herb must have a name.']
+const herbSchema = new mongoose.Schema(
+  {
+    name: {
+      type: String,
+      required: [true, 'An herb must have a name.']
+    },
+    photo: String,
+    product: {
+      type: mongoose.Schema.ObjectId,
+      ref: 'Product',
+      required: [true, 'Herb must belong to a product.']
+    }
   },
-  photo: String
-});
+  {
+    toJSON: { virtuals: true },
+    toObject: { virtuals: true }
+  }
+);
 
 const Herb = mongoose.model('Herb', herbSchema);
 
