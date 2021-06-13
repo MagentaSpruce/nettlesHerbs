@@ -86,7 +86,7 @@ const productSchema = new mongoose.Schema(
         // day: Number
       }
     ],
-    herbs: [{ type: mongoose.Schema.ObjectId, ref: 'User' }]
+    herbs: [{ type: mongoose.Schema.ObjectId, ref: 'Herb' }]
   },
   {
     toJSON: { virtuals: true },
@@ -117,7 +117,7 @@ productSchema.pre('save', function(next) {
 productSchema.pre(/^find/, function(next) {
   this.populate({
     path: 'herbs',
-    select: '-__v -passwordChangedAt'
+    select: '-__v -passwordChangedAt -id'
   });
   next();
 });

@@ -60,6 +60,7 @@ app.use(express.static(`${__dirname}/public`));
 
 // Testing MW
 app.use((req, res, next) => {
+  // eslint-disable-next-line no-console
   console.log(
     'This is baby cakes completely useless middleware coming at you live scribe, do you dig it? 🕵️‍♀️'
   );

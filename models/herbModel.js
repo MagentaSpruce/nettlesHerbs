@@ -6,12 +6,15 @@ const herbSchema = new mongoose.Schema(
       type: String,
       required: [true, 'An herb must have a name.']
     },
-    photo: String,
-    product: {
-      type: mongoose.Schema.ObjectId
-      // ref: 'Product',
-      // required: [true, 'Herb must belong to a product.']
+    photo: {
+      type: String,
+      required: [true, 'An herb must have a picture.']
     }
+    // product: {
+    //   type: mongoose.Schema.ObjectId
+    //   // ref: 'Product',
+    //   // required: [true, 'Herb must belong to a product.']
+    // }
   },
   {
     toJSON: { virtuals: true },
