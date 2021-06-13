@@ -14,6 +14,7 @@ router
   .route('/')
   .get(authController.protect, productController.getAllProducts)
   .post(productController.createProduct);
+
 router
   .route('/:id')
   .get(productController.getProduct)

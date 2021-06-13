@@ -8,9 +8,9 @@ const herbSchema = new mongoose.Schema(
     },
     photo: String,
     product: {
-      type: mongoose.Schema.ObjectId,
-      ref: 'Product',
-      required: [true, 'Herb must belong to a product.']
+      type: mongoose.Schema.ObjectId
+      // ref: 'Product',
+      // required: [true, 'Herb must belong to a product.']
     }
   },
   {
