@@ -6,12 +6,16 @@ const router = express.Router();
 
 router
   .route('/')
-  .get(herbController.getAllHerbs)
-  .post(authController.protect, herbController.createHerb);
+  .get(authController.protect, herbController.getAllHerbs)
+  .post(
+    authController.protect,
+    authController.restrictTo('admin'),
+    herbController.createHerb
+  );
 
 router
   .route('/:id')
-  .get(herbController.getHerb)
+  .get(authController.protect, herbController.getHerb)
   .patch(
     authController.protect,
     authController.restrictTo('admin'),

@@ -9,14 +9,16 @@ const router = express.Router({
 router
   .route('/')
   .get(reviewController.getAllReviews)
-  .post(authController.protect, reviewController.createReview);
+  .post(
+    authController.protect,
+    reviewController.setProductUserIds,
+    reviewController.createReview
+  );
 
 router
   .route('/:id')
-  .delete(
-    authController.protect,
-    authController.restrictTo('admin'),
-    reviewController.deleteReview
-  );
+  .get(authController.protect, reviewController.getReview)
+  .patch(authController.protect, reviewController.updateReview)
+  .delete(reviewController.deleteReview);
 
 module.exports = router;

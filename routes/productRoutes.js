@@ -21,7 +21,11 @@ router
 router
   .route('/:id')
   .get(productController.getProduct)
-  .patch(productController.updateProduct)
+  .patch(
+    authController.protect,
+    authController.restrictTo('admin'),
+    productController.updateProduct
+  )
   .delete(
     authController.protect,
     authController.restrictTo('admin'),
