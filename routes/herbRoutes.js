@@ -4,27 +4,17 @@ const authController = require('./../controllers/authController');
 
 const router = express.Router();
 
+router.use(authController.protect);
+
 router
   .route('/')
-  .get(authController.protect, herbController.getAllHerbs)
-  .post(
-    authController.protect,
-    authController.restrictTo('admin'),
-    herbController.createHerb
-  );
+  .get(herbController.getAllHerbs)
+  .post(authController.restrictTo('admin'), herbController.createHerb);
 
 router
   .route('/:id')
-  .get(authController.protect, herbController.getHerb)
-  .patch(
-    authController.protect,
-    authController.restrictTo('admin'),
-    herbController.updateHerb
-  )
-  .delete(
-    authController.protect,
-    authController.restrictTo('admin'),
-    herbController.deleteHerb
-  );
+  .get(herbController.getHerb)
+  .patch(authController.restrictTo('admin'), herbController.updateHerb)
+  .delete(authController.restrictTo('admin'), herbController.deleteHerb);
 
 module.exports = router;

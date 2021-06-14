@@ -58,8 +58,8 @@ exports.getMe = (req, res, next) => {
   next();
 };
 
-exports.getAllUsers = factory.getAll(User);
 exports.getUser = factory.getOne(User);
+exports.getAllUsers = factory.getAll(User);
 // Do NOT attempt to change PW with updateUser***
 exports.updateUser = factory.updateOne(User);
 exports.deleteUser = factory.deleteOne(User);

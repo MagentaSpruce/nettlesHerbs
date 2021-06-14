@@ -48,24 +48,27 @@ const userSchema = new mongoose.Schema({
   }
 });
 
-userSchema.pre('save', async function(next) {
-  //Only run this function if password was modified
-  if (!this.isModified('password')) return next();
+//Block out the below script when importing from dev -data to avoid password encrypting incoming files UNLESS they DO NOT have an ID - these DO, so the code is canceled out until AFTER the data is all imported.
+//********************* */
+// userSchema.pre('save', async function(next) {
+//   //Only run this function if password was modified
+//   if (!this.isModified('password')) return next();
 
-  //Hash the password, cost is 12
-  this.password = await bcrypt.hash(this.password, 12);
+//   //Hash the password, cost is 12
+//   this.password = await bcrypt.hash(this.password, 12);
 
-  //Delete passwordConfirm field
-  this.passwordConfirm = undefined;
-  next();
-});
+//   //Delete passwordConfirm field
+//   this.passwordConfirm = undefined;
+//   next();
+// });
 
-userSchema.pre('save', function(next) {
-  if (!this.isModified('password') || this.isNew) return next();
+// userSchema.pre('save', function(next) {
+//   if (!this.isModified('password') || this.isNew) return next();
 
-  this.passwordChangedAt = Date.now() - 1000;
-  next();
-});
+//   this.passwordChangedAt = Date.now() - 1000;
+//   next();
+// });
+//************* */
 
 userSchema.pre(/^find/, function(next) {
   // this points to the current query
