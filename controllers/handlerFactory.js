@@ -75,12 +75,14 @@ exports.getAll = Model =>
       .sort()
       .limitFields()
       .paginate();
-    const doc = (await features.query) && (await Model.find());
+    const doc = await features.query;
+    const doc2 = await Model.find();
+    // .explain()
 
     //SEND RESPONSE
     res.status(200).json({
       status: 'success',
-      results: doc.length,
-      data: { data: doc }
+      results: doc.length && doc2.length,
+      data: { data: doc, doc2 }
     });
   });
