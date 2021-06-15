@@ -80,7 +80,10 @@ app.use((req, res, next) => {
 
 // ROUTES
 app.get('/base', (req, res) => {
-  res.status(200).render('base');
+  res.status(200).render('base', {
+    product: 'Anxious Begone',
+    user: 'Happy'
+  });
 });
 
 app.use('/api/v1/products', productRouter);
