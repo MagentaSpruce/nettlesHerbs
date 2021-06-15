@@ -1079,12 +1079,9 @@ a:active {
   height: 10vh;
 }
 
-.aboutNav-links-overview {
-  font-size: 2rem;
-}
-
 .aboutNav-list-overview {
   list-style: none;
+  font-size: 2rem;
   transform: translateX(30%);
 }
 .aboutNav-image-overview {
@@ -1101,6 +1098,7 @@ a:active {
 
 .aboutNav-header-overview {
   color: whitesmoke;
+  margin: 0 auto;
 }
 
 .footer__social-overview {
@@ -1161,7 +1159,7 @@ a:active {
   }
 
   body {
-    background-image: url('/public/img/site/full-bloom.png') !important;
+    background-image: url('./public/img/site/full-bloom.png') !important;
   }
 
   .card-container {
