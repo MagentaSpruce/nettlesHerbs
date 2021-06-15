@@ -13,6 +13,7 @@ const productRouter = require('./routes/productRoutes.js');
 const userRouter = require('./routes/userRoutes.js');
 const reviewRouter = require('./routes/reviewRoutes');
 const herbRouter = require('./routes/herbRoutes');
+const viewRouter = require('./routes/viewRoutes');
 
 const app = express();
 // console.log(process.env.NODE_ENV);
@@ -53,7 +54,7 @@ app.use(xss());
 app.use(
   hpp({
     whitelist: [
-      'cost',
+      'makeUp',
       'price',
       'ratingsQuantity',
       'ratingsAverage',
@@ -78,26 +79,7 @@ app.use((req, res, next) => {
   next();
 });
 
-// ROUTES
-app.get('/base', (req, res) => {
-  res.status(200).render('base', {
-    product: 'Anxious Begone',
-    user: 'Happy'
-  });
-});
-
-app.get('/overview', (req, res) => {
-  res.status(200).render('_overview', {
-    title: 'All Products'
-  });
-});
-
-app.get('/product', (req, res) => {
-  res.status(200).render('_product', {
-    title: 'Axnious Begone'
-  });
-});
-
+app.use('/', viewRouter);
 app.use('/api/v1/products', productRouter);
 app.use('/api/v1/users', userRouter);
 app.use('/api/v1/reviews', reviewRouter);

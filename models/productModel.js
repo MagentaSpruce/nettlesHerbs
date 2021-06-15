@@ -15,9 +15,9 @@ const productSchema = new mongoose.Schema(
       minlength: [7, 'A product name must have more or equal to 7 characters.']
     },
     slug: String,
-    cost: {
-      type: Number,
-      required: [true, 'A product must have a cost.']
+    makeUp: {
+      type: String,
+      required: [true, 'A product must have a make up.']
     },
     medicinalProperties: {
       type: String,

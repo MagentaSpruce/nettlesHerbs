@@ -216,67 +216,67 @@
               type: 'Feature',
               geometry: {
                 type: 'Point',
-                coordinates: [-75.0152, -9.19],
+                coordinates: [-75.0152, -9.19]
               },
               properties: {
-                description: 'Passion flower, Peru',
-              },
+                description: 'Passion flower, Peru'
+              }
             },
             {
               type: 'Feature',
               geometry: {
                 type: 'Point',
-                coordinates: [108.2772, 14.0583],
+                coordinates: [108.2772, 14.0583]
               },
               properties: {
-                description: 'Ginger root, Vietnam',
-              },
+                description: 'Ginger root, Vietnam'
+              }
             },
             {
               type: 'Feature',
               geometry: {
                 type: 'Point',
-                coordinates: [15.2551, 54.526],
+                coordinates: [15.2551, 54.526]
               },
               properties: {
-                description: 'Red raspberry leaves, Europe',
-              },
+                description: 'Red raspberry leaves, Europe'
+              }
             },
             {
               type: 'Feature',
               geometry: {
                 type: 'Point',
-                coordinates: [1.2644, 46.2022],
+                coordinates: [1.2644, 46.2022]
               },
               properties: {
-                description: 'Dafodil, Northern Europe',
-              },
-            },
-          ],
+                description: 'Dafodil, Northern Europe'
+              }
+            }
+          ]
         };
 
         const map = new mapboxgl.Map({
           container: 'map',
           style: 'mapbox://styles/mapbox/light-v10',
-          scrollZoom: true,
+          scrollZoom: true
         });
 
         const bounds = new mapboxgl.LngLatBounds();
 
-        geojson.features.forEach(function (marker) {
+        geojson.features.forEach(function(marker) {
           var el = document.createElement('div');
           el.className = 'marker';
 
           new mapboxgl.Marker({
             element: el,
-            anchor: 'bottom',
+            anchor: 'bottom'
           })
             .setLngLat(marker.geometry.coordinates)
             .addTo(map);
 
           new mapboxgl.Popup({
             offset: 30,
-            closeOnClick: false,
+            closeOnClick: false
           })
             .setLngLat(marker.geometry.coordinates)
             .setHTML('<p>' + marker.properties.description + '</p>')
@@ -290,11 +290,11 @@
             top: 200,
             bottom: 150,
             left: 50,
-            right: 50,
-          },
+            right: 50
+          }
         });
 
-        map.on('load', function () {
+        map.on('load', function() {
           map.addLayer({
             id: 'route',
             type: 'line',
@@ -308,11 +308,11 @@
                     [-82.6403, 27.7676],
                     [-74.8273, 11.0014],
                     [-83.9844, 34.5261],
-                    [-81.5471, 30.0821],
-                  ],
-                },
-              },
-            },
+                    [-81.5471, 30.0821]
+                  ]
+                }
+              }
+            }
           });
         });
       </script>
@@ -494,7 +494,7 @@
         <div class="cta__img cta__img--logo">
           <img
             src="img/site/logo-small.png"
-            alt="Natours logo"
+            alt="Nettles Herbs logo"
             class="Nettles Herbs logo"
           />
         </div>

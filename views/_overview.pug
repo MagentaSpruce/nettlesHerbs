@@ -1,4 +1,41 @@
 extends base
 
 block content   
-    h1 He's a racist too
+
+    main.main
+      .card-container
+        each product in products
+            .card-overview
+                div(class='card__header')
+                    div(class='card__picture')
+                        div(class='card__picture-overlay') &nbsp;
+                        img(src=`img/products/${product.imageCover}` alt=`${product.name}` class='card__picture-img')
+                    h3.heading-tertirary
+                        span= product.name
+                div(class='card__details')
+                    h4(class='card__sub-heading')= `${product.makeUp}`
+                    p(class='card__text')= `${product.summary}`
+                    div(class='card__data')
+                        svg.specials-icon-specials-info
+                            use(xlink:href='img/site/sprite.svg#icon-forrst')
+                        span= `${product.storedAs}`
+                    div(class='card__data')
+                        svg.specials-icon-specials-meter
+                            use(xlink:href='img/site/sprite.svg#icon-meter2')
+                        span= `${product.amount}`
+                    div(class='card__data')
+                        svg.specials-icon-specials-sunset
+                            use(xlink:href='img/site/sprite.svg#icon-sunset')
+                        span 4.8
+                    div(class='card__data')
+                        svg.specials-icon-specials-information
+                            use(xlink:href='img/site/sprite.svg#icon-information')
+                        span 15
+                div(class='card__footer')
+                    p
+                        span(class='card__footer-value')= `$${product.price} `
+                        span(class='card__footer-text') each
+                    p(class='card__ratings')
+                        span(class='card__footer-value')= `${product.ratingAverage} `
+                        span(class='card__footer-text')= (`rating(${product.ratingsQuantity})`)
+                    a.btn.btn--green.btn--small(href=`/products/${product.slug}`) Details
