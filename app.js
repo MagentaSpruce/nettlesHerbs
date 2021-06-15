@@ -1,3 +1,4 @@
+const path = require('path');
 const express = require('express');
 const morgan = require('morgan');
 const rateLimit = require('express-rate-limit');
@@ -16,7 +17,13 @@ const herbRouter = require('./routes/herbRoutes');
 const app = express();
 // console.log(process.env.NODE_ENV);
 
+app.set('view engine', 'pug');
+app.set('views', path.join(__dirname, 'views'));
+
 // GLOBAL MIDDLEWARE
+// Serving static files
+app.use(express.static(path.join(__dirname, 'public')));
+
 // Set security HTTP headers
 app.use(helmet());
 
@@ -55,9 +62,6 @@ app.use(
   })
 );
 
-// Serving static files
-app.use(express.static(`${__dirname}/public`));
-
 // Testing MW
 app.use((req, res, next) => {
   // eslint-disable-next-line no-console
@@ -72,6 +76,11 @@ app.use((req, res, next) => {
   req.requestTime = new Date().toISOString();
   // console.log(req.headers);
   next();
+});
+
+// ROUTES
+app.get('/base', (req, res) => {
+  res.status(200).render('base');
 });
 
 app.use('/api/v1/products', productRouter);
