@@ -17,7 +17,7 @@ Building this project out has helped me to better learn and practice the followi
 9. Working with remote databases
 10. Express
 11. Mongoose/MongoDB
-12. npm packages 
+12. npm packages
 13. Regular expressions
 14. Error handling
 15. Authenitcation
@@ -26,3 +26,4 @@ Building this project out has helped me to better learn and practice the followi
 
 This is a large and dynamic application. The API documentation can be found here:(). A very general, non-refactored overview of the project with pertinent notes and inputs is below. To view the refactored final product please check the relevant code files.
 Hungry
+hippos
