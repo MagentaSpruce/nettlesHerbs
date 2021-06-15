@@ -21,7 +21,7 @@ const herbSchema = new mongoose.Schema(
     toObject: { virtuals: true }
   }
 );
-
+herbSchema.index({ location: '2dsphere' });
 const Herb = mongoose.model('Herb', herbSchema);
 
 module.exports = Herb;

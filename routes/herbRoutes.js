@@ -7,6 +7,10 @@ const router = express.Router();
 router.use(authController.protect);
 
 router
+  .route('/herbs-within/:distance/center/:latlng/unit/:unit')
+  .get(herbController.getHerbsWithin);
+
+router
   .route('/')
   .get(herbController.getAllHerbs)
   .post(authController.restrictTo('admin'), herbController.createHerb);
