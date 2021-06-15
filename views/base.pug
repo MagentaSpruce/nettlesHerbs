@@ -7,10 +7,11 @@ html(lang='en')
     link(rel='shortcut icon' href='./img/site/icon.png' type='image/x-icon')
     link(rel='stylesheet' href='./css/style.css')
     link(rel='stylesheet' href='./css/style2.css')
-    title Nettles Herbs | Products page
+    title Nettles Herbs | #{title}
   body
     include _header
-    main.main
+    block content 
+        h1 Hello sour krauts
     include _footer
 
 
