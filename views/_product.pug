@@ -1,4 +1,104 @@
 extends base
+include _reviewCard
+
+block append head 
+    script(src='/js/mapbox.js')
+
+
+//- mixin overviewBox(label, text, icon)
+//-     div(class='overview-box__detail')
+//-         svg.product-icon-medicinal
+//-             use(xlink:href=`/img/site/sprite.svg#icon-${icon}`)
+//-         span(class='overview-box__label')= label
+//-         span(class='overview-box__text')= text
 
 block content 
-    h1 Dont tell me what to do!
+    section.section-header
+        .header__hero 
+
+            img.header__hero-img(src=`/img/products/${product.imageCover}` alt=`${product.name}`)
+
+
+
+
+        .heading-box
+            h1.heading-primary
+                span= `${product.name}`
+            div(class='heading-box__group')
+                div(class='heading-box__detail')
+                    svg.specials-icon-product-price
+                        use(xlink:href='/img/site/sprite.svg#icon-credit')
+                    span(class='heading-box__text')= `${product.price}`
+            div(class='heading-box__detail')
+
+    section.section-description
+        .overview-box
+            div
+                div(class='overview-box__group')
+                    h2.heading-secondary.ma-bt-lg Quick facts
+                    div(class='overview-box__detail')
+                        svg.product-icon-stored
+                            use(xlink:href='/img/site/sprite.svg#icon-forrst')
+                        span(class='overview-box__label') Stored as
+                        span(class='overview-box__text')= `${product.storedAs}`
+                    div(class='overview-box__detail')
+                        svg.product-icon-amount
+                            use(xlink:href='/img/site/sprite.svg#icon-meter2')
+                        span(class='overview-box__label') Amount
+                        span(class='overview-box__text')= `${product.amount}`
+                    div(class='overview-box__detail')
+                        svg.product-icon-medicinal
+                            use(xlink:href='/img/site/sprite.svg#icon-plus-square')
+                        span(class='overview-box__label') Medicinal Properties
+                        span(class='overview-box__text')= `${product.medicinalProperties}`
+                    div(class='overview-box__detail')
+                        svg.product-icon-dosage
+                            use(xlink:href='/img/site/sprite.svg#icon-eyedropper')
+                        span(class='overview-box__label') Dosage
+                        span(class='overview-box__text') 1 cup per day with or before breakfast.
+                div(class='overview-box__group')
+                    h2.heading-secondary.ma-bt-lg Active ingredients
+
+                    each herb in product.herbs
+                        div(class='overview-box__detail')
+                            img(src=`/img/herbs/${herb.photo}` alt=`${herb.name}` class='overview-box__img')
+                            span(class='overview-box__label')= herb.name
+                            span(class='overview-box__text')
+                                em= herb.latin
+
+
+
+        .description-box
+            h2.heading-secondary.ma-bt-lg= `About the ${product.name}`
+            - const paragraphs = product.description.split('\n');
+            each p in paragraphs
+                p(class='description__text')= p
+
+    section.section-pictures
+        each img, i in product.images
+            .picture-box
+                img.picture-box__img(src=`/img/products/${img}`, alt=`Herb in ${product.name}`, class=`picture-box__img--${i + 1}`)
+
+    section.section-map
+        #map(data-locations=`${JSON.stringify(product.locations)}`)
+
+    section.section-reviews
+        .reviews
+            each review in product.reviews
+                +reviewCard(review)
+
+
+
+
+    section.section-cta
+        .cta
+            div(class='cta__img cta__img--logo')
+                img.Nettles.Herbs.logo(src='/img/site/logo-small.png' alt='Nettles Herbs logo')
+            img(src='/img/site/leaf.jpg' alt='Up close picture of a leaf' class='cta__img cta__img--1')
+            img(src='/img/site/leaf2.jpg' alt='Green leaf close up' class='cta__img cta__img--2')
+            div(class='cta__content')
+                h2.heading-secondary What are you waiting for?
+                p(class='cta__text')
+                    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get
+                    | started on your new path today!
+                button.btn.btn--green.span-all-rows Order Now 

@@ -1,3 +1,4 @@
+/* eslint-disable */
 //This is the script for the homepage tabbed component and slider.
 'use strict';
 let viewport;
@@ -11,15 +12,15 @@ const tabs = document.querySelectorAll('.operations__tab');
 const tabsContainer = document.querySelector('.operations__tab-container');
 const tabsContent = document.querySelectorAll('.operations__content');
 
-tabsContainer.addEventListener('click', function (e) {
+tabsContainer.addEventListener('click', function(e) {
   const clicked = e.target.closest('.operations__tab');
 
   // Guard clause
   if (!clicked) return;
 
   // Remove active classes
-  tabs.forEach((t) => t.classList.remove('operations__tab--active'));
-  tabsContent.forEach((c) => c.classList.remove('operations__content--active'));
+  tabs.forEach(t => t.classList.remove('operations__tab--active'));
+  tabsContent.forEach(c => c.classList.remove('operations__content--active'));
 
   // Activate tab
   clicked.classList.add('operations__tab--active');
@@ -31,7 +32,7 @@ tabsContainer.addEventListener('click', function (e) {
 });
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////SLIDER
-const slider1 = function () {
+const slider1 = function() {
   const slider = document.querySelector('.slider');
   const slides = document.querySelectorAll('.slide');
   const btnLeft = document.querySelector('.slider__btn--left');
@@ -44,8 +45,8 @@ const slider1 = function () {
   let curSlide = 0;
   const maxSlide = slides.length; //slides is a nodelist
 
-  const createDots = function () {
-    slides.forEach(function (_, i) {
+  const createDots = function() {
+    slides.forEach(function(_, i) {
       dotContainer.insertAdjacentHTML(
         'beforeend',
         `<button class="dots__dot" data-slide="${i}"></button>`
@@ -53,23 +54,23 @@ const slider1 = function () {
     });
   };
 
-  const activateDot = function (slide) {
+  const activateDot = function(slide) {
     document
       .querySelectorAll('.dots__dot')
-      .forEach((dot) => dot.classList.remove('dots__dot--active'));
+      .forEach(dot => dot.classList.remove('dots__dot--active'));
 
     document
       .querySelector(`.dots__dot[data-slide="${slide}"]`)
       .classList.add('dots__dot--active');
   };
 
-  const goToSlide = function (slide) {
+  const goToSlide = function(slide) {
     slides.forEach(
       (s, i) => (s.style.transform = `translateX(${150 * (i - slide)}%)`)
     );
   };
 
-  const nextSlide = function () {
+  const nextSlide = function() {
     if (curSlide === maxSlide - 1) {
       curSlide = 0;
     } else {
@@ -79,7 +80,7 @@ const slider1 = function () {
     activateDot(curSlide);
   };
 
-  const prevSlide = function () {
+  const prevSlide = function() {
     if (curSlide === 0) {
       curSlide = maxSlide - 1;
     } else {
@@ -89,7 +90,7 @@ const slider1 = function () {
     activateDot(curSlide);
   };
 
-  const init = function () {
+  const init = function() {
     goToSlide(2);
     createDots();
     activateDot(2);
@@ -99,13 +100,13 @@ const slider1 = function () {
   btnRight.addEventListener('click', nextSlide);
   btnLeft.addEventListener('click', prevSlide);
 
-  document.addEventListener('keydown', function (e) {
+  document.addEventListener('keydown', function(e) {
     console.log(e);
     if (e.key === 'ArrowLeft') prevSlide();
     if (e.key === 'ArrowRight') nextSlide();
   });
 
-  dotContainer.addEventListener('click', function (e) {
+  dotContainer.addEventListener('click', function(e) {
     if (e.target.classList.contains('dots__dot')) {
       const { slide } = e.target.dataset;
       goToSlide(slide);

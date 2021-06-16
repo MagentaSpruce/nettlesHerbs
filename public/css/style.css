@@ -630,7 +630,7 @@ a:active {
 .reviews__card {
   width: 30rem;
   padding: 4rem;
-  background-image: url(/public/img/site/leaves.png);
+  background-image: url(/img/site/leaves.png);
   border-radius: 3px;
   -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
@@ -689,7 +689,7 @@ a:active {
   margin-right: 1px;
 }
 .reviews__star--active {
-  fill: #55c57a;
+  fill: forestgreen;
 }
 .reviews__star--inactive {
   fill: #bbb;

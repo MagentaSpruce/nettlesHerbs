@@ -13,8 +13,13 @@ exports.getOverview = catchAsync(async (req, res) => {
   });
 });
 
-exports.getProduct = (req, res) => {
-  res.status(200).render('_product', {
-    title: 'Axnious Begone'
+exports.getProduct = catchAsync(async (req, res) => {
+  const product = await Product.findOne({ slug: req.params.slug }).populate({
+    path: 'reviews',
+    fields: 'review rating user'
   });
-};
+  res.status(200).render('_product', {
+    title: `${product.name}`,
+    product
+  });
+});

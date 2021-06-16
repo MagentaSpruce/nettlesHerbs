@@ -6,6 +6,10 @@ const herbSchema = new mongoose.Schema(
       type: String,
       required: [true, 'An herb must have a name.']
     },
+    latin: {
+      type: String,
+      required: [true, 'An herb must have a scientific name.']
+    },
     photo: {
       type: String,
       required: [true, 'An herb must have a picture.']
