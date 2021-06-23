@@ -157,10 +157,10 @@ a:active {
     linear,
     left top,
     right top,
-    from(#ff7730),
-    to(#eb4d4b)
+    from(#7dd56f),
+    to(#28b487)
   );
-  background-image: linear-gradient(to right, #ff7730, #eb4d4b);
+  background-image: linear-gradient(to right, #7dd56f, #28b487);
   font-size: 3.5rem;
 }
 
@@ -571,7 +571,7 @@ a:active {
 }
 
 .marker {
-  background-image: url('../img/pin.png');
+  background-image: url('../img/site/pin.png');
   background-size: cover;
   width: 32px;
   height: 40px;

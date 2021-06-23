@@ -1,3 +1,4 @@
+const AppError = require('../utils/appError');
 const Product = require('./../models/productModel');
 const catchAsync = require('./../utils/catchAsync');
 
@@ -13,13 +14,29 @@ exports.getOverview = catchAsync(async (req, res) => {
   });
 });
 
-exports.getProduct = catchAsync(async (req, res) => {
+exports.getProduct = catchAsync(async (req, res, next) => {
   const product = await Product.findOne({ slug: req.params.slug }).populate({
     path: 'reviews',
     fields: 'review rating user'
   });
-  res.status(200).render('_product', {
-    title: `${product.name}`,
-    product
-  });
+
+  if (!product) {
+    return next(
+      new AppError(
+        'The problem is that there is no product with that name!',
+        404
+      )
+    );
+  }
+
+  res
+    .status(200)
+    .set(
+      'Content-Security-Policy',
+      'connect-src https://*.tiles.mapbox.com https://api.mapbox.com https://events.mapbox.com'
+    )
+    .render('_product', {
+      title: `${product.name}`,
+      product
+    });
 });

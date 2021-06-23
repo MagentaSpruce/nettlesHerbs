@@ -1,16 +1,25 @@
 /* eslint-disable */
-//This is the script for the homepage tabbed component and slider.
-'use strict';
+import '@babel/polyfill';
+import { displayMap } from './mapbox';
+
+// DOM ELEMENTS
+const mapBox = document.getElementById('map');
+const tabs = document.querySelectorAll('.operations__tab');
+const tabsContainer = document.querySelector('.operations__tab-container');
+const tabsContent = document.querySelectorAll('.operations__content');
+
+// DELEGATION
+if (mapBox) {
+  const locations = JSON.parse(mapBox.dataset.locations);
+  // console.log(locations);
+  displayMap(locations);
+}
+
 let viewport;
 if (document.body.clientWidth < 4000) {
   viewport = document.querySelector('meta[name=viewport]');
   viewport.setAttribute('content', 'width=device-width, initial-scale=.67');
 }
-
-//TABBED COMPONENT
-const tabs = document.querySelectorAll('.operations__tab');
-const tabsContainer = document.querySelector('.operations__tab-container');
-const tabsContent = document.querySelectorAll('.operations__content');
 
 tabsContainer.addEventListener('click', function(e) {
   const clicked = e.target.closest('.operations__tab');

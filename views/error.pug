@@ -1,0 +1,19 @@
+extends base
+
+block content
+  main.main
+    .error
+      .error__title
+        h2.heading-secondary.heading-secondary--error Uh oh! Something went terribly horribly wrong! 
+        h2.error__emoji 💀 
+      | 
+      br
+      br
+      | 
+      .error__msg= msg
+        |   
+        br
+        br
+        |   
+        h2.heading-secondary.heading-secondary--error Better call Sprucey!
+         a(href='https://github.com/MagentaSpruce') 🌴
