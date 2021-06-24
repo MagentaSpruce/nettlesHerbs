@@ -1,0 +1,417 @@
+doctype html
+html(lang='en')
+  head
+    block head
+        meta(charset='UTF-8')
+        meta(http-equiv='X-UA-Compatible' content='IE=edge')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+        meta(name='description' content='Nettles Herbs is a locally owned and operated herbal medicine center in Jacksonville, FL that specializes in holistic healing and herbal remedies.')
+        link(rel='shortcut icon' href='/img/site/icon.png' type='image/x-icon')
+        link(rel='stylesheet' href='/css/style2.css')
+        script(src='/js/home.js' defer)
+        title Nettles Herbs | Home
+
+  body
+    a(name='top')
+    .container
+      nav.navbar
+        ul(class='navbar__nav')
+          img.navLogo(src='./img/site/icon.png' alt='Nettles Herb logo')
+          li.nav-item
+            a.nav-link(href='#top')
+              span.link-text Home
+          li.nav-item
+            a.nav-link(href='/products')
+              span.link-text Remedies
+          li.nav-item
+            a.nav-link(href='/about')
+              span.link-text About 
+
+      header.header
+        img(class='header__logo' src='./img/site/nettlesLogo.png' alt='Nettles Herbs Logo')
+        h1.header-1
+          span.green Nourishing
+          | the Mind, Body & soul.
+        a(href='/products' class='btn header__btn btn-green btn-animated')
+          | Our Shop
+        div(class='header__partners-text')
+          h4 Resources
+        div(class='header__partner-logos')
+          a(href='https://www.thestudiosatfshh.com/')
+            img(src='./img/site/fsIcon.png' alt='Florida Holistic School of Jacksonville logo')
+          a(href='https://www.dona.org/')
+            img(src='./img/site/diIcon.png' alt='DONA International logo')
+          a(href='https://www.americanherbalistsguild.com/')
+            img(src='./img/site/ahIgcon.jpg' alt='American Herbalist Guild Logo')
+          a(href='http://www.traditionsherbschool.com/')
+            img(src='./img/site/tIcon.jpg' alt='Traditions School of Herbal Studies Logo')
+      section.article
+        .stats
+          h3(class='stats__header') Herbal profile:
+          img(src='/img/site/stats.jpg' alt='Picture of Tabi' class='stats__pic')
+          div(class='stats__name--container')
+            h3(class='stats__name') Tabitha Nettles
+            ul(class='stats__list')
+              h4(class='stats__list--header') Specializations
+              li(class='stats__list--item')
+                svg.stats-icon-list
+                  use(xlink:href='img/site/sprite.svg#icon-leaf')
+                a(href='https://www.thestudiosatfshh.com/') Clinical Herbalism
+              li(class='stats__list--item')
+                svg.stats-icon-list
+                  use(xlink:href='img/site/sprite.svg#icon-leaf')
+                a(href='https://www.evolutionaryherbalism.com/') Astro Herbalism
+              li(class='stats__list--item')
+                svg.stats-icon-list
+                  use(xlink:href='img/site/sprite.svg#icon-leaf')
+                a(href='https://www.steamychick.com/institute/') Peristeaming
+              li(class='stats__list--item')
+                svg.stats-icon-list
+                  use(xlink:href='img/site/sprite.svg#icon-leaf')
+                a(href='https://www.dona.org/what-is-a-doula/find-a-doula/') Birthing Doula
+              li(class='stats__list--item')
+                svg.stats-icon-list
+                  use(xlink:href='img/site/sprite.svg#icon-leaf')
+                a(href='https://sites.education.miami.edu/womens-health-cert/') Women's Health
+          p(class='stats__bio')
+            | Hi there! My name's Tabi and I am most definitely an herb nerd.
+            br
+            | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For instance, did you know
+            | that the herb
+            a(href='https://restorativemedicine.org/library/monographs/lily-of-the-valley/' class='stats__bio-anchor')
+              strong Lily of the Valley (
+                em convallaria majalis
+                | )
+            | contains a certain type of chemical compound, known as a digitoxin,
+            | as well as other steroroids and unique carbohydrates that, when made
+            | into a tea, will treat oedema as well as the symptoms from
+            | conjestive heart failure?
+        .photo
+          img(src='./img/site/statsPhoto.jpg' alt='Picture of Tabi making herbal medicines.' class='stats__photo')
+      section.intro
+        h2(class='intro__container-header') Hand blended in small batches
+        div(class='intro__container')
+          div(class='intro__container--content')
+            h3(class='intro__container--content-header')
+              | Nourishing from the roots up
+            p(class='intro__container--content-content')
+              | Nettles Herbs provides high quality herbal blends created with the
+              | whole person in mind. We believe health begins from the inside
+              | out, and what you put into, and onto, your body really counts.
+              | That’s why we use organic, sustainably sourced herbs free from
+              | harsh chemicals and nice on the earth (& your body too). A
+              | connection to nature and the power of its healing is a core belief
+              | here at Nettles Herbs & we make sure our products reflect that.
+              | All herbal blends are hand processed with the highest attention to
+              | detail, & designed to promote the body’s natural healing
+              | potential.
+            h3(class='intro__container--content-header') An ocean of drops.
+            p(class='intro__container--content-content')
+              | We believe that every person can (and
+              span.green does
+              | !) truly make a difference. One of
+              | the many ways we try to make ours is by try reducing our carbon
+              | footprint by as much as possible. We accomplish this by spending a
+              | little extra on materials that are manufactured from natural, or
+              | re-usable ingredients such as glass, cardboard, & compostable
+              | paper. Striving to create as little waste as possible, we stick to
+              | the basics: using only what we need and cutting the ‘fluff.’
+            a.btn-rectangle.btn-top(href='/about')
+              | &#2448; Learn more &rarr;
+          div(class='intro__container--gallery')
+            img(src='./img/site/gallery-photo-1.jpg' alt='Medicinal herbs' class='intro__container--gallery-photo-1')
+            img(src='./img/site/gallery-photo-2.jpg' alt='Belly binding' class='intro__container--gallery-photo-2')
+            img(src='./img/site/gallery-photo-3.jpg' alt='Herbal tea blend' class='intro__container--gallery-photo-3')
+            img(src='./img/site/gallery-photo-4.jpg' alt='Freshley chopped herbs' class='intro__container--gallery-photo-4')
+            img(src='./img/site/gallery-photo-5.jpg' alt='Hot cup of herbal tea with lemon' class='intro__container--gallery-photo-5')
+      .inbetween
+        h2.specials-header Featured Products
+      section.specials
+        .card
+          div(class='card__side card__side--front')
+            h4(class='card__picture card__picture--1') &nbsp;
+            div(class='card__heading')
+              span(class='card__heading-span card__heading-span--1') Soothing Relief
+            div(class='card__details')
+              h4(class='card__details-header') Mixed herb remedy
+              div(class='card__details--packaging')
+                svg.specials-icon-specials-info
+                  use(xlink:href='img/site/sprite.svg#icon-forrst')
+                p &nbsp;&nbsp;&nbsp;Loose Herb
+              div(class='card__details--quantity')
+                svg.specials-icon-specials-meter
+                  use(xlink:href='img/site/sprite.svg#icon-meter2')
+                p &nbsp;&nbsp;&nbsp;4 OZ
+              div(class='card__details--amount')
+                svg.specials-icon-specials-medal
+                  use(xlink:href='img/site/sprite.svg#icon-medal')
+                p &nbsp;&nbsp;&nbsp;4.9
+              div(class='card__details--price')
+                svg.specials-icon-specials-price
+                  use(xlink:href='img/site/sprite.svg#icon-credit')
+                p &nbsp;&nbsp;&nbsp;17
+              p(class='card__details--summary')
+                | An herbal blend containing Yarrow, used since antiquity for the
+                | treatment of digestion problems.
+          div(class='card__side card__side--back card__side--back-1')
+            div(class='card__cta')
+              div(class='card__price-box')
+                p(class='card__price-only') Only
+                p(class='card__price-value') $17
+              a(href='/product/soothing-relief' class='btn header__btn btn-magenta btn-animated') Order now
+        .card
+          div(class='card__side card__side--front')
+            h4(class='card__picture card__picture--2') &nbsp;
+            div(class='card__heading')
+              span(class='card__heading-span card__heading-span--2') Anxious Begone
+            div(class='card__details')
+              h4(class='card__details-header') A Formulated tincture
+              div(class='card__details--packaging')
+                svg.specials-icon-specials-info
+                  use(xlink:href='img/site/sprite.svg#icon-forrst')
+                p &nbsp;&nbsp;&nbsp;bottle
+              div(class='card__details--quantity')
+                svg.specials-icon-specials-meter
+                  use(xlink:href='img/site/sprite.svg#icon-meter2')
+                p &nbsp;&nbsp;&nbsp;2 ml
+              div(class='card__details--amount')
+                svg.specials-icon-specials-medal
+                  use(xlink:href='img/site/sprite.svg#icon-medal')
+                p &nbsp;&nbsp;&nbsp;4.8
+              div(class='card__details--price')
+                svg.specials-icon-specials-price
+                  use(xlink:href='img/site/sprite.svg#icon-credit')
+                p &nbsp;&nbsp;&nbsp;13
+              p(class='card__details--summary')
+                | This best selling formula eases the symptoms of anxiety and
+                | stress by reducing cortisol production in the adrenal glands.
+          div(class='card__side card__side--back card__side--back-2')
+            div(class='card__cta')
+              div(class='card__price-box')
+                p(class='card__price-only') Only
+                p(class='card__price-value') $13
+              a(href='product/anxious-begone' class='btn header__btn btn-orange btn-animated') Order Now
+        .card
+          div(class='card__side card__side--front')
+            h4(class='card__picture card__picture--3') &nbsp;
+            div(class='card__heading')
+              span(class='card__heading-span card__heading-span--3') Loose leaf Nettle
+            div(class='card__details')
+              h4(class='card__details-header') Blood cleansing herb
+              div(class='card__details--packaging')
+                svg.specials-icon-specials-info
+                  use(xlink:href='img/site/sprite.svg#icon-forrst')
+                p &nbsp;&nbsp;&nbsp;Loose herb
+              div(class='card__details--quantity')
+                svg.specials-icon-specials-meter
+                  use(xlink:href='img/site/sprite.svg#icon-meter2')
+                p &nbsp;&nbsp;&nbsp;4 OZ
+              div(class='card__details--amount')
+                svg.specials-icon-specials-medal
+                  use(xlink:href='img/site/sprite.svg#icon-medal')
+                p &nbsp;&nbsp;&nbsp;4.7
+              div(class='card__details--price')
+                svg.specials-icon-specials-price
+                  use(xlink:href='img/site/sprite.svg#icon-credit')
+                p &nbsp;&nbsp;&nbsp;5
+              p(class='card__details--summary')
+                | Chock full of nutrients, including iron, this plant does
+                | everything from relieve allery symptoms to improving hair & nail
+                | growth!
+          div(class='card__side card__side--back card__side--back-3')
+            div(class='card__cta')
+              div(class='card__price-box')
+                p(class='card__price-only') Only
+                p(class='card__price-value') $5
+              a(href='product/loose-leaf-nettle' class='btn header__btn btn-green btn-animated') Order Now
+      div(class='story__pictures')
+        img(src='./img/site/story-img-2.jpg' alt='Tabi helping a patient' class='story__img--1')
+        img(src='./img/site/story-img-3.jpg' alt='Assortment of herbal medicines' class='story__img--2')
+      div(class='story__content')
+        h3(class='story__content-heading')
+          | Samuel Hahnermann (1755-1844),
+          br
+          | Founder of Homeopathy
+        h2(class='story__content-title')
+          | &ldquo;The highest ideal of cure is the speedy, gentle, and enduring
+          | restoration of health by the most trustworthy and least harmflul
+          | way.&rdquo;
+        p(class='story__content-text')
+          | Modern medicines are often plagued with harmful side-affects and with
+          | every new medication prescribed the risk of those dangerous
+          | interactions is increased. The average over 65 American takes an
+          | average of fifteen different prescriptions per year. Is there any
+          | wonder then that so many people are returning to their roots?
+          br
+          br
+          | Herbal medicine has been around long before civilization existed.
+          | There are tried, tested and proven methods and remedies which have
+          | healed, aided, and nourished countless lives over millenia. Come
+          | discover with us how the healing powers of nature can improve you and
+          | your loved ones lives as well.
+        a.btn-rectangle.btn--white(href='/products')
+          | &#2448; Find your path &rarr;
+      section.tab
+        div(class='section__title')
+          h2(class='section__description-a') A Holistic Alternative
+          h3(class='section__header-a')
+            | Find out which herbs are best for you
+        .operations
+          div(class='operations__tab-container')
+            button(class='\
+                btn\
+                operations__tab operations__tab--1 operations__tab--active\
+              ' data-tab='1')
+              span 01
+              | Energy
+            button(class='btn operations__tab operations__tab--2' data-tab='2')
+              span 02
+              | Constitution
+            button(class='btn operations__tab operations__tab--3' data-tab='3')
+              span 03
+              | Balance
+          div(class='\
+              operations__content\
+              operations__content--1\
+              operations__content--active\
+            ')
+            div(class='operations__icon operations__icon--1')
+              svg.operations-icon-operations-female
+                use(xlink:href='img/site/sprite.svg#icon-sunset')
+            h5(class='operations__header')
+              | Did you know that plants have their own energy?
+            p
+              | It’s true! Just look at cayenne pepper for example. One bite of
+              | that pepper and your body has an immediate response to its energy,
+              | which is hot!. You begin to sweat, your face gets red, & you can
+              | actually feel the plant heating up your body. Plants are
+              | classified as either hot/warm, cold/cool, and damp/dry. These
+              | describe the energetic action the plant has within the tissues of
+              | your body.
+          div(class='operations__content operations__content--2')
+            div(class='operations__icon operations__icon--2')
+              svg.operations-icon-operations-pill
+                use(xlink:href='img/site/sprite.svg#icon-plus-square')
+            h5(class='operations__header')
+              | In order to pick the right herb for you, well, you must evaluate
+              | YOU.
+            p
+              | Are you a hot natured person? prone to overheating? Sweat easily?
+              | Perhaps you have a short temper? Red skin? If so, you would
+              | consider cold/cool herbs. Are you a person who gets cold easily?
+              | Who prefers hot weather over cold? Perhaps you’re reserved and
+              | have a hard time speaking out? Pale skin? If so, you would
+              | consider hot/warm herbs.
+          div(class='operations__content operations__content--3')
+            div(class='operations__icon operations__icon--3')
+              svg.operations-icon-operations-square
+                use(xlink:href='img/site/sprite.svg#icon-accessibility')
+            h5(class='operations__header')
+              | Holism: the idea that various systems should be viewed as wholes,
+              | not merely as a collection of parts.
+            p
+              | Nettles Herbs creates each herbal blend with the whole person in
+              | mind, meaning we blend our herbs not just according to their
+              | actions, but to their energetics as well. We consider the whole
+              | plant as well as the whole person & work in harmony with nature.
+              | Each proprietary blend is balanced for the mind, body, & soul.
+      section(class='contact__main')
+        .row
+          .contact
+            div(class='contact__form')
+              div
+                h3(class='contact__header') Want to work with Tabi?
+              form.form(action='#' autocomplete='off')
+                div(class='form__group')
+                  input#name(type='text' placeholder='Full name' required class='form__input')
+                  label(for='name' class='form__label') Full name
+                div(class='form__group')
+                  input#email(type='email' placeholder='Email address' required class='form__input')
+                  label(for='email' class='form__label') Email address
+                div(class='form__group')
+                  button.btn-green.btn.btn-contact
+                    | Contact &rarr;
+      section#section--3.section
+        div(class='section__title section__title--testimonials')
+          h2(class='section__description') Not sure yet?
+          h3(class='section__header')
+            | Millions more are utilizing herbal medicine every year!
+        .slider
+          .slide
+            .testimonial
+              h5(class='testimonial__header') I use my tea every day
+              blockquote(class='testimonial__text')
+                | Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                | Accusantium quas quisquam non? Quas voluptate nulla minima
+                | deleniti optio ullam nesciunt, numquam corporis et asperiores
+                | laboriosam sunt, praesentium suscipit blanditiis. Necessitatibus
+                | id alias reiciendis, perferendis facere pariatur dolore veniam
+                | autem esse non voluptatem saepe provident nihil molestiae.
+              address(class='testimonial__author')
+                img(src='/img/users/user-14.jpg' alt='User photo' class='testimonial__photo')
+                h6(class='testimonial__name') Aarav Lynn
+                p(class='testimonial__location') Ponte Vedra, FL
+          .slide
+            .testimonial
+              h5(class='testimonial__header')
+                | This is the last place you need to stop for herbs!
+              blockquote(class='testimonial__text')
+                | Quisquam itaque deserunt ullam, quia ea repellendus provident,
+                | ducimus neque ipsam modi voluptatibus doloremque, corrupti
+                | laborum. Incidunt numquam perferendis veritatis neque
+                | repellendus. Lorem, ipsum dolor sit amet consectetur adipisicing
+                | elit. Illo deserunt exercitationem deleniti.
+              address(class='testimonial__author')
+                img(src='/img/users/user-12.jpg' alt='User photo' class='testimonial__photo')
+                h6(class='testimonial__name') Miyah Miles
+                p(class='testimonial__location') Jacksonville, FL
+          .slide
+            .testimonial
+              h5(class='testimonial__header') Got what you need fresh!
+              blockquote(class='testimonial__text')
+                | Debitis, nihil sit minus suscipit magni aperiam vel tenetur
+                | incidunt commodi architecto numquam omnis nulla autem,
+                | necessitatibus blanditiis modi similique quidem. Odio aliquam
+                | culpa dicta beatae quod maiores ipsa minus consequatur error
+                | sunt, deleniti saepe aliquid quos inventore sequi.
+                | Necessitatibus id alias reiciendis, perferendis facere.
+              address(class='testimonial__author')
+                img(src='/img/users/user-10.jpg' alt='User photo' class='testimonial__photo')
+                h6(class='testimonial__name') Francisco Gomes
+                p(class='testimonial__location') Saint Johns, FL
+          button(class='slider__btn slider__btn--left') &larr;
+          button(class='slider__btn slider__btn--right') &rarr;
+          .dots
+      section.section.section--sign-up
+        div(class='section__title')
+          h3(class='section__header') Still not convinced?
+        a.crater.btn-rectangle.btn--white(href='/products')
+          | &#2448; Discover our remedies &rarr;
+
+      footer.footer
+        img.footer-img(src='./img/site/logo.png' alt='Nettles Herb logo')
+        div(class='footer__social')
+          a(href='#')
+            svg.footer-icon-footer
+              use(xlink:href='img/site/sprite.svg#icon-facebook')
+          a(href='#')
+            svg.footer-icon-footer
+              use(xlink:href='img/site/sprite.svg#icon-instagram')
+          a(href='#')
+            svg.footer-icon-footer
+              use(xlink:href='img/site/sprite.svg#icon-tiktok')
+        div(class='footer__copy-div')
+          h4(class='footer__copy')
+            | &#169;2021 Nettles Herb's,&nbsp;
+            small
+              | All rights reserved
+              | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          p.builtBy
+            | Website built by:
+            a(href='https://github.com/MagentaSpruce') MagentaSpruce
+            | 🌴
+        div(class='footer__links')
+          a(href='#top') Home
+          a(href='/products') Remedies
+          a(href='/about') About us
+

@@ -200,7 +200,7 @@ html {
 }
 
 body {
-  background-image: url('/public/img/site/full-bloom.png');
+  background-image: url('/img/site/full-bloom.png');
   overflow-x: hidden !important;
 }
 
@@ -517,7 +517,7 @@ header {
 
 .stats {
   background-color: var(--color-grey-3);
-  background-image: url('/public/img/site/fourth.jpg');
+  background-image: url('/img/site/fourth.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -959,7 +959,7 @@ header {
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(6, 1fr);
   align-items: center;
-  background-image: url(/public/img/site/story-img-1.jpg);
+  background-image: url(/img/site/story-img-1.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: left;
@@ -2526,7 +2526,7 @@ header {
   }
 
   body {
-    background-image: url('/public/img/site/full-bloom.png') !important;
+    background-image: url('/img/site/full-bloom.png') !important;
   }
 
   ul.navbar__nav {
@@ -2672,7 +2672,7 @@ header {
   }
 
   body {
-    background-image: url('/public/img/site/full-bloom.png') !important;
+    background-image: url('/img/site/full-bloom.png') !important;
   }
 
   ul.navbar__nav {

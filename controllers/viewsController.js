@@ -14,6 +14,18 @@ exports.getOverview = catchAsync(async (req, res) => {
   });
 });
 
+exports.getHome = catchAsync(async (req, res) => {
+  res.status(200).render('home', {
+    title: 'Home Page'
+  });
+});
+
+exports.getAbout = catchAsync(async (req, res) => {
+  res.status(200).render('about', {
+    title: 'About us'
+  });
+});
+
 exports.getProduct = catchAsync(async (req, res, next) => {
   const product = await Product.findOne({ slug: req.params.slug }).populate({
     path: 'reviews',

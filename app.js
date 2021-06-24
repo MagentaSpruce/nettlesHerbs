@@ -6,6 +6,8 @@ const helmet = require('helmet');
 const mongoSanitize = require('express-mongo-sanitize');
 const xss = require('xss-clean');
 const hpp = require('hpp');
+const pug = require('pug');
+const nodemailer = require('nodemailer');
 
 const AppError = require('./utils/appError');
 const globalErrorHandler = require('./controllers/errorController');
@@ -18,6 +20,7 @@ const viewRouter = require('./routes/viewRoutes');
 const app = express();
 // console.log(process.env.NODE_ENV);
 
+// VIEW ENGINE SETUP
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));
 

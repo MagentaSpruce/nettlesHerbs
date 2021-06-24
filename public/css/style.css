@@ -39,7 +39,7 @@ body {
   line-height: 1.6;
   font-weight: 300;
   font-family: 'Lato', sans-serif;
-  background-image: url('/public/img/site/full-bloom.png');
+  background-image: url('/img/site/full-bloom.png');
 
   min-height: 100vh;
   display: -webkit-box;
@@ -700,7 +700,7 @@ a:active {
   padding: 3rem;
   padding-bottom: 10rem;
   padding-top: calc(5rem + var(--section-rotate));
-  background-image: url('/public/img/site/full-bloom.png');
+  background-image: url('/img/site/full-bloom.png');
 }
 
 .cta {
@@ -1159,7 +1159,7 @@ a:active {
   }
 
   body {
-    background-image: url('./public/img/site/full-bloom.png') !important;
+    background-image: url('/img/site/full-bloom.png') !important;
   }
 
   .card-container {
@@ -1197,7 +1197,7 @@ a:active {
   }
 
   body {
-    background-image: url('/public/img/site/full-bloom.png') !important;
+    background-image: url('/img/site/full-bloom.png') !important;
   }
 
   .card-container {
