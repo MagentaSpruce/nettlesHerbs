@@ -6,25 +6,25 @@ html(lang='en')
     meta(name='viewport' content='width=device-width, initial-scale=1.0')
     link(rel='shortcut icon' href='./img/site/icon.png' type='image/x-icon')
     link(rel='stylesheet' href='./css/style2.css')
-    script(src='/public/js/index.js' defer)
+    
     title Nettles Herbs - About Us
   body
     a(name='top')
     .containerAbout
       nav.aboutNav
-        img.aboutNav-image(src='/public/img/site/icon.png' alt='Nettles herb main logo')
+        img.aboutNav-image(src='/img/site/icon.png' alt='Nettles herb main logo')
         h3.aboutNav-header Nettles Herbs
         .aboutNav-links
           ul.aboutNav-list
             li.aboutNav-list-item
-              a(href='index.html') Home
+              a(href='/home') Home
             li.aboutNav-list-item
-              a(href='overview.html') Remedies
+              a(href='/products') Remedies
             li.aboutNav-list-item
               a(href='#') About
       section.aboutHeader
         .aboutHeader-gallery
-          img.aboutHeader-img(src='/public/img/site/about-header.jpg' alt='Picture of Tabi')
+          img.aboutHeader-img(src='/img/site/about-header.jpg' alt='Picture of Tabi')
         .aboutHeader-contentBox
           h1.aboutHeader-title Who we are
           h4.aboutHeader-text
@@ -121,7 +121,7 @@ html(lang='en')
               | expedita molestiae, facilis saepe rerum, molestias incidunt odit
               | sequi fugit ipsum. Cum, amet fugiat?
       section.aboutServices
-        img(src='/public/img/site/logo.png' alt='Nettles Herbs logo')
+        img(src='/img/site/logo.png' alt='Nettles Herbs logo' class='aboutServices-img')
         .aboutServices-contentBox
           h2.aboutServices-title Our Treatments and Services
           ul.aboutServices-list
@@ -150,16 +150,16 @@ html(lang='en')
                 use(xlink:href='img/site/sprite.svg#icon-pagelines')
               | &nbsp;&nbsp;Belly Binding -
               small practiced for centuries in many cultures
-          a.aboutServices-button(href='overview.html')
+          a.aboutServices-button(href='/products')
             | &#128596; &nbsp; Discover the remedies &rarr;
       section.aboutContact
         .aboutContact-contentBox
           .aboutContact-contentBox-inner
-            img.aboutContact-contentBox-img(src='/public/img/site/icon.png' alt='Nettles Herbs main logo')
+            img.aboutContact-contentBox-img(src='/img/site/icon.png' alt='Nettles Herbs main logo')
             h3.aboutContact-title Let us help!
             p.aboutContact-text
               | Let our experience be your guide to a healthier life.
-            button.aboutContact-button Contact us now!
+            a.aboutContact-button(href='products') Start now!
       footer.footerAbout
         img.footer-img-about(src='./img/site/logo.png' alt='Nettles Herbs logo')
         div(class='footer__social-about')
@@ -183,6 +183,8 @@ html(lang='en')
             a(href='https://github.com/MagentaSpruce') MagentaSpruce
             | 🌴
         div(class='footer__links-about')
-          a(href='index.html') Home
-          a(href='overview.html') Remedies
+          a(href='/home') Home
+          a(href='/products') Remedies
           a(href='#top') About
+          
+          script(src='/js/home.js' defer)

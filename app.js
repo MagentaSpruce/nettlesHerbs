@@ -6,7 +6,6 @@ const helmet = require('helmet');
 const mongoSanitize = require('express-mongo-sanitize');
 const xss = require('xss-clean');
 const hpp = require('hpp');
-const pug = require('pug');
 const nodemailer = require('nodemailer');
 
 const AppError = require('./utils/appError');
@@ -83,6 +82,36 @@ app.use((req, res, next) => {
   next();
 });
 
+app.post('/home', (req, res) => {
+  console.log(req.body);
+  const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: process.env.EMAIL_USERNAME,
+      pass: process.env.EMAIL_PASSWORD
+    }
+  });
+
+  const mailOptions = {
+    from: req.body.email,
+    to: process.env.EMAIL_USERNAME,
+    subject: `You have a contact request from ${req.body.name}`,
+    text: `${
+      req.body.name
+    } has sent you a contact request sister. So, you should email them back at ${
+      req.body.email
+    } to see what the business iz ya dig? 🤙🦐🛡`
+  };
+
+  transporter.sendMail(mailOptions, (error, info) => {
+    if (error) {
+      console.log('Your mail had a problem being sent. Please try back later.');
+    } else {
+      console.log('Email sent successfully.');
+      res.send('success');
+    }
+  });
+});
 app.use('/', viewRouter);
 app.use('/api/v1/products', productRouter);
 app.use('/api/v1/users', userRouter);

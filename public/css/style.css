@@ -1072,7 +1072,7 @@ a:active {
   display: flex;
   flex-direction: column;
 
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
 .aboutNav {
@@ -1081,7 +1081,7 @@ a:active {
 
 .aboutNav-list-overview {
   list-style: none;
-  font-size: 2rem;
+  font-size: 2.5rem;
   transform: translateX(30%);
 }
 .aboutNav-image-overview {
@@ -1114,7 +1114,7 @@ a:active {
   grid-column: 10/11;
   margin-top: 1.5vh;
   grid-gap: 1.5vh;
-  transform: translateX(25%);
+  transform: translateX(-15%);
 }
 
 .footer__copy-div-overview {
