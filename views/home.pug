@@ -324,10 +324,10 @@ html(lang='en')
                 h3(class='contact__header') Want to work with Tabi?
               form.form(autocomplete='off')
                 div(class='form__group')
-                  input#name(type='text' placeholder='Full name' required class='form__input')
+                  input(type='text' id='name' placeholder='Full name' required class='form__input')
                   label(for='name' class='form__label') Full name
                 div(class='form__group')
-                  input#email(type='email' placeholder='Email address' required class='form__input')
+                  input(type='email' id='email' placeholder='Email address' required class='form__input')
                   label(for='email' class='form__label') Email address
                 div(class='form__group')
                   button.btn-green.btn.btn-contact.submit(type='submit')

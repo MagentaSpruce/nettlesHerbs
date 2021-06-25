@@ -87,14 +87,14 @@ app.post('/home', (req, res) => {
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: process.env.EMAIL_USERNAME,
-      pass: process.env.EMAIL_PASSWORD
+      user: 'tristanettles@gmail.com',
+      pass: '221ffk376gd'
     }
   });
 
   const mailOptions = {
     from: req.body.email,
-    to: process.env.EMAIL_USERNAME,
+    to: 'tristanettles@gmail.com',
     subject: `You have a contact request from ${req.body.name}`,
     text: `${
       req.body.name
@@ -105,7 +105,7 @@ app.post('/home', (req, res) => {
 
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
-      console.log('Your mail had a problem being sent. Please try back later.');
+      console.log(error);
     } else {
       console.log('Email sent successfully.');
       res.send('success');
