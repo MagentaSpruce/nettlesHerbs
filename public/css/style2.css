@@ -127,14 +127,6 @@ a:active {
   width: 2rem;
   fill: var(--color-primary-3);
 }
-.operations-icon-operations-female {
-}
-
-.operations-icon-operations-pill {
-}
-
-.operations-icon-operations-square {
-}
 
 .specials-icon-specials-information {
   width: 3.5rem;
@@ -227,7 +219,7 @@ span.green {
     var(--color-primary-3)
   );
   display: inline-block;
-  -webkit-background-clip: text;
+  --webkit-background-clip: text;
   color: transparent;
   text-shadow: none;
 }
@@ -337,10 +329,6 @@ span.green {
   margin-left: 15vw;
 }
 
-.btn-rectangle:link,
-.btn-rectangle:visited {
-}
-
 .btn-rectangle:hover {
   background-color: var(--color-grey-2);
   color: var(--color-primary-3);
@@ -366,9 +354,6 @@ span.green {
   font-size: 2.5rem;
   margin-left: 25rem;
   background-image: none;
-}
-
-.btn--white:hover {
 }
 
 .container {
@@ -467,9 +452,6 @@ header {
   align-self: start;
   justify-self: center;
   margin: var(--margin-top-lg);
-}
-
-.header-top {
 }
 
 .header-1 {
@@ -588,7 +570,7 @@ header {
     var(--color-primary-4),
     var(--color-primary-7)
   );
-  -webkit-background-clip: text;
+  --webkit-background-clip: text;
   color: transparent;
   font-size: 2.6rem;
   font-weight: bold;
@@ -687,7 +669,7 @@ header {
     var(--color-primary-4),
     var(--color-primary-2)
   );
-  -webkit-background-clip: text;
+  --webkit-background-clip: text;
   color: transparent;
   text-shadow: 0.2rem 0.2rem 0.3rem rgba(0, 0, 0, 0.1);
   margin-bottom: -3rem;
@@ -1653,9 +1635,6 @@ header {
     height: 70%;
   }
 
-  .card {
-  }
-
   .story__content,
   .story__pictures {
     grid-row: 6/7;
@@ -1757,9 +1736,6 @@ header {
     transform: translateX(30vw);
   }
 
-  .navLogo {
-  }
-
   .header__logo {
     margin-bottom: 5vh;
   }
@@ -1838,9 +1814,6 @@ header {
     height: 75%;
   }
 
-  .card {
-  }
-
   .story__content,
   .story__pictures {
     grid-row: 7/8;
@@ -1864,9 +1837,6 @@ header {
   .contact__main {
     grid-row: 9/10;
     grid-column: 1/-1;
-  }
-
-  .row {
   }
 
   .contact {
@@ -2132,11 +2102,6 @@ header {
     margin-top: -15rem;
   }
 
-  .intro__container {
-  }
-
-  .intro__container--content-content {
-  }
   .intro__container--gallery {
     width: 85%;
     /* display: none; */
@@ -2167,9 +2132,6 @@ header {
     height: 100%;
   }
 
-  .story__content-title {
-  }
-
   .story__content-text {
     font-size: 2rem;
   }
@@ -2187,9 +2149,6 @@ header {
 
   .form__group {
     width: 48%;
-  }
-
-  .form__label {
   }
 
   .dots {
@@ -2268,9 +2227,6 @@ header {
 
   .intro {
     margin-top: -25rem;
-  }
-
-  .intro__container {
   }
 
   .inbetween {
@@ -2595,7 +2551,7 @@ header {
 
   .btn-top {
     transform: translateX(10rem) translateY(15rem);
-    width: 28%;
+    width: 30%;
   }
   .btn-top:hover {
     transform: translateX(10rem) translateY(14rem);

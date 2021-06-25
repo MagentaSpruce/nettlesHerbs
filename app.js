@@ -14,6 +14,7 @@ const productRouter = require('./routes/productRoutes.js');
 const userRouter = require('./routes/userRoutes.js');
 const reviewRouter = require('./routes/reviewRoutes');
 const herbRouter = require('./routes/herbRoutes');
+const purchaseRouter = require('./routes/purchaseRoutes');
 const viewRouter = require('./routes/viewRoutes');
 
 const app = express();
@@ -83,7 +84,7 @@ app.use((req, res, next) => {
 });
 
 app.post('/home', (req, res) => {
-  console.log(req.body);
+  // console.log(req.body);
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
@@ -103,10 +104,13 @@ app.post('/home', (req, res) => {
     } to see what the business iz ya dig? 🤙🦐🛡`
   };
 
-  transporter.sendMail(mailOptions, (error, info) => {
+  // eslint-disable-next-line no-unused-vars
+  transporter.sendMail(mailOptions, (error, _) => {
     if (error) {
-      console.log(error);
+      // eslint-disable-next-line no-console
+      console.error(error);
     } else {
+      // eslint-disable-next-line no-console
       console.log('Email sent successfully.');
       res.send('success');
     }
@@ -117,6 +121,7 @@ app.use('/api/v1/products', productRouter);
 app.use('/api/v1/users', userRouter);
 app.use('/api/v1/reviews', reviewRouter);
 app.use('/api/v1/herbs', herbRouter);
+app.use('/api/v1/purchases', purchaseRouter);
 
 app.all('*', (req, res, next) => {
   next(new AppError(`Can't find ${req.originalUrl} on this server!`, 404));

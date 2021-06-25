@@ -4,6 +4,7 @@ include _reviewCard
 block append head
     script(src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js')
     link(href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet') 
+    script(src='https://js.stripe.com/v3/')
     //- script(src='/js/mapbox.js')
 
 
@@ -103,4 +104,4 @@ block content
                 p(class='cta__text')
                     | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get
                     | started on your new path today!
-                button.btn.btn--green.span-all-rows Order Now 
+                button.btn.btn--green.span-all-rows#buy-product(data-product-id=`${product.id}`) Order Now 
