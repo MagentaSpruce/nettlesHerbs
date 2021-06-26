@@ -10,7 +10,7 @@ exports.getCheckoutSession = catchAsync(async (req, res, next) => {
   // 2) Create checkout session
   const session = await stripe.checkout.sessions.create({
     payment_method_types: ['card'],
-    success_url: `${req.protocol}://${req.get('host')}/products/?product=${
+    success_url: `${req.protocol}://${req.get('host')}/home/?product=${
       req.params.productId
     }&price=${product.price}`,
     cancel_url: `${req.protocol}://${req.get('host')}/product/${product.slug}`,
@@ -34,7 +34,7 @@ exports.getCheckoutSession = catchAsync(async (req, res, next) => {
 });
 
 exports.createPurchaseCheckout = catchAsync(async (req, res, next) => {
-  // TEMPORARY CODE
+  // TEMPORARY CODE ---- INSECURE!!!!
   const { product, price } = req.query;
 
   if (!product && !price) return next();

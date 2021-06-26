@@ -6,6 +6,11 @@ const purchaseSchema = new mongoose.Schema({
     ref: 'Product',
     required: [true, 'Purchase must belong to a product']
   },
+  price: {
+    type: Number,
+    ref: 'Product',
+    required: [true, 'Purchase must have a price']
+  },
   createdAt: {
     type: Date,
     default: Date.now()

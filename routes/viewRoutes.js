@@ -7,7 +7,11 @@ const router = express.Router();
 
 // ROUTES
 
-router.get('/', viewController.getHome);
+router.get(
+  '/',
+  purchaseController.createPurchaseCheckout,
+  viewController.getHome
+);
 router.get(
   '/home',
   purchaseController.createPurchaseCheckout,
