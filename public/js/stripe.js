@@ -8,15 +8,15 @@ export const makePurchase = async productId => {
   try {
     // 1) Get checkout session from API
     const session = await axios(
-      `http://127.0.0.1:3000/api/v1/purchases/checkout-session/${productId}`
+      `/api/v1/purchases/checkout-session/${productId}`
     );
-    console.log(session);
+    // console.log(session);
 
     // 2) Create checkout form + charge CC using Stripe
     await stripe.redirectToCheckout({
       sessionId: session.data.session.id
     });
   } catch (err) {
-    console.log(err);
+    console.log('Check the console.log Jack 🆔🥶❄');
   }
 };

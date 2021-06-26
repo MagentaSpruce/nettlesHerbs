@@ -3,3 +3,4 @@ include lib
 include bin
 node_modules
 config.env
+.cache/

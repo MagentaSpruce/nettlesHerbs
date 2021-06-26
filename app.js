@@ -7,6 +7,7 @@ const mongoSanitize = require('express-mongo-sanitize');
 const xss = require('xss-clean');
 const hpp = require('hpp');
 const nodemailer = require('nodemailer');
+const compression = require('compression');
 // const csp = require('express-csp');
 
 const AppError = require('./utils/appError');
@@ -70,6 +71,8 @@ app.use(
   })
 );
 
+app.use(compression());
+
 // Testing MW
 app.use((req, res, next) => {
   // eslint-disable-next-line no-console
@@ -114,7 +117,7 @@ app.post('/home', (req, res) => {
       console.error(error);
     } else {
       // eslint-disable-next-line no-console
-      console.log('Email sent successfully.');
+      // console.log('Email sent successfully.');
       res.send('success');
     }
   });
