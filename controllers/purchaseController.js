@@ -1,5 +1,6 @@
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 const Product = require('./../models/productModel');
+const Purchase = require('./../models/purchaseModel');
 const catchAsync = require('./../utils/catchAsync');
 
 exports.getCheckoutSession = catchAsync(async (req, res, next) => {
@@ -9,7 +10,9 @@ exports.getCheckoutSession = catchAsync(async (req, res, next) => {
   // 2) Create checkout session
   const session = await stripe.checkout.sessions.create({
     payment_method_types: ['card'],
-    success_url: `${req.protocol}://${req.get('host')}/products`,
+    success_url: `${req.protocol}://${req.get('host')}/products/?product=${
+      req.params.productId
+    }&price=${product.price}`,
     cancel_url: `${req.protocol}://${req.get('host')}/product/${product.slug}`,
     client_reference_id: req.params.productId,
     line_items: [
@@ -28,4 +31,14 @@ exports.getCheckoutSession = catchAsync(async (req, res, next) => {
     status: 'success',
     session
   });
+});
+
+exports.createPurchaseCheckout = catchAsync(async (req, res, next) => {
+  // TEMPORARY CODE
+  const { product, price } = req.query;
+
+  if (!product && !price) return next();
+  await Purchase.create({ product, price });
+
+  res.redirect(req.originalUrl.split('?')[0]);
 });
