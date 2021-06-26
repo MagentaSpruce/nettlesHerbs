@@ -2,6 +2,7 @@
 import '@babel/polyfill';
 import { displayMap } from './mapbox';
 import { makePurchase } from './stripe';
+import { showAlert } from './alerts';
 
 // DOM ELEMENTS
 const mapBox = document.getElementById('map');
@@ -19,3 +20,6 @@ purchaseBtn.addEventListener('click', e => {
   const { productId } = e.target.dataset;
   makePurchase(productId);
 });
+
+const alertMessage = document.querySelector('body').dataset.alert;
+if (alert) showAlert('success', alertMessage, 10);

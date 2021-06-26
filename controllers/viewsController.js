@@ -2,6 +2,14 @@ const AppError = require('../utils/appError');
 const Product = require('./../models/productModel');
 const catchAsync = require('./../utils/catchAsync');
 
+exports.alerts = (req, res, next) => {
+  const { alert } = req.query;
+  if (alert === 'purchase')
+    res.locals.alert =
+      'Your purchase was successful! Please check your email for confirmation.';
+  next();
+};
+
 exports.getOverview = catchAsync(async (req, res) => {
   // 1) Get product data from collection
   const products = await Product.find();
