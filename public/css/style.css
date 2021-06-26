@@ -209,6 +209,9 @@ a:active {
 
 .heading-box__text {
   font-size: 4rem;
+  background-image: linear-gradient(to right bottom, #7dd56f, #28b487);
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .specials-icon-product-price {
@@ -354,7 +357,7 @@ a:active {
 
 .section-header {
   position: relative;
-  height: 38vw;
+  height: 58vw;
   clip-path: polygon(
     0 0,
     100% 0,
@@ -378,8 +381,6 @@ a:active {
   object-fit: cover;
   height: 100%;
   width: 100%;
-  -o-object-position: 50% 25%;
-  object-position: 50% 25%;
 }
 
 .header__hero-overlay {
@@ -450,6 +451,7 @@ a:active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  background-image: url('/img/site/full-bloom.png');
 }
 .section-description > * {
   padding: 0 8vw;
@@ -1081,7 +1083,7 @@ a:active {
 
 .aboutNav-list-overview {
   list-style: none;
-  font-size: 2.5rem;
+  font-size: 2vh;
   transform: translateX(30%);
 }
 .aboutNav-image-overview {
@@ -1207,6 +1209,7 @@ a:active {
 
   .btn.btn--green.btn--small {
     margin: 0 auto;
+    text-align: center;
   }
 
   .footer__social-overview {
@@ -1217,10 +1220,85 @@ a:active {
 
   .footer__links-overview {
     transform: translateX(-15%);
+    font-size: 2vh;
   }
 
   .section-description {
     display: grid;
+    height: 140vh;
+  }
+
+  .section-cta {
+    max-width: 100%;
+  }
+
+  .cta {
+    padding: 0;
+    height: 21vh;
+  }
+
+  .cta__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .description-box {
+    margin-top: -5vh;
+  }
+
+  .overview-box {
+    height: 92%;
+  }
+
+  .heading-secondary {
+    transform: translateY(1.5vh) translateX(8vw);
+  }
+
+  .cta__text {
+    transform: translateX(8vw) translateY(3.5vh);
+    color: #777;
+  }
+
+  .btn.btn--green.span-all-rows {
+    transform: translateY(6vh) translateX(19vw);
+  }
+}
+@media only screen and (max-width: 375px) {
+  .aboutNav-header {
+    /* background-color: red; */
+  }
+
+  .aboutNav-image-overview {
+    width: 15%;
+  }
+
+  body {
+    background-image: url('/img/site/full-bloom.png') !important;
+  }
+
+  .card-container {
+    max-width: 50rem;
+    grid-template-columns: minmax(min-content, 1fr);
+  }
+
+  .btn.btn--green.btn--small {
+    margin: 0 auto;
+  }
+
+  .footer__social-overview {
+    display: grid;
+    grid-template-columns: repeat(3, 7rem);
+    transform: translateX(10%);
+  }
+
+  .footer__links-overview {
+    transform: translateX(-15%);
+    font-size: 2vh;
+  }
+
+  .section-description {
+    display: grid;
+    height: 140vh;
   }
 
   .section-cta {
