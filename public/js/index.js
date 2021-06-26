@@ -1,11 +1,11 @@
 /* eslint-disable */
 import '@babel/polyfill';
 import { displayMap } from './mapbox';
-import { buyProduct } from './stripe';
+import { makePurchase } from './stripe';
 
 // DOM ELEMENTS
 const mapBox = document.getElementById('map');
-const buyBtn = document.getElementById('buy-product');
+const purchaseBtn = document.getElementById('buyBtn');
 
 // DELEGATION
 if (mapBox) {
@@ -14,8 +14,8 @@ if (mapBox) {
   displayMap(locations);
 }
 
-buyBtn.addEventListener('click', e => {
+purchaseBtn.addEventListener('click', e => {
   e.target.textContent = 'Processing...';
-  const productId = e.target.dataset.productId;
-  buyProduct(productId);
+  const { productId } = e.target.dataset;
+  makePurchase(productId);
 });

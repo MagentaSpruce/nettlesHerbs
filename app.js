@@ -7,14 +7,16 @@ const mongoSanitize = require('express-mongo-sanitize');
 const xss = require('xss-clean');
 const hpp = require('hpp');
 const nodemailer = require('nodemailer');
+// const csp = require('express-csp');
 
 const AppError = require('./utils/appError');
 const globalErrorHandler = require('./controllers/errorController');
 const productRouter = require('./routes/productRoutes.js');
 const userRouter = require('./routes/userRoutes.js');
 const reviewRouter = require('./routes/reviewRoutes');
-const herbRouter = require('./routes/herbRoutes');
 const purchaseRouter = require('./routes/purchaseRoutes');
+const herbRouter = require('./routes/herbRoutes');
+
 const viewRouter = require('./routes/viewRoutes');
 
 const app = express();
@@ -25,6 +27,7 @@ app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));
 
 // GLOBAL MIDDLEWARE
+
 // Serving static files
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -116,6 +119,7 @@ app.post('/home', (req, res) => {
     }
   });
 });
+
 app.use('/', viewRouter);
 app.use('/api/v1/products', productRouter);
 app.use('/api/v1/users', userRouter);

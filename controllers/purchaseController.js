@@ -3,13 +3,13 @@ const Product = require('./../models/productModel');
 const catchAsync = require('./../utils/catchAsync');
 
 exports.getCheckoutSession = catchAsync(async (req, res, next) => {
-  // 1) Get currently booked product
+  // 1) Get current product
   const product = await Product.findById(req.params.productId);
-  // 2) Create checkout session
 
+  // 2) Create checkout session
   const session = await stripe.checkout.sessions.create({
     payment_method_types: ['card'],
-    success_url: `${req.protocol}://${req.get('host')}/`,
+    success_url: `${req.protocol}://${req.get('host')}/products`,
     cancel_url: `${req.protocol}://${req.get('host')}/product/${product.slug}`,
     client_reference_id: req.params.productId,
     line_items: [
@@ -23,8 +23,7 @@ exports.getCheckoutSession = catchAsync(async (req, res, next) => {
       }
     ]
   });
-
-  // 3) Send session to client as response
+  // 3) Create session as response
   res.status(200).json({
     status: 'success',
     session
