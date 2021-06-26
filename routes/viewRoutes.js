@@ -9,12 +9,12 @@ const router = express.Router();
 
 router.get(
   '/',
-  purchaseController.createPurchaseCheckout,
+  // purchaseController.createPurchaseCheckout,
   viewController.getHome
 );
 router.get(
   '/home',
-  purchaseController.createPurchaseCheckout,
+  // purchaseController.createPurchaseCheckout,
   viewController.getHome
 );
 

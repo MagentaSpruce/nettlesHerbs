@@ -10,6 +10,7 @@ const nodemailer = require('nodemailer');
 const compression = require('compression');
 // const csp = require('express-csp');
 const cors = require('cors');
+const bodyParser = require('body-parser');
 
 const AppError = require('./utils/appError');
 const globalErrorHandler = require('./controllers/errorController');
@@ -17,6 +18,7 @@ const productRouter = require('./routes/productRoutes.js');
 const userRouter = require('./routes/userRoutes.js');
 const reviewRouter = require('./routes/reviewRoutes');
 const purchaseRouter = require('./routes/purchaseRoutes');
+const purchaseController = require('./controllers/purchaseController');
 const herbRouter = require('./routes/herbRoutes');
 
 const viewRouter = require('./routes/viewRoutes');
@@ -53,6 +55,12 @@ const limiter = rateLimit({
   message: 'Too many requests from this IP, please try again in an hour!'
 });
 app.use('/api', limiter);
+
+app.post(
+  '/webhook-checkout',
+  bodyParser.raw({ type: 'application/json' }),
+  purchaseController.webhookCheckout
+);
 
 // Body parser - reading data from body into req.body
 app.use(express.json({ limit: '10kb' }));

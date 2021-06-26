@@ -10,9 +10,10 @@ exports.getCheckoutSession = catchAsync(async (req, res, next) => {
   // 2) Create checkout session
   const session = await stripe.checkout.sessions.create({
     payment_method_types: ['card'],
-    success_url: `${req.protocol}://${req.get('host')}/home/?product=${
-      req.params.productId
-    }&price=${product.price}`,
+    // success_url: `${req.protocol}://${req.get('host')}/home/?product=${
+    //   req.params.productId
+    // }&price=${product.price}`,
+    success_url: `${req.protocol}://${req.get('host')}/home`,
     cancel_url: `${req.protocol}://${req.get('host')}/product/${product.slug}`,
     client_reference_id: req.params.productId,
     line_items: [
@@ -33,12 +34,36 @@ exports.getCheckoutSession = catchAsync(async (req, res, next) => {
   });
 });
 
-exports.createPurchaseCheckout = catchAsync(async (req, res, next) => {
-  // TEMPORARY CODE ---- INSECURE!!!!
-  const { product, price } = req.query;
-
-  if (!product && !price) return next();
+const createPurchaseCheckout = async session => {
+  const product = session.client_reference_id;
+  const price = session.line_items[0].amount / 100;
   await Purchase.create({ product, price });
+};
+exports.webhookCheckout = (req, res, next) => {
+  const signature = req.headers['stripe-signature'];
+  let event;
+  try {
+    event = stripe.webhooks.constructEvent(
+      req.body,
+      signature,
+      process.env.STRIPE_WEBHOOK_SECRET
+    );
+  } catch (err) {
+    return res.status(400).send(`Webhook error: ${err.message}`);
+  }
 
-  res.redirect(req.originalUrl.split('?')[0]);
-});
+  if (event.type === 'checkout-session.complete')
+    createPurchaseCheckout(event.data.object);
+
+  res.status(200).json({ received: true });
+};
+
+// exports.createPurchaseCheckout = catchAsync(async (req, res, next) => {
+//   // TEMPORARY CODE ---- INSECURE!!!!
+//   const { product, price } = req.query;
+
+//   if (!product && !price) return next();
+//   await Purchase.create({ product, price });
+
+//   res.redirect(req.originalUrl.split('?')[0]);
+// });
