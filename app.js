@@ -9,6 +9,7 @@ const hpp = require('hpp');
 const nodemailer = require('nodemailer');
 const compression = require('compression');
 // const csp = require('express-csp');
+const cors = require('cors');
 
 const AppError = require('./utils/appError');
 const globalErrorHandler = require('./controllers/errorController');
@@ -29,6 +30,10 @@ app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));
 
 // GLOBAL MIDDLEWARE
+//Implement CORS - access-control-allow-origin, allows sharing of API
+app.use(cors());
+
+app.options('*', cors());
 
 // Serving static files
 app.use(express.static(path.join(__dirname, 'public')));
