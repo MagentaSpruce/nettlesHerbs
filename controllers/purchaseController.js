@@ -20,7 +20,11 @@ exports.getCheckoutSession = catchAsync(async (req, res, next) => {
       {
         name: `${product.name}`,
         description: product.summary,
-        images: [],
+        images: [
+          `${req.protocol}://${req.get('host')}/img/products/${
+            product.imageCover
+          }`
+        ],
         amount: product.price * 100,
         currency: 'usd',
         quantity: 1
@@ -36,7 +40,7 @@ exports.getCheckoutSession = catchAsync(async (req, res, next) => {
 
 const createPurchaseCheckout = async session => {
   const product = session.client_reference_id;
-  const price = session.line_items[0].amount / 100;
+  const price = session.display_items[0].amount / 100;
   await Purchase.create({ product, price });
 };
 exports.webhookCheckout = (req, res, next) => {
@@ -52,7 +56,7 @@ exports.webhookCheckout = (req, res, next) => {
     return res.status(400).send(`Webhook error: ${err.message}`);
   }
 
-  if (event.type === 'checkout-session.complete')
+  if (event.type === 'checkout-session.completed')
     createPurchaseCheckout(event.data.object);
 
   res.status(200).json({ received: true });
