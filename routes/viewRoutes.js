@@ -1,7 +1,6 @@
 const express = require('express');
 
 const viewController = require('../controllers/viewsController');
-const purchaseController = require('../controllers/purchaseController');
 
 const router = express.Router();
 
