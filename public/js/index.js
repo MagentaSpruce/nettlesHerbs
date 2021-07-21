@@ -2,7 +2,7 @@
 import '@babel/polyfill';
 import { displayMap } from './mapbox';
 import { makePurchase } from './stripe';
-import { showAlert } from './alerts';
+import { showAlert, hideAlert } from './alerts';
 
 // DOM ELEMENTS
 const mapBox = document.getElementById('map');

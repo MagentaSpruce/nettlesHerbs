@@ -109,7 +109,7 @@ app.post('/home', (req, res) => {
     service: 'gmail',
     auth: {
       user: 'tristanettles@gmail.com',
-      pass: '221ffk376gd'
+      pass: process.env.GOOGLE_PASSWORD
     }
   });
 

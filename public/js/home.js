@@ -89,9 +89,9 @@ const slider1 = function() {
   };
 
   const init = function() {
-    goToSlide(2);
+    goToSlide(0);
     createDots();
-    activateDot(2);
+    activateDot(0);
   };
   init();
 

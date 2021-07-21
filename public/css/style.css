@@ -73,7 +73,6 @@ a:active {
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  position: relative;
 }
 
 .flex {
@@ -238,6 +237,8 @@ a:active {
   /*Add later when we use this for the button in form*/
   border: none;
   cursor: pointer;
+  text-align: center;
+  align-self: center;
 }
 
 .btn:hover {
@@ -819,11 +820,8 @@ a:active {
 }
 
 .card-container {
-  max-width: 120rem;
+  max-width: 90%;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 7rem;
 }
 
 .card-overview {
@@ -843,6 +841,7 @@ a:active {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  margin-bottom: 5vh;
 }
 .card__header {
   position: relative;
@@ -1115,7 +1114,7 @@ a:active {
 .footer__links-overview {
   grid-column: 10/11;
   margin-top: 1.5vh;
-  grid-gap: 1.5vh;
+
   transform: translateX(-15%);
 }
 
@@ -1125,9 +1124,47 @@ a:active {
   transform: translateY(5.5vh);
 }
 
-@media only screen and (max-width: 1325px) {
-  .aboutNav-header {
+@media only screen and (min-width: 1225px) and (max-width: 2500px) {
+  .card-container {
     /* background-color: red; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) !important;
+    grid-gap: 4vw;
+    row-gap: 1vh;
+  }
+
+  .footer__links-overview {
+    font-size: 2.2rem;
+  }
+
+  .footer-img-about {
+    width: 40% !important;
+  }
+
+  .btn.btn--green.btn--small {
+    width: 60%;
+    display: flex;
+    justify-self: flex-end;
+  }
+
+  .main {
+    /* background-color: rebeccapurple; */
+  }
+}
+
+@media only screen and (min-width: 800px) and (max-width: 1225px) {
+  .aboutNav-header {
+  }
+
+  .card-overview {
+    margin-bottom: 0vh !important;
+  }
+
+  .footer__links-overview {
+    font-size: 3rem;
+  }
+  .main {
+    /* background-color: orange; */
   }
 
   .aboutNav-image-overview {
@@ -1147,7 +1184,7 @@ a:active {
     transform: translateY(0.2vh);
   }
   .btn.btn--green.btn--small {
-    width: 40%;
+    width: 50%;
     transform: translateX(10vw);
   }
 }
@@ -1170,7 +1207,8 @@ a:active {
   }
 
   .btn.btn--green.btn--small {
-    margin: 0 auto;
+    display: flex;
+    justify-self: flex-end;
   }
 
   .footer-img {
