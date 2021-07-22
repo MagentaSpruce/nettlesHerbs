@@ -38,6 +38,7 @@ app.use(cors());
 app.options('*', cors());
 
 // Serving static files
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Set security HTTP headers
@@ -135,6 +136,9 @@ app.post('/home', (req, res) => {
       res.send('success');
     }
   });
+});
+app.get('/test', (req, res) => {
+  res.status(200).render('about');
 });
 
 app.use('/', viewRouter);
