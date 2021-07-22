@@ -1161,7 +1161,12 @@ a:active {
   }
 
   .footer__links-overview {
-    font-size: 3rem;
+    font-size: 2rem;
+  }
+
+  .footer-img-about {
+    height: 140%;
+    width: 100%;
   }
   .main {
     /* background-color: orange; */
@@ -1188,9 +1193,20 @@ a:active {
     transform: translateX(10vw);
   }
 }
+
+@media only screen and (min-width: 701px) and (max-width: 799px) {
+  .main {
+    padding: 6rem 1rem;
+  }
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 3rem;
+  }
+}
 @media only screen and (max-width: 700px) {
-  .aboutNav-header {
-    /* background-color: red; */
+  .main {
+    background-color: red;
   }
 
   .aboutNav-image-overview {
