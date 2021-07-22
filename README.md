@@ -6,7 +6,7 @@ Client product - Fully responsive and custom business site built using HTML, CSS
 This client product utilizes a custom built API for processing emails and payments. This website was built for an Herbal Medicine company based out of Jacksonville, FL.
 
 Building this project out has helped me to better learn and practice the following:
-
+https://help.heroku.com/sharing/4f30e148-c0e5-489f-81ba-f04339175dfb
 1. Project preparation and planning
 2. Flexbox & CSS Grid
 3. Media queries
