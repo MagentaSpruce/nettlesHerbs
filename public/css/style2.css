@@ -1964,8 +1964,12 @@ header {
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
   .container {
     grid-template-rows:
-      100vh 109vh 1vh 300vh 75vh repeat(2, minmax(min-content, 75vh))
+      100vh 109vh 1vh 300vh 76vh repeat(2, minmax(min-content, 75vh))
       85vh 18vh;
+  }
+
+  header {
+    grid-column: full-start / col-end 6;
   }
 
   .navLogo {
@@ -2022,7 +2026,7 @@ header {
   }
 
   .intro__container {
-    padding: 0 2vw;
+    padding: 0 2vw 0 4vw;
   }
 
   .intro__container--content {
@@ -2035,10 +2039,14 @@ header {
 
   .intro__container--content-header {
     font-size: 2.5rem;
+    text-align: center;
+    position: relative;
+    right: 10%;
   }
 
   .intro__container--content-content {
     font-size: 1.8rem;
+    text-align: center;
   }
 
   .btn-rectangle.btn-top {
@@ -2214,6 +2222,16 @@ header {
     transform: translateX(-15%) translateY(25%);
   }
 
+  .aboutContact-button {
+    transform: translateX(-10%) translateY(-60%);
+  }
+  .aboutContact-button:hover {
+    transform: translateX(-10%) translateY(-55%);
+  }
+  .aboutContact-button:active {
+    transform: translateX(-10%) translateY(-60%);
+  }
+
   .footer__social-about {
     grid-column: 4/7;
   }
@@ -2259,6 +2277,11 @@ header {
     display: flex;
     gap: 45%;
     left: 14.5%;
+  }
+
+  .btn.btn--green.btn--small {
+    display: flex;
+    justify-self: flex-end;
   }
 
   .navLogo {
@@ -2348,14 +2371,14 @@ header {
   }
 
   .stats-icon-list {
-    width: 4rem;
-    height: 4rem;
+    width: 3.5rem;
+    height: 3.5rem;
   }
 
   .stats__bio {
     grid-row: 6/7;
-    margin-top: -3vh;
-    font-size: 2.2rem;
+    margin-top: -1vh;
+    font-size: 2.1rem;
   }
 
   .intro {
@@ -2700,6 +2723,14 @@ header {
     top: 7vh;
     right: 40%;
   }
+  .aboutServices-button:hover {
+    top: 6vh;
+    right: 40%;
+  }
+  .aboutServices-button:active {
+    top: 7vh;
+    right: 40%;
+  }
 
   .aboutContact {
     padding: 5vh 10vw;
@@ -2728,6 +2759,8 @@ header {
 
   .footer__links-about {
     font-size: 2.5rem;
+    position: relative;
+    right: 1vw;
   }
 
   .footer__copy-div-about {
@@ -2741,7 +2774,7 @@ header {
 @media only screen and (min-device-width: 410px) and (max-device-width: 767px) and (-webkit-min-device-pixel-ratio: 3) {
   .container {
     grid-template-rows:
-      5vh 95vh 105vh 153vh 4vh 180vh 45vh 81vh repeat(
+      5vh 95vh 105vh 164vh 1vh 260vh 45vh 105vh repeat(
         2,
         minmax(min-content, 55vh)
       )
@@ -2763,10 +2796,10 @@ header {
   }
 
   .navbar__nav {
-    position: relative;
-    display: flex;
-    gap: 41%;
-    left: 6.5%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 4rem;
+    margin-left: 10%;
   }
 
   .navLogo {
@@ -2779,7 +2812,7 @@ header {
   }
 
   .link-text {
-    font-size: 3rem;
+    font-size: 2rem;
     transform: rotate(0deg);
   }
 
@@ -2789,7 +2822,7 @@ header {
     padding: 0 8rem 8rem 8rem;
     padding-top: 1rem;
     display: grid;
-    grid-template-rows: 1fr minmax(8rem, min-content) 1fr;
+    grid-template-rows: 1fr minmax(5rem, min-content) 1fr;
     grid-template-columns: minmax(min-content, max-content);
     grid-row-gap: 1.5rem;
     justify-content: center;
@@ -2797,36 +2830,48 @@ header {
   }
 
   .header__logo {
-    width: 75%;
-    margin-top: 2vh;
+    width: 60%;
+    margin-top: 1vh;
+    margin-bottom: 2vh;
   }
 
   .header-1 {
-    font-size: 6rem;
+    font-size: 4rem;
     text-align: center;
   }
 
   .btn.header__btn.btn-green.btn-animated.PPP {
-    font-size: 3rem;
+    font-size: 2rem;
     padding: 2rem 3.5rem;
     letter-spacing: 0;
     font-family: var(--font-family-2);
     position: relative;
-    top: 7.5vh;
-  }
-
-  .resources {
-    font-size: 3rem;
+    top: 9.5vh;
   }
 
   .header__partners-text {
     position: relative;
-    top: 5vh;
+
+    top: 6vh !important;
+  }
+
+  .resources {
+    font-size: 2rem;
   }
 
   .header__partner-logos {
     position: relative;
-    top: 6vh;
+    top: 7vh;
+  }
+
+  .header__partner-logos img {
+    height: 6rem;
+  }
+
+  .navbar__nav {
+    list-style: none;
+
+    position: static;
   }
 
   .article {
@@ -2835,42 +2880,49 @@ header {
   }
 
   .stats__header {
-    font-size: 4rem;
+    font-size: 3rem;
+    position: relative;
   }
 
   .stats__pic {
-    height: 30vh;
+    height: 25vh;
+    position: relative;
+    right: 3vw;
   }
 
   .stats__name--container {
-    grid-column: 3/6;
+    grid-column: 2/6;
   }
 
   .stats__name {
-    font-size: 4rem;
+    font-size: 2.6rem;
   }
 
   .stats__list--header {
-    font-size: 3.5rem;
+    font-size: 2.2rem;
+    position: relative;
+    left: 3.5vw;
   }
 
   .stats__list--item {
-    line-height: 1.9;
+    line-height: 1.5;
   }
 
   .stats__list--item a {
-    font-size: 2.5rem;
+    font-size: 1.8rem;
   }
 
   .stats-icon-list {
-    width: 3rem;
-    height: 3rem;
+    width: 2.2rem;
+    height: 2.2rem;
   }
 
   .stats__bio {
     grid-row: 6/7;
-    margin-top: -5vh;
-    font-size: 2.2rem;
+    margin-top: -8vh;
+    font-size: 1.6rem;
+    position: relative;
+    width: 90%;
   }
 
   .intro {
@@ -2881,9 +2933,9 @@ header {
   }
 
   .intro__container-header {
-    font-size: 3rem;
+    font-size: 2.5rem;
     padding: 0;
-    width: 100%;
+
     text-align: center;
     margin: 3vh auto 4vh auto;
   }
@@ -2894,17 +2946,17 @@ header {
   }
 
   .intro__container--content {
-    margin-top: -5vh;
+    margin-top: -3vh;
   }
 
   .intro__container--content-header {
-    font-size: 3rem;
+    font-size: 2rem;
     margin-top: 1vh;
     text-align: center;
   }
 
   .intro__container--content-content {
-    font-size: 2.4rem;
+    font-size: 1.6rem;
     text-align: center;
     padding: 0;
     width: 100%;
@@ -2926,7 +2978,7 @@ header {
   .intro__container--gallery-photo-1 {
     position: absolute;
     top: 20vh;
-    left: 40vw;
+    left: 35vw;
   }
 
   .intro__container--gallery-photo-2 {
@@ -2938,12 +2990,13 @@ header {
   .intro__container--gallery-photo-3 {
     position: absolute;
     top: 33vh;
-    left: 45vw;
+    left: 38vw;
   }
 
   .intro__container--gallery-photo-4 {
     position: absolute;
     top: 20vh;
+    left: 8vw;
   }
   .intro__container--gallery-photo-5 {
     position: absolute;
@@ -2953,7 +3006,7 @@ header {
 
   .btn-rectangle.btn-top {
     margin: 0;
-    font-size: 2.5rem;
+    font-size: 1.6rem;
     margin-top: 0vh;
     position: relative;
     left: 30%;
@@ -2970,11 +3023,11 @@ header {
     grid-row: 6/7;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    margin: 5rem 14vw;
+    margin: 5rem 2vw;
   }
 
   .specials-header {
-    font-size: 5rem;
+    font-size: 3rem;
   }
 
   .card {
@@ -3003,18 +3056,18 @@ header {
   .story__content {
     grid-column: 1 / -1;
     grid-row: 8/9;
-    padding: 3vh 3vw;
+    padding: 3vh 2vw;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
   }
 
   .story__content-heading {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .story__content-title {
-    font-size: 3rem;
+    font-size: 2.2rem;
   }
 
   .story__content-text {
@@ -3023,6 +3076,10 @@ header {
 
   .btn-rectangle.btn--white {
     font-size: 1.6rem;
+    width: 55%;
+    position: relative;
+    right: 40%;
+    bottom: 5%;
   }
 
   .tab {
@@ -3031,6 +3088,14 @@ header {
     grid-row: 9/10;
     grid-column: full-start/full-end;
     margin: 10vh auto;
+  }
+
+  .btn.operations__tab {
+    padding: 0.5vh 3vw;
+  }
+
+  .operations__content {
+    padding: 0 2vw 1vh 1vw;
   }
 
   .section__description-a {
@@ -3053,7 +3118,8 @@ header {
   }
 
   .contact__header {
-    font-size: 4rem;
+    font-size: 2.5rem;
+    width: 100%;
   }
 
   .contact__form {
@@ -3061,12 +3127,15 @@ header {
   }
 
   .form__input {
-    font-size: 2rem;
+    font-size: 1.6rem;
+    width: 100%;
   }
 
   .btn-green.btn.btn-contact {
-    font-size: 2rem;
+    font-size: 1.6rem;
     margin-top: 0;
+    width: 100%;
+    padding: 1.5vh 2vw;
   }
 
   .btn.operations__tab {
@@ -3086,38 +3155,47 @@ header {
   }
 
   .section__header {
-    font-size: 4rem;
+    font-size: 2.5rem;
   }
 
   .testimonial {
-    width: 75%;
-    margin-top: 30vh;
+    width: 73%;
+    margin-top: 15vh;
   }
 
   .dots {
-    bottom: 7vh;
+    bottom: 9vh;
   }
 
   .testimonial__header {
-    font-size: 3rem;
+    font-size: 2rem;
+    position: relative;
+    bottom: 5vh;
   }
 
   .testimonial__text {
-    font-size: 2.6rem;
+    font-size: 1.7rem;
+    position: relative;
+    bottom: 2vh;
   }
 
   .testimonial__photo {
-    height: 10rem;
-    width: 10rem;
+    height: 7rem;
+    width: 7rem;
   }
 
   .testimonial__author {
-    column-gap: 5rem;
+    column-gap: 2rem;
+    position: relative;
+    right: 10vw;
+    bottom: 3vh;
   }
 
-  .crater {
-    top: 60vh;
-    left: 0vw;
+  .crater.btn-rectangle.btn--white {
+    position: relative;
+    top: 55vh;
+    left: -33vw;
+    width: 65%;
   }
 
   .slider__btn.slider__btn--left,
@@ -3142,6 +3220,9 @@ header {
 
   .footer-img {
     width: 200%;
+    position: relative;
+    top: 2vh;
+    right: 85%;
   }
 
   .footer__copy-div {
@@ -3154,8 +3235,7 @@ header {
   }
 
   .footer__copy {
-    width: 100%;
-    font-size: 1rem;
+    display: none;
   }
 
   .footer-icon-footer {
@@ -3168,21 +3248,24 @@ header {
   }
 
   .footer__links {
-    font-size: 3rem;
-    grid-gap: 0;
+    font-size: 2rem;
+    grid-gap: 1vh;
+    position: relative;
+    left: 25%;
   }
 
   .builtBy {
     position: relative;
-    right: 1vw;
+    right: -10vw;
     width: 100%;
     font-size: 1.4rem;
+    margin-top: 1vh;
   }
 
   .containerAbout {
     display: grid;
     grid-template-columns: repeat(10, minmax(min-content, 1fr));
-    grid-template-rows: 10vh 150vh 285vh 148vh 50vh 18vh;
+    grid-template-rows: 10vh 145vh 285vh 148vh 50vh 18vh;
   }
 
   .aboutNav-list {
@@ -3291,6 +3374,16 @@ header {
     display: none;
   }
 
+  .aboutContact-button {
+    transform: translateX(-10%) translateY(-60%);
+  }
+  .aboutContact-button:hover {
+    transform: translateX(-10%) translateY(-55%);
+  }
+  .aboutContact-button:active {
+    transform: translateX(-10%) translateY(-60%);
+  }
+
   .footer__copy-div-about {
     grid-column: 1/-1;
     margin-top: 2.5vh;
@@ -3327,17 +3420,19 @@ header {
 
   .builtBy {
     font-size: 1.2rem;
+    position: relative;
+    right: -3vw;
   }
 }
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 410px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
   .container {
     grid-template-rows:
-      5vh 95vh 105vh 162vh 4vh 193vh 45vh 94vh repeat(
+      5vh 95vh 105vh 175vh 1vh 288vh 45vh 105vh repeat(
         2,
         minmax(min-content, 55vh)
       )
-      88vh
+      115vh
       18vh;
     grid-template-columns:
       [full-start] 1fr [center-start] repeat(
@@ -3355,10 +3450,10 @@ header {
   }
 
   .navbar__nav {
-    position: relative;
-    display: flex;
-    gap: 35%;
-    left: 5%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 4rem;
+    margin-left: 4.5%;
   }
 
   .navLogo {
@@ -3371,7 +3466,7 @@ header {
   }
 
   .link-text {
-    font-size: 3rem;
+    font-size: 2rem;
     transform: rotate(0deg);
   }
 
@@ -3381,7 +3476,7 @@ header {
     padding: 0 8rem 8rem 8rem;
     padding-top: 1rem;
     display: grid;
-    grid-template-rows: 1fr minmax(8rem, min-content) 1fr;
+    grid-template-rows: 1fr minmax(5rem, min-content) 1fr;
     grid-template-columns: minmax(min-content, max-content);
     grid-row-gap: 1.5rem;
     justify-content: center;
@@ -3389,36 +3484,48 @@ header {
   }
 
   .header__logo {
-    width: 75%;
-    margin-top: 2vh;
+    width: 60%;
+    margin-top: 1vh;
+    margin-bottom: 2vh;
   }
 
   .header-1 {
-    font-size: 5rem;
+    font-size: 3.5rem;
     text-align: center;
   }
 
   .btn.header__btn.btn-green.btn-animated.PPP {
-    font-size: 2.6rem;
+    font-size: 2rem;
     padding: 2rem 3.5rem;
     letter-spacing: 0;
     font-family: var(--font-family-2);
     position: relative;
-    top: 7.5vh;
-  }
-
-  .resources {
-    font-size: 3rem;
+    top: 2.5vh;
   }
 
   .header__partners-text {
     position: relative;
-    top: 5vh;
+
+    top: -2vh !important;
+  }
+
+  .resources {
+    font-size: 2rem;
   }
 
   .header__partner-logos {
     position: relative;
-    top: 5vh;
+    top: -2vh;
+  }
+
+  .header__partner-logos img {
+    height: 6rem;
+  }
+
+  .navbar__nav {
+    list-style: none;
+
+    position: static;
   }
 
   .article {
@@ -3427,42 +3534,51 @@ header {
   }
 
   .stats__header {
-    font-size: 4rem;
+    font-size: 2.8rem;
+    position: relative;
   }
 
   .stats__pic {
-    height: 30vh;
+    height: 27vh;
+    position: relative;
+    right: 3vw;
   }
 
   .stats__name--container {
-    grid-column: 3/6;
+    grid-column: 2/6;
   }
 
   .stats__name {
-    font-size: 4rem;
+    font-size: 2.6rem;
   }
 
   .stats__list--header {
-    font-size: 3.5rem;
+    font-size: 2.2rem;
+    position: relative;
+    left: 4.5vw;
   }
 
   .stats__list--item {
-    line-height: 1.9;
+    line-height: 1.5;
+    position: relative;
+    left: 3vw;
   }
 
   .stats__list--item a {
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
 
   .stats-icon-list {
-    width: 3rem;
-    height: 3rem;
+    width: 2rem;
+    height: 2rem;
   }
 
   .stats__bio {
     grid-row: 6/7;
-    margin-top: -5vh;
-    font-size: 2rem;
+    margin-top: -6vh;
+    font-size: 1.4rem;
+    position: relative;
+    width: 90%;
   }
 
   .intro {
@@ -3473,9 +3589,9 @@ header {
   }
 
   .intro__container-header {
-    font-size: 3rem;
+    font-size: 2.5rem;
     padding: 0;
-    width: 100%;
+
     text-align: center;
     margin: 3vh auto 4vh auto;
   }
@@ -3486,17 +3602,17 @@ header {
   }
 
   .intro__container--content {
-    margin-top: -5vh;
+    margin-top: -3vh;
   }
 
   .intro__container--content-header {
-    font-size: 3rem;
+    font-size: 2rem;
     margin-top: 1vh;
     text-align: center;
   }
 
   .intro__container--content-content {
-    font-size: 2.4rem;
+    font-size: 1.6rem;
     text-align: center;
     padding: 0;
     width: 100%;
@@ -3518,7 +3634,7 @@ header {
   .intro__container--gallery-photo-1 {
     position: absolute;
     top: 20vh;
-    left: 40vw;
+    left: 35vw;
   }
 
   .intro__container--gallery-photo-2 {
@@ -3530,12 +3646,13 @@ header {
   .intro__container--gallery-photo-3 {
     position: absolute;
     top: 33vh;
-    left: 45vw;
+    left: 38vw;
   }
 
   .intro__container--gallery-photo-4 {
     position: absolute;
     top: 20vh;
+    left: 8vw;
   }
   .intro__container--gallery-photo-5 {
     position: absolute;
@@ -3545,7 +3662,7 @@ header {
 
   .btn-rectangle.btn-top {
     margin: 0;
-    font-size: 2.5rem;
+    font-size: 1.6rem;
     margin-top: 0vh;
     position: relative;
     left: 30%;
@@ -3562,16 +3679,16 @@ header {
     grid-row: 6/7;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    margin: 5rem 14vw;
+    margin: 5rem 2vw;
   }
 
   .specials-header {
-    margin-top: 3vh;
-    font-size: 4rem;
+    font-size: 3rem;
   }
 
   .card {
     margin: 2vh auto 0 auto;
+    width: 32rem;
   }
 
   .story__pictures {
@@ -3590,32 +3707,36 @@ header {
   .story__img--2 {
     width: 80%;
     position: relative;
-    top: 4vh;
+    top: 4.5vh;
   }
 
   .story__content {
     grid-column: 1 / -1;
     grid-row: 8/9;
-    padding: 3vh 3vw;
+    padding: 3vh 2vw;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
   }
 
   .story__content-heading {
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
 
   .story__content-title {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
   .story__content-text {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 
   .btn-rectangle.btn--white {
-    font-size: 2rem;
+    font-size: 1.7rem;
+    width: 60%;
+    position: relative;
+    right: 40%;
+    bottom: 5%;
   }
 
   .tab {
@@ -3626,18 +3747,16 @@ header {
     margin: 10vh auto;
   }
 
-  .operations__content.operations__content--1,
-  .operations__content.operations__content--2,
-  .operations__content.operations__content--3 {
-    padding: 2vh 1vw 1vh 0;
+  .btn.operations__tab {
+    padding: 0.5vh 3vw;
+  }
+
+  .operations__content {
+    padding: 0 2vw 1vh 1vw;
   }
 
   .section__description-a {
     font-size: 3rem;
-  }
-
-  .contact__header {
-    width: 100%;
   }
 
   .section__header-a {
@@ -3656,20 +3775,25 @@ header {
   }
 
   .contact__header {
-    font-size: 4rem;
+    font-size: 2.5rem;
+    width: 100%;
   }
 
   .contact__form {
     width: 90%;
+    padding: 15vh 2vw;
   }
 
   .form__input {
-    font-size: 2rem;
+    font-size: 1.6rem;
+    width: 100%;
   }
 
   .btn-green.btn.btn-contact {
-    font-size: 2rem;
+    font-size: 1.6rem;
     margin-top: 0;
+    width: 50%;
+    padding: 1.5vh 2vw;
   }
 
   .btn.operations__tab {
@@ -3689,44 +3813,52 @@ header {
   }
 
   .section__header {
-    font-size: 4rem;
+    font-size: 2.5rem;
   }
 
   .testimonial {
-    width: 75%;
+    width: 73%;
     margin-top: 15vh;
   }
 
   .dots {
-    bottom: 8vh;
+    bottom: 9vh;
   }
 
   .testimonial__header {
-    font-size: 2.5rem;
+    font-size: 2rem;
+    position: relative;
+    bottom: 3vh;
   }
 
   .testimonial__text {
-    font-size: 2rem;
+    font-size: 1.7rem;
+    position: relative;
+    bottom: 2vh;
   }
 
   .testimonial__photo {
-    height: 8rem;
-    width: 8rem;
+    height: 7rem;
+    width: 7rem;
   }
 
   .testimonial__author {
-    column-gap: 3rem;
+    column-gap: 1rem;
+    position: relative;
+    right: 10vw;
+    bottom: 3vh;
   }
 
-  .crater {
-    top: 47vh;
-    left: -10vw;
-    width: 100%;
+  .crater.btn-rectangle.btn--white {
+    position: relative;
+    top: 67vh;
+    left: -53vw;
+    width: 80%;
   }
 
   .slider__btn.slider__btn--left,
   .slider__btn.slider__btn--right {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 
   .footer {
@@ -3742,10 +3874,16 @@ header {
 
   .footer__social {
     grid-row: 3/4;
+    grid-column: 3/6;
+    position: relative;
+    right: -4vw;
   }
 
   .footer-img {
     width: 200%;
+    position: relative;
+    top: 2vh;
+    right: 85%;
   }
 
   .footer__copy-div {
@@ -3758,8 +3896,7 @@ header {
   }
 
   .footer__copy {
-    width: 100%;
-    font-size: 1rem;
+    display: none;
   }
 
   .footer-icon-footer {
@@ -3768,25 +3905,29 @@ header {
   }
 
   .footer__social {
-    grid-gap: 8vw;
+    grid-gap: 5vw;
   }
 
   .footer__links {
-    font-size: 2.5rem;
-    grid-gap: 1;
+    font-size: 1.8rem;
+    grid-gap: 1vh;
+    position: relative;
+    left: 35%;
+    row-gap: 1.8vh;
   }
 
   .builtBy {
-    position: relative;
-    right: 1vw;
     width: 100%;
     font-size: 1.4rem;
+    margin-top: 0;
+    position: relative;
+    left: 13vw !important;
   }
 
   .containerAbout {
     display: grid;
     grid-template-columns: repeat(10, minmax(min-content, 1fr));
-    grid-template-rows: 10vh 140vh 340vh 138vh 50vh 18vh;
+    grid-template-rows: 10vh 140vh 337vh 145vh 50vh 18vh;
   }
 
   .aboutNav-list {
@@ -3875,7 +4016,7 @@ header {
   }
 
   .aboutServices-contentBox {
-    bottom: 7vh;
+    bottom: 2vh;
   }
 
   .aboutServices-button {
@@ -3931,6 +4072,9 @@ header {
 
   .footer__links-about {
     font-size: 1.8rem;
+    row-gap: 1.7vh;
+    position: relative;
+    right: 1vw;
   }
 
   .footer__copy-about {
@@ -3939,28 +4083,44 @@ header {
 
   .footer-img-about {
     width: 150%;
+    position: relative;
+    top: 0vh;
   }
 
   .footer__copy-div-about {
     width: 100%;
     font-size: 0.8rem;
     margin-top: 1.5vh;
-    grid-column: 4/-1;
+    grid-column: 3/-1;
+    position: relative;
+    right: 4vw;
   }
 
   .builtBy {
     font-size: 1rem;
+
+    top: 1vh;
+  }
+
+  .aboutContact-button {
+    transform: translateX(-10%) translateY(-60%);
+  }
+  .aboutContact-button:hover {
+    transform: translateX(-10%) translateY(-55%);
+  }
+  .aboutContact-button:active {
+    transform: translateX(-10%) translateY(-60%);
   }
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 374px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
   .container {
     grid-template-rows:
-      5vh 95vh 105vh 170vh 4vh 203vh 45vh 94vh repeat(
+      5vh 95vh 105vh 185vh 1vh 305vh 45vh 100vh repeat(
         2,
         minmax(min-content, 55vh)
       )
-      88vh
+      120vh
       18vh;
     grid-template-columns:
       [full-start] 1fr [center-start] repeat(
@@ -3978,10 +4138,10 @@ header {
   }
 
   .navbar__nav {
-    position: relative;
-    display: flex;
-    gap: 35%;
-    left: 3.7%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 4rem;
+    margin-left: 2%;
   }
 
   .navLogo {
@@ -3994,17 +4154,17 @@ header {
   }
 
   .link-text {
-    font-size: 3rem;
+    font-size: 2rem;
     transform: rotate(0deg);
   }
 
   header {
     grid-column: 1 / -1;
     grid-row: 2 / 3;
-    padding: 0 8rem 6rem 8rem;
+    padding: 0 8rem 8rem 8rem;
     padding-top: 1rem;
     display: grid;
-    grid-template-rows: 1fr minmax(6rem, min-content) 1fr;
+    grid-template-rows: 1fr minmax(5rem, min-content) 1fr;
     grid-template-columns: minmax(min-content, max-content);
     grid-row-gap: 1.5rem;
     justify-content: center;
@@ -4012,36 +4172,48 @@ header {
   }
 
   .header__logo {
-    width: 70%;
-    margin-top: 2vh;
+    width: 60%;
+    margin-top: 1vh;
+    margin-bottom: 2vh;
   }
 
   .header-1 {
-    font-size: 4rem;
+    font-size: 3.5rem;
     text-align: center;
   }
 
   .btn.header__btn.btn-green.btn-animated.PPP {
-    font-size: 2.6rem;
-    padding: 2rem 3.5rem;
+    font-size: 2rem;
+    padding: 1.5rem 3rem;
     letter-spacing: 0;
     font-family: var(--font-family-2);
     position: relative;
-    top: 3.5vh;
-  }
-
-  .resources {
-    font-size: 3rem;
+    top: 2.5vh;
   }
 
   .header__partners-text {
     position: relative;
-    top: 3vh;
+
+    top: -3vh !important;
+  }
+
+  .resources {
+    font-size: 2rem;
   }
 
   .header__partner-logos {
     position: relative;
-    top: 3.5vh;
+    top: -4vh;
+  }
+
+  .header__partner-logos img {
+    height: 6rem;
+  }
+
+  .navbar__nav {
+    list-style: none;
+
+    position: static;
   }
 
   .article {
@@ -4050,42 +4222,51 @@ header {
   }
 
   .stats__header {
-    font-size: 4rem;
+    font-size: 2.8rem;
+    position: relative;
   }
 
   .stats__pic {
-    height: 30vh;
+    height: 27vh;
+    position: relative;
+    right: 3vw;
   }
 
   .stats__name--container {
-    grid-column: 3/6;
+    grid-column: 2/6;
   }
 
   .stats__name {
-    font-size: 4rem;
+    font-size: 2.6rem;
   }
 
   .stats__list--header {
-    font-size: 3.5rem;
+    font-size: 2.2rem;
+    position: relative;
+    left: 4.5vw;
   }
 
   .stats__list--item {
-    line-height: 1.9;
+    line-height: 1.5;
+    position: relative;
+    left: 3vw;
   }
 
   .stats__list--item a {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   .stats-icon-list {
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 2rem;
+    height: 2rem;
   }
 
   .stats__bio {
     grid-row: 6/7;
     margin-top: -5vh;
-    font-size: 1.9rem;
+    font-size: 1.3rem;
+    position: relative;
+    width: 95%;
   }
 
   .intro {
@@ -4096,9 +4277,9 @@ header {
   }
 
   .intro__container-header {
-    font-size: 3rem;
-    padding: 0 1vw;
-    width: 100%;
+    font-size: 2.5rem;
+    padding: 0;
+
     text-align: center;
     margin: 3vh auto 4vh auto;
   }
@@ -4109,17 +4290,17 @@ header {
   }
 
   .intro__container--content {
-    margin-top: -5vh;
+    margin-top: -3vh;
   }
 
   .intro__container--content-header {
-    font-size: 3rem;
+    font-size: 2rem;
     margin-top: 1vh;
     text-align: center;
   }
 
   .intro__container--content-content {
-    font-size: 2.4rem;
+    font-size: 1.6rem;
     text-align: center;
     padding: 0;
     width: 100%;
@@ -4141,7 +4322,7 @@ header {
   .intro__container--gallery-photo-1 {
     position: absolute;
     top: 20vh;
-    left: 40vw;
+    left: 35vw;
   }
 
   .intro__container--gallery-photo-2 {
@@ -4153,12 +4334,13 @@ header {
   .intro__container--gallery-photo-3 {
     position: absolute;
     top: 33vh;
-    left: 45vw;
+    left: 38vw;
   }
 
   .intro__container--gallery-photo-4 {
     position: absolute;
     top: 20vh;
+    left: 8vw;
   }
   .intro__container--gallery-photo-5 {
     position: absolute;
@@ -4168,10 +4350,10 @@ header {
 
   .btn-rectangle.btn-top {
     margin: 0;
-    font-size: 2.5rem;
+    font-size: 1.6rem;
     margin-top: 0vh;
     position: relative;
-    left: 30%;
+    left: 25%;
   }
 
   .inbetween {
@@ -4185,16 +4367,16 @@ header {
     grid-row: 6/7;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    margin: 5rem 14vw;
+    margin: 5rem 2vw;
   }
 
   .specials-header {
-    margin-top: 3vh;
-    font-size: 4rem;
+    font-size: 3rem;
   }
 
   .card {
     margin: 2vh auto 0 auto;
+    width: 32rem;
   }
 
   .story__pictures {
@@ -4213,33 +4395,36 @@ header {
   .story__img--2 {
     width: 80%;
     position: relative;
-    top: 4vh;
+    top: 7.5vh;
   }
 
   .story__content {
     grid-column: 1 / -1;
     grid-row: 8/9;
-    padding: 3vh 3vw;
+    padding: 3vh 2vw;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
   }
 
   .story__content-heading {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
   }
 
   .story__content-title {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
   }
 
   .story__content-text {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
   }
 
   .btn-rectangle.btn--white {
-    font-size: 2rem;
-    left: -10vw;
+    font-size: 1.7rem;
+    width: 60%;
+    position: relative;
+    right: 40%;
+    bottom: 5%;
   }
 
   .tab {
@@ -4250,10 +4435,13 @@ header {
     margin: 10vh auto;
   }
 
-  .operations__content.operations__content--1,
-  .operations__content.operations__content--2,
-  .operations__content.operations__content--3 {
-    padding: 2vh 1vw 1vh 0;
+  .btn.operations__tab {
+    padding: 0.5vh 3vw;
+    margin-right: 1.5vw;
+  }
+
+  .operations__content {
+    padding: 0 2vw 1vh 1vw;
   }
 
   .section__description-a {
@@ -4276,21 +4464,25 @@ header {
   }
 
   .contact__header {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     width: 100%;
   }
 
   .contact__form {
     width: 90%;
+    padding: 15vh 2vw;
   }
 
   .form__input {
-    font-size: 2rem;
+    font-size: 1.6rem;
+    width: 100%;
   }
 
   .btn-green.btn.btn-contact {
-    font-size: 2rem;
+    font-size: 1.6rem;
     margin-top: 0;
+    width: 50%;
+    padding: 1.5vh 2vw;
   }
 
   .btn.operations__tab {
@@ -4310,24 +4502,28 @@ header {
   }
 
   .section__header {
-    font-size: 4rem;
-  }
-
-  .testimonial {
-    width: 75%;
-    margin-top: 10vh;
-  }
-
-  .dots {
-    bottom: 8vh;
-  }
-
-  .testimonial__header {
     font-size: 2.5rem;
   }
 
+  .testimonial {
+    width: 73%;
+    margin-top: 15vh;
+  }
+
+  .dots {
+    bottom: 9vh;
+  }
+
+  .testimonial__header {
+    font-size: 2rem;
+    position: relative;
+    bottom: 3vh;
+  }
+
   .testimonial__text {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
+    position: relative;
+    bottom: 2vh;
   }
 
   .testimonial__photo {
@@ -4336,19 +4532,22 @@ header {
   }
 
   .testimonial__author {
-    column-gap: 2rem;
+    column-gap: 1rem;
+    position: relative;
+    right: 10vw;
+    bottom: 6vh;
   }
 
-  .crater {
+  .crater.btn-rectangle.btn--white {
     position: relative;
-    top: 44vh;
-    left: -15vw !important;
-    width: 70%;
+    top: 70vh;
+    left: -60vw;
+    width: 80%;
   }
 
   .slider__btn.slider__btn--left,
   .slider__btn.slider__btn--right {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 
   .footer {
@@ -4364,10 +4563,16 @@ header {
 
   .footer__social {
     grid-row: 3/4;
+    grid-column: 3/6;
+    position: relative;
+    right: -4vw;
   }
 
   .footer-img {
     width: 200%;
+    position: relative;
+    top: 2vh;
+    right: 85%;
   }
 
   .footer__copy-div {
@@ -4380,8 +4585,7 @@ header {
   }
 
   .footer__copy {
-    width: 100%;
-    font-size: 1rem;
+    display: none;
   }
 
   .footer-icon-footer {
@@ -4390,25 +4594,30 @@ header {
   }
 
   .footer__social {
-    grid-gap: 8vw;
+    grid-gap: 4vw;
   }
 
   .footer__links {
-    font-size: 2.5rem;
-    grid-gap: 1;
+    font-size: 1.8rem;
+    grid-gap: 1vh;
+    position: relative;
+    left: 35%;
+    row-gap: 1.8vh;
   }
 
   .builtBy {
-    position: relative;
-    right: 1vw;
     width: 100%;
     font-size: 1.4rem;
+    margin-top: 0;
+    position: relative;
+    left: 7vw !important;
+    top: 1vh;
   }
 
   .containerAbout {
     display: grid;
     grid-template-columns: repeat(10, minmax(min-content, 1fr));
-    grid-template-rows: 10vh 145vh 356vh 148vh 50vh 18vh;
+    grid-template-rows: 10vh 148vh 356vh 148vh 50vh 18vh;
   }
 
   .aboutNav-list {
@@ -4544,6 +4753,12 @@ header {
   .aboutContact-button {
     transform: translateX(-10%) translateY(-60%);
   }
+  .aboutContact-button:hover {
+    transform: translateX(-10%) translateY(-55%);
+  }
+  .aboutContact-button:active {
+    transform: translateX(-10%) translateY(-60%);
+  }
 
   .footer__copy-div-about {
     grid-column: 5/-1;
@@ -4578,12 +4793,13 @@ header {
   .footer__copy-div-about {
     width: 100%;
     font-size: 0.8rem;
-    margin-top: 1vh;
+    margin-top: 2vh;
+    position: relative;
+    right: 15vw;
   }
 
   .builtBy {
     font-size: 1rem;
     position: relative;
-    right: 8vw;
   }
 }

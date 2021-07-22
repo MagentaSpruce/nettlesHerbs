@@ -934,6 +934,11 @@ a:active {
   align-self: center;
 }
 
+.btn.btn--green.btn--small {
+  display: flex;
+  justify-self: flex-end;
+}
+
 .error {
   position: absolute;
   top: 35%;
@@ -1087,6 +1092,8 @@ a:active {
 }
 .aboutNav-image-overview {
   width: 7vh;
+  position: relative;
+  right: 1%;
 }
 
 .footer-img {
@@ -1100,15 +1107,18 @@ a:active {
 .aboutNav-header-overview {
   color: whitesmoke;
   margin: 0 auto;
+  position: relative;
+  right: 20%;
 }
 
 .footer__social-overview {
-  grid-column: 4/8;
+  grid-column: 3/8;
   grid-row: 2/3;
   margin-top: 1.5vh;
   display: grid;
   grid-template-columns: repeat(3, minmax(min-content, 1fr));
-  transform: translateX(15%);
+  position: relative;
+  left: 8vw;
 }
 
 .footer__links-overview {
@@ -1189,8 +1199,8 @@ a:active {
     transform: translateY(0.2vh);
   }
   .btn.btn--green.btn--small {
-    width: 50%;
-    transform: translateX(10vw);
+    display: flex;
+    justify-self: flex-end;
   }
 }
 
@@ -1206,7 +1216,8 @@ a:active {
 }
 @media only screen and (max-width: 700px) {
   .main {
-    background-color: red;
+    /* background-color: red; */
+    padding: 6rem 2rem;
   }
 
   .aboutNav-image-overview {
@@ -1249,7 +1260,7 @@ a:active {
   }
 
   .aboutNav-image-overview {
-    width: 15%;
+    display: none;
   }
 
   body {
@@ -1262,8 +1273,8 @@ a:active {
   }
 
   .btn.btn--green.btn--small {
-    margin: 0 auto;
-    text-align: center;
+    display: flex;
+    justify-self: flex-end;
   }
 
   .footer__social-overview {
@@ -1275,6 +1286,7 @@ a:active {
   .footer__links-overview {
     transform: translateX(-15%);
     font-size: 2vh;
+    row-gap: 1vh;
   }
 
   .section-description {
@@ -1336,7 +1348,8 @@ a:active {
   }
 
   .btn.btn--green.btn--small {
-    margin: 0 auto;
+    display: flex;
+    justify-self: flex-end;
   }
 
   .footer__social-overview {
