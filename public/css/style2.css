@@ -3265,7 +3265,7 @@ header {
   .containerAbout {
     display: grid;
     grid-template-columns: repeat(10, minmax(min-content, 1fr));
-    grid-template-rows: 10vh 145vh 285vh 148vh 50vh 18vh;
+    grid-template-rows: 10vh 145vh 285vh 145vh 50vh 18vh;
   }
 
   .aboutNav-list {
@@ -3927,7 +3927,7 @@ header {
   .containerAbout {
     display: grid;
     grid-template-columns: repeat(10, minmax(min-content, 1fr));
-    grid-template-rows: 10vh 140vh 337vh 145vh 50vh 18vh;
+    grid-template-rows: 10vh 140vh 337vh 142vh 50vh 18vh;
   }
 
   .aboutNav-list {
@@ -4617,7 +4617,7 @@ header {
   .containerAbout {
     display: grid;
     grid-template-columns: repeat(10, minmax(min-content, 1fr));
-    grid-template-rows: 10vh 148vh 356vh 148vh 50vh 18vh;
+    grid-template-rows: 10vh 148vh 356vh 145vh 50vh 18vh;
   }
 
   .aboutNav-list {

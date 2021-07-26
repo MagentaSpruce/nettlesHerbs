@@ -1259,6 +1259,10 @@ a:active {
     /* background-color: red; */
   }
 
+  .section-pictures {
+    margin-top: 25rem;
+  }
+
   .aboutNav-image-overview {
     display: none;
   }
@@ -1300,7 +1304,7 @@ a:active {
 
   .cta {
     padding: 0;
-    height: 21vh;
+    height: 22vh;
   }
 
   .cta__content {
@@ -1308,8 +1312,14 @@ a:active {
     flex-direction: column;
   }
 
+  .cta__img {
+    display: none;
+  }
+
   .description-box {
     margin-top: -5vh;
+
+    margin-bottom: 20rem !important;
   }
 
   .overview-box {
@@ -1317,25 +1327,51 @@ a:active {
   }
 
   .heading-secondary {
-    transform: translateY(1.5vh) translateX(8vw);
+    text-align: center;
+    position: relative;
+    right: 4vw;
+    padding-top: 1vh;
   }
 
   .cta__text {
-    transform: translateX(8vw) translateY(3.5vh);
-    color: #777;
+    display: none;
   }
 
   .btn.btn--green.span-all-rows {
-    transform: translateY(6vh) translateX(19vw);
+    position: relative;
+    right: 4vw;
   }
 }
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 376px) {
   .aboutNav-header {
     /* background-color: red; */
   }
 
+  .section-pictures {
+    margin-top: 35rem;
+  }
+
   .aboutNav-image-overview {
     width: 15%;
+  }
+
+  .cta__img {
+    display: none;
+  }
+  .heading-secondary {
+    text-align: center;
+    position: relative;
+    right: 4vw;
+    padding-top: 1vh;
+  }
+
+  .cta__text {
+    display: none;
+  }
+
+  .btn.btn--green.span-all-rows {
+    position: relative;
+    right: 4vw;
   }
 
   body {
@@ -1368,10 +1404,6 @@ a:active {
     height: 140vh;
   }
 
-  .section-cta {
-    max-width: 100%;
-  }
-
   .cta {
     padding: 0;
     height: 21vh;
@@ -1387,15 +1419,55 @@ a:active {
   }
 
   .heading-secondary {
-    transform: translateY(1.5vh) translateX(8vw);
+    text-align: center;
+    position: relative;
+    right: 4vw;
+    padding-top: 1vh;
   }
 
   .cta__text {
-    transform: translateX(8vw) translateY(3.5vh);
-    color: #777;
+    display: none;
   }
 
   .btn.btn--green.span-all-rows {
-    transform: translateY(6vh) translateX(19vw);
+    position: relative;
+    right: 4vw;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .aboutNav-header {
+    /* background-color: red; */
+  }
+
+  .section-pictures {
+    margin-top: 40rem;
+  }
+
+  .aboutNav-image-overview {
+    width: 15%;
+  }
+
+  .cta__img {
+    display: none;
+  }
+  .heading-secondary {
+    text-align: center;
+    position: relative;
+    right: 4vw;
+    padding-top: 1vh;
+  }
+
+  .cta__text {
+    display: none;
+  }
+
+  .btn.btn--green.span-all-rows {
+    position: relative;
+    right: 4vw;
+  }
+
+  .cta {
+    height: 23vh;
   }
 }
