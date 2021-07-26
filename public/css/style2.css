@@ -1960,10 +1960,8 @@ header {
     font-size: 6rem;
   }
 }
-@media only screen and (max-width: 62.5em) {
-}
 /* Landscape */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
   .container {
     grid-template-rows:
       100vh 109vh 1vh 300vh 76vh repeat(2, minmax(min-content, 75vh))
@@ -2250,7 +2248,7 @@ header {
   }
 }
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
   .container {
     grid-template-rows:
       5vh 95vh 105vh 113vh 3vh 190vh 60vw 70vh repeat(
@@ -2773,7 +2771,7 @@ header {
 }
 
 /* Portrait and Landscape */
-@media only screen and (min-width: 410px) and (max-width: 767px) {
+@media only screen and (min-width: 411px) and (max-width: 767px) {
   .container {
     grid-template-rows:
       5vh 95vh 105vh 164vh 1vh 260vh 45vh 105vh repeat(
@@ -2832,13 +2830,13 @@ header {
   }
 
   .header__logo {
-    width: 60%;
+    width: 45%;
     margin-top: 1vh;
     margin-bottom: 2vh;
   }
 
   .header-1 {
-    font-size: 4rem;
+    font-size: 3.5rem;
     text-align: center;
   }
 
@@ -2848,7 +2846,7 @@ header {
     letter-spacing: 0;
     font-family: var(--font-family-2);
     position: relative;
-    top: 9.5vh;
+    top: 18.5vh;
   }
 
   .header__partners-text {
