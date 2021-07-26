@@ -2774,7 +2774,7 @@ header {
 @media only screen and (min-width: 411px) and (max-width: 767px) {
   .container {
     grid-template-rows:
-      5vh 95vh 105vh 164vh 1vh 260vh 45vh 105vh repeat(
+      5vh 95vh 105vh 161vh 1vh 257vh 45vh 105vh repeat(
         2,
         minmax(min-content, 55vh)
       )
@@ -3428,7 +3428,7 @@ header {
 @media only screen and (min-width: 375px) and (max-width: 410px) {
   .container {
     grid-template-rows:
-      5vh 95vh 105vh 175vh 1vh 288vh 45vh 105vh repeat(
+      5vh 95vh 105vh 172vh 1vh 285vh 45vh 105vh repeat(
         2,
         minmax(min-content, 55vh)
       )
@@ -4116,7 +4116,7 @@ header {
 @media only screen and (min-width: 320px) and (max-width: 374px) {
   .container {
     grid-template-rows:
-      5vh 95vh 105vh 185vh 1vh 305vh 45vh 100vh repeat(
+      5vh 95vh 105vh 182vh 1vh 303vh 45vh 100vh repeat(
         2,
         minmax(min-content, 55vh)
       )
