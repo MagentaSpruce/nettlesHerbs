@@ -2773,7 +2773,7 @@ header {
 }
 
 /* Portrait and Landscape */
-@media only screen and (min-width: 410px) and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 3) {
+@media only screen and (min-width: 410px) and (max-width: 767px) {
   .container {
     grid-template-rows:
       5vh 95vh 105vh 164vh 1vh 260vh 45vh 105vh repeat(
@@ -3427,7 +3427,7 @@ header {
   }
 }
 
-@media only screen and (min-width: 375px) and (max-width: 410px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+@media only screen and (min-width: 375px) and (max-width: 410px) {
   .container {
     grid-template-rows:
       5vh 95vh 105vh 175vh 1vh 288vh 45vh 105vh repeat(
@@ -4115,7 +4115,7 @@ header {
   }
 }
 
-@media only screen and (min-width: 320px) and (max-width: 374px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+@media only screen and (min-width: 320px) and (max-width: 374px) {
   .container {
     grid-template-rows:
       5vh 95vh 105vh 185vh 1vh 305vh 45vh 100vh repeat(
