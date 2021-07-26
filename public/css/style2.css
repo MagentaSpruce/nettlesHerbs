@@ -3170,7 +3170,7 @@ header {
   .testimonial__header {
     font-size: 2rem;
     position: relative;
-    bottom: 5vh;
+    bottom: 3vh;
   }
 
   .testimonial__text {
@@ -3421,7 +3421,7 @@ header {
   .builtBy {
     font-size: 1.2rem;
     position: relative;
-    right: -3vw;
+    right: -10vw;
   }
 }
 
