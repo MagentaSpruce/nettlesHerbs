@@ -1,31 +1,13 @@
 # nettlesHerbs
 
-Client product - Fully responsive and custom business site built using HTML, CSS, JavaScript, NodeJS, Express &amp; MongoDB
+Business site - Fully responsive and custom web application built using HTML, CSS, JavaScript, NodeJS, Express, MongoDB & PUG.
 
-This client product utilizes a custom built API for processing emails and payments. This website was built for an Herbal Medicine company based out of Jacksonville, FL.
+This site product utilizes a custom built API with over 30 endpoints and is also able to handle the processing of emails and payments. This website was built for an Herbal Medicine company based out of Jacksonville, FL. The site is fully functional but not yet live as it is still awaiting final content before being finished and deployed to a domain.
 
-Building this project out has helped me to better learn and practice the following:
-https://help.heroku.com/sharing/4f30e148-c0e5-489f-81ba-f04339175dfb
+The current app can be visited here: https://nettles-herbs.herokuapp.com/home
 
-1. Project preparation and planning
-2. Flexbox & CSS Grid
-3. Media queries
-4. ES Lint
-5. NodeJS
-6. Creating schema and models
-7. Routing
-8. CRUD operations
-9. Working with remote databases
-10. Express
-11. Mongoose/MongoDB
-12. npm packages
-13. Regular expressions
-14. Error handling
-15. Authenitcation
-16. Jason Web Tokens
-17. Authorization and security
+This is a large and dynamic application. The API documentation can be found here: https://documenter.getpostman.com/view/15470113/TzeUnUBB 
 
-This is a large and dynamic application. The API documentation can be found here:(). A very general, non-refactored overview of the project with pertinent notes and inputs is below. To view the refactored final product please check the relevant code files.
-Hungry
-hippos
-one more gain
+There is no walkthrough for this project as it is much too large. I have a notebook with meticulous notes detailing the complete project construction for anyone that may be interested however.
+
+You can email me at: margentaspruce@protonmail.com for more information.
